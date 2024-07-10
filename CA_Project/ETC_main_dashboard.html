@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>CA Dashboard</title>
+
+    <!-- Global stylesheets -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/layerslogo.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="assets/fonts/robo/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="global_assets/css/icons/icomoon/styles.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/bootstrap_limitless.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="assets/css/layout.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+    <link href=assets/css/components.min.css rel="stylesheet" type="text/css">
+    <link href="assets/css/colors.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="global_assets/css/icons/fontawesome/styles.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- /global stylesheets -->
+
+    <!-- Core JS files -->
+    <script src="global_assets/js/main/jquery.min.js"></script>
+    <script src="global_assets/js/main/bootstrap.bundle.min.js"></script>
+    <script src="global_assets/js/plugins/loaders/blockui.min.js"></script>
+    <script src="global_assets/js/plugins/ui/ripple.min.js"></script>
+    <script src="global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+    <script src="global_assets/js/plugins/ui/moment/moment.min.js"></script>
+    <script src="global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+    <script src="global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+    <script src="global_assets/js/plugins/forms/selects/select2.min.js"></script>
+
+    <script src="global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+    <script src="global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+    <script src="global_assets/js/demo_pages/form_multiselect.js"></script>
+    <script src="global_assets/js/demo_pages/form_select2.js"></script>
+    <script src="global_assets/js/demo_pages/datatables_basic.js"></script>
+    <script src="global_assets/js/demo_pages/dashboard.js"></script>
+    <script src="global_assets/js/plugins/extensions/jquery_ui/interactions.min.js"></script>
+    <script src="global_assets/js/demo_pages/picker_date.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="global_assets/js/demo_pages/form_layouts.js"></script>
+    <script src="global_assets/js/demo_pages/form_checkboxes_radios.js"></script>
+
+    <!-- /Date picker files JS files -->
+    <script src="global_assets/js/plugins/pickers/daterangepicker.js"></script>
+    <script src="global_assets/js/plugins/jQueryUI/jquery-ui.js"></script>
+    <script src="global_assets/js/plugins/pickers/anytime.min.js"></script>
+    <script src="global_assets/js/plugins/pickers/pickadate/picker.js"></script>
+    <script src="global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+    <script src="global_assets/js/plugins/pickers/pickadate/picker.time.js"></script>
+    <!-- Theme JS files -->
+    <script src="global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+    <script src="global_assets/js/plugins/extensions/session_timeout.min.js"></script>
+    <script src="assets/js/cryptojs-aes.min.js"></script>
+    <script src="assets/js/cryptojs-aes-format.js"></script>
+    <script src="assets/js/sha256.js"></script>
+    <script src="assets/js/jQuery.print.min.js"></script>
+
+    <!-- Theme JS files -->
+    <script src="global_assets/js/plugins/ui/fullcalendar/core/main.min.js"></script>
+    <script src="global_assets/js/plugins/ui/fullcalendar/daygrid/main.min.js"></script>
+    <script src="global_assets/js/plugins/ui/fullcalendar/timegrid/main.min.js"></script>
+    <script src="global_assets/js/plugins/ui/fullcalendar/list/main.min.js"></script>
+    <script src="global_assets/js/plugins/ui/fullcalendar/interaction/main.min.js"></script>
+    <!-- /theme JS files -->
+
+    <script src="global_assets/js/plugins/tables/datatables/extensions/jszip/jszip.min.js"></script>
+    <script src="global_assets/js/plugins/tables/datatables/extensions/pdfmake/pdfmake.min.js"></script>
+    <script src="global_assets/js/plugins/tables/datatables/extensions/pdfmake/vfs_fonts.min.js"></script>
+    <script src="global_assets/js/plugins/tables/datatables/extensions/buttons.min.js"></script>
+
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="sidebar-xs">
+    <!-- Main navbar -->
+    <div class="navbar navbar-expand-md navbar-dark bg-indigo navbar-static">
+      <div class="navbar-brand">
+        <a href="layersweb/app/dashboard" class="d-inline-block">
+          <img src="assets/images/LayersLogoApp.png" alt="" />
+        </a>
+      </div>
+
+      <div class="d-md-none">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar-mobile"
+        >
+          <i class="icon-user"></i>
+        </button>
+        <button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+          <i class="icon-paragraph-justify3"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-mobile">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              href="#"
+              class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block legitRipple"
+            >
+              <i class="icon-paragraph-justify3"></i>
+            </a>
+          </li>
+        </ul>
+        <center>
+          <span class="navbar-text ml-md-3">
+            <span class="badge badge-mark border-orange-300 mr-2"></span>
+            <strong>CARE TAKING BRANCH, TIS HAZARI</strong>
+          </span>
+        </center>
+        <ul class="navbar-nav ml-md-auto">
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="navbar-nav-link dropdown-toggle legitRipple"
+              data-toggle="dropdown"
+            >
+              <i class="icon-user mr-2"></i>
+              KHEEM SINGH
+            </a>
+
+            <div
+              class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-250"
+              style="
+                background: url(global_assets/images/backgrounds/user_bg2.jpg)
+                  center center no-repeat;
+              "
+            >
+              <div class="card-body text-center">
+                <a href="#">
+                  <img
+                    src="global_assets/images/placeholders/placeholder.jpg"
+                    class="img-fluid rounded-circle shadow-1 mb-3"
+                    width="80"
+                    height="80"
+                    alt=""
+                  />
+                </a>
+                <h6 class="mb-0 text-white text-shadow-dark">KHEEM SINGH</h6>
+                <span class="font-size-sm text-white text-shadow-dark"
+                  >Bracnh In-charge : 91021</span
+                >
+              </div>
+
+              <div class="sidebar-user-material-footer">
+                <a
+                  href="#user-nav"
+                  class="d-flex justify-content-between align-items-center text-shadow-dark dropdown-toggle legitRipple"
+                  data-toggle="collapse"
+                  ><span>My account</span></a
+                >
+              </div>
+              <div class="collapse" id="user-nav">
+                <ul class="nav nav-sidebar">
+                  <li class="nav-item">
+                    <a
+                      href="#"
+                      class="nav-link legitRipple"
+                      id="emp_personal_qual_detail_update_btn"
+                    >
+                      <i class="icon-user-plus"></i>
+                      <span>My profile</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="#" class="nav-link legitRipple">
+                      <i class="icon-cog5"></i>
+                      <span>Account settings</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <a href="auth/logout">
+                <div class="dropdown-content-footer bg-light">
+                  <span
+                    class="font-size-sm line-height-sm text-uppercase font-weight-semibold text-grey mr-auto"
+                    >Log Out</span
+                  >
+
+                  <div>
+                    <span
+                      href="#"
+                      class="text-grey"
+                      data-popup="tooltip"
+                      title="Log Out"
+                      ><i class="icon-switch2"></i
+                    ></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- /main navbar -->
+    <!-- Page content -->
+    <div class="page-content">
+      <!-- Main sidebar -->
+      <div class="sidebar sidebar-light sidebar-main sidebar-expand-md">
+        <!-- Sidebar mobile toggler -->
+        <div class="sidebar-mobile-toggler text-center">
+          <a href="#" class="sidebar-mobile-main-toggle">
+            <i class="icon-arrow-left8"></i>
+          </a>
+          <span class="font-weight-semibold">Navigation</span>
+          <a href="#" class="sidebar-mobile-expand">
+            <i class="icon-screen-full"></i>
+            <i class="icon-screen-normal"></i>
+          </a>
+        </div>
+        <!-- /sidebar mobile toggler -->
+
+        <!-- Sidebar content -->
+        <div class="sidebar-content">
+          <!-- Main navigation -->
+          <div class="card card-sidebar-mobile">
+            <ul class="nav nav-sidebar" data-nav-type="accordion">
+              <!-- Main -->
+              <li class="nav-item-header">
+                <div class="text-uppercase font-size-xs line-height-xs">
+                  Main
+                </div>
+                <i class="icon-menu" title="Main"></i>
+              </li>
+              <!-- /main -->
+
+              <!-- Home -->
+              <li class="nav-item">
+                <a href="#" class="nav-link legitRipple">
+                  <i class="text-pink-800 icon-home2"></i>
+                  <span> Home </span>
+                </a>
+              </li>
+              <!-- /Home -->
+              <!-- Accounts -->
+              <li class="nav-item">
+                <a href="#" class="nav-link legitRipple">
+                  <i class="text-indigo fa fa-rupee-sign"></i>
+                  <span> Accounts </span>
+                </a>
+              </li>
+              <!-- /Accounts -->
+              <!-- circulars -->
+              <li class="nav-item">
+                <a href="#" class="nav-link legitRipple">
+                  <i class="text-pink icon-clipboard3"></i>
+                  <span> Circulars </span>
+                </a>
+              </li>
+              <!-- circulars -->
+              <!-- Employees -->
+              <li class="nav-item">
+                <a href="#" class="nav-link legitRipple">
+                  <i class="text-pink icon-users4"></i>
+                  <span> Employees </span>
+                </a>
+              </li>
+              <!-- /Employees -->
+              <!-- Hierarchy -->
+              <li class="nav-item">
+                <a href="#" class="nav-link legitRipple" title="Hierarchy">
+                  <i class="text-blue icon-sort"></i>
+                  <span> Hierarchy </span>
+                </a>
+              </li>
+              <!-- /Hierarchy -->
+              <!-- digital court -->
+              <li class="nav-item">
+                <a href="#" class="nav-link legitRipple">
+                  <i class="text-orange-800 icon-graduation"></i>
+                  <span>Digital Court</span>
+                </a>
+              </li>
+              <!-- /digital court -->
+
+              <!-- Inventory Employee / User Item Issued -->
+              <li class="nav-item">
+                <a href="#" class="nav-link legitRipple">
+                  <i class="text-pink icon-calendar"></i>
+                  <span>Inventory</span>
+                </a>
+              </li>
+              <!-- Inventory Employee / User Item Issued -->
+
+              <!-- Extension phone numbers -->
+              <li class="nav-item">
+                <a href="#" class="nav-link legitRipple">
+                  <i class="text-pink-800 icon-phone"></i>
+                  <span>Extension Phone Numbers</span>
+                </a>
+              </li>
+              <!-- /Extension phone numbers -->
+              <!-- online CA -->
+              <li class="nav-item">
+                <a accesskey="k" href="#" class="nav-link legitRipple">
+                  <i class="icon-copy4"></i>
+                  <span>Certified Copy</span>
+                </a>
+              </li>
+              <!-- /online CA -->
+
+              <!-- Leaves -->
+              <li class="nav-item">
+                <a accesskey="k" href="#" class="nav-link legitRipple">
+                  <i class="icon-copy3 text-orange-800"></i>
+                  <span>Leaves</span>
+                </a>
+              </li>
+              <!--/Leaves -->
+              <!-- Recuritment -->
+              <li class="nav-item">
+                <a accesskey="k" href="#" class="nav-link legitRipple">
+                  <i class="icon-file-text text-danger-800"></i>
+                  <span>Recruitment</span>
+                </a>
+              </li>
+              <!-- /Recuritment  -->
+              <!-- Misc. Forms -->
+              <li class="nav-item">
+                <a accesskey="k" href="#" class="nav-link legitRipple">
+                  <i class="icon-file-text text-danger-600"></i>
+                  <span>Misc Forms</span>
+                </a>
+              </li>
+              <!-- /Misc. Forms -->
+            </ul>
+          </div>
+          <!-- /main navigation -->
+        </div>
+        <!-- /sidebar content -->
+      </div>
+      <!-- /main sidebar -->
+      <!-- Main content -->
+      <div class="content-wrapper">
+        <!-- Page content -->
+        <div class="page-content">
+          <!-- Main content -->
+          <div class="content-wrapper">
+            <!-- Page header -->
+            <div class="page-header page-header-light">
+              <div
+                class="breadcrumb-line breadcrumb-line-light header-elements-md-inline"
+              >
+                <div class="d-flex">
+                  <div class="breadcrumb">
+                    <a href="ETC_main_dashboard.html" class="breadcrumb-item"
+                      ><i class="icon-home2 mr-2"></i> Home</a
+                    >
+                    <span class="breadcrumb-item">e-True Copy</span
+                    ><span class="breadcrumb-item">Dashboard</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="header-elements-toggle text-default d-md-none"
+                    ><i class="icon-more"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="page-header-content header-elements-md-inline">
+                <div class="header-elements d-none">
+                  <div class="d-flex justify-content-center"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- /page header -->
+
+            <div class="content">
+              <!-- Inner container -->
+              <div class="d-md-flex align-items-md-start">
+                <style>
+                  .list-group-birthday {
+                    max-height: 450px;
+                    margin-bottom: 10px;
+                    padding: 10px;
+                    overflow: scroll;
+                    -webkit-overflow-scrolling: touch;
+                  }
+
+                  .fc-event {
+                    cursor: pointer;
+                  }
+                </style>
+                <!-- Left sidebar component -->
+                <div
+                  class="sidebar sidebar-light sidebar-component sidebar-component-left sidebar-expand-md"
+                  style="width: 20%"
+                >
+                  <!-- Sidebar content -->
+                  <div class="sidebar-content">
+                    <!-- Quarter Selection -->
+                    <div class="card card-collapsed">
+                      <div
+                        class="card-header bg-pink-600 header-elements-inline"
+                      >
+                        <a href="#" class="text-white"
+                          ><span
+                            class="text-uppercase font-size-lg font-weight-bold"
+                            ><i class="icon-home mr-2"></i> e-True Copy</span
+                          >
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /Quarter Selection -->
+
+                    <!-- ETC Proccessing -->
+                    <div class="card card-collapsed">
+                      <div
+                        class="card-header bg-transparent header-elements-inline"
+                      >
+                        <span
+                          class="text-uppercase font-size-sm font-weight-semibold"
+                          ><i class="icon-copy2 mr-2 text-pink-600"></i> ETC
+                          Proccessing
+                        </span>
+                        <div class="header-elements">
+                          <div class="list-icons">
+                            <a
+                              class="list-icons-item rotate-180"
+                              data-action="collapse"
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-body p-0" style="display: none">
+                        <ul class="nav nav-sidebar" data-nav-type="accordion">
+                          <!-- Applied list -->
+                          <li class="nav-item">
+                            <a
+                              href="ETC_applied_list.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-list2"></i>Applied List
+                            </a>
+                          </li>
+                          <!-- /Applied list -->
+                          <!-- Pending list -->
+                          <li class="nav-item">
+                            <a
+                              href="ETC_pending_list.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-list2"></i>Pending List
+                            </a>
+                          </li>
+                          <!-- /pending list -->
+                          <!-- Assigned list -->
+                          <li class="nav-item">
+                            <a
+                              href="ETC_pending_list.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-list2"></i>Assigned List
+                            </a>
+                          </li>
+                          <!-- /Assigned list -->
+                          <!-- verified list -->
+                          <li class="nav-item">
+                            <a
+                              href="ETC_pending_list.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-list2"></i>Verified List
+                            </a>
+                          </li>
+                          <!-- /verified list -->
+                          <!-- rejected list -->
+                          <li class="nav-item">
+                            <a
+                              href="ETC_pending_list.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-list2"></i>Rejected List
+                            </a>
+                          </li>
+                          <!-- /rejected list -->
+                          <!-- returned list -->
+                          <li class="nav-item">
+                            <a
+                              href="ETC_pending_list.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-list2"></i>Returned List
+                            </a>
+                          </li>
+                          <!-- /returned list -->
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /ETC Proccessing -->
+
+                    <!-- ETC Delivery Reschedule -->
+                    <div class="card card-collapsed">
+                      <div
+                        class="card-header bg-transparent header-elements-inline"
+                      >
+                        <a class="text-dark" href="#"
+                          ><span
+                            class="text-uppercase font-size-sm font-weight-semibold"
+                            ><i class="icon-alarm-add mr-2 text-pink"></i> ETC
+                            Delivery Reschedule
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /ETC Delivery Reschedule -->
+                    <!-- Reports -->
+                    <div class="card card-collapsed">
+                      <div
+                        class="card-header bg-transparent header-elements-inline"
+                      >
+                        <span
+                          class="text-uppercase font-size-sm font-weight-semibold"
+                          ><i class="icon-stack mr-2 text-pink-600"></i>
+                          Reports</span
+                        >
+                        <div class="header-elements">
+                          <div class="list-icons">
+                            <a
+                              class="list-icons-item rotate-180"
+                              data-action="collapse"
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-body p-0" style="display: none">
+                        <ul class="nav nav-sidebar" data-nav-type="accordion">
+                          <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-files-empty"></i> ETC Report</a
+                            >
+                            <ul class="nav nav-group-sub" style="display: none">
+                              <li class="nav-item">
+                                <a href="" class="nav-link legitRipple"
+                                  ><i class="icon-bookmarks"></i>Marked
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a href="" class="nav-link legitRipple"
+                                  ><i class="icon-paste2"></i>Prepared
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a href="" class="nav-link legitRipple"
+                                  ><i class="icon-diff-renamed"></i>Delivered
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a href="" class="nav-link legitRipple"
+                                  ><i class="icon-diff-renamed"></i>Cancelled
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a href="" class="nav-link legitRipple"
+                                  ><i class="icon-diff-renamed"></i>Total
+                                  Pending
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Reports -->
+
+                    <!-- Setting -->
+                    <div class="card card-collapsed">
+                      <div
+                        class="card-header bg-transparent header-elements-inline"
+                      >
+                        <span
+                          class="text-uppercase font-size-sm font-weight-semibold"
+                          ><i class="icon-cog2 mr-2 text-pink-600"></i>
+                          Settings</span
+                        >
+                        <div class="header-elements">
+                          <div class="list-icons">
+                            <a
+                              class="list-icons-item rotate-180"
+                              data-action="collapse"
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-body p-0" style="display: none">
+                        <ul class="nav nav-sidebar" data-nav-type="accordion">
+                          <li class="nav-item">
+                            <a href="" class="nav-link legitRipple"
+                              ><i class="icon-collaboration"></i>User Roles
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="" class="nav-link legitRipple"
+                              ><i class="icon-calendar22"></i>Set Delivery Date
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Setting -->
+                  </div>
+                  <!-- /sidebar content -->
+                </div>
+                <!-- /left sidebar component -->
+                <!-- Right content -->
+                <div class="" style="width: 100%">
+                  <!-- Button class -->
+                  <div class="">
+                    <!-- Simple statistics -->
+                    <div class="row">
+                      <div class="col-sm-6 col-xl-3">
+                        <div class="card card-body">
+                          <a href="#">
+                            <div class="media">
+                              <div class="mr-3 align-self-center">
+                                <i
+                                  class="icon-checkmark fa-3x text-success-400"
+                                ></i>
+                              </div>
+
+                              <div class="media-body text-right">
+                                <h3 class="font-weight-black mb-0">10</h3>
+                                <span
+                                  class="text-uppercase font-size-lg text-muted"
+                                  >APPLIED
+                                </span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <a href="#"> </a>
+                      </div>
+
+                      <div class="col-sm-6 col-xl-3">
+                        <div class="card card-body">
+                          <a href="#">
+                            <div class="media">
+                              <div class="mr-3 align-self-center">
+                                <i
+                                  class="icon-blocked icon-3x text-danger-400"
+                                ></i>
+                              </div>
+
+                              <div class="media-body text-right">
+                                <h3 class="font-weight-bold mb-0">1</h3>
+                                <span
+                                  class="text-uppercase font-size-lg text-muted"
+                                  >Rejected</span
+                                >
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-6 col-xl-3">
+                        <div class="card card-body bg-danger has-bg-image">
+                          <a class="text-white" href="#">
+                            <div class="media">
+                              <div class="mr-3 align-self-center">
+                                <i class="icon-blocked icon-3x"></i>
+                              </div>
+
+                              <div class="media-body text-right">
+                                <h3 class="font-weight-bold mb-0">3</h3>
+                                <span class="text-uppercase font-size-lg font"
+                                  >OBJECTIONS</span
+                                >
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <a class="text-white" href="#"> </a>
+                      </div>
+                      <div class="col-sm-6 col-xl-3">
+                        <div class="card card-body">
+                          <a href="#">
+                            <div class="media">
+                              <div class="mr-3 align-self-center">
+                                <i
+                                  class="icon-exclamation icon-3x text-danger-400"
+                                ></i>
+                              </div>
+
+                              <div class="media-body text-right">
+                                <h3 class="font-weight-bold mb-0">8</h3>
+                                <span
+                                  class="text-uppercase font-size-lg text-muted"
+                                >
+                                  CANCELLED</span
+                                >
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- /simple statistics -->
+
+                    <!-- Statistics with progress bar -->
+
+                    <div class="row">
+                      <div class="col-sm-6 col-xl-3">
+                        <div class="card card-body">
+                          <a href="#">
+                            <div class="media mb-3">
+                              <div class="media-body">
+                                <h6 class="font-weight-semibold mb-0">
+                                  Marked
+                                </h6>
+                                <span
+                                  class="text-muted tex-sm"
+                                  style="font-size: 11px"
+                                  >Today-0, 7 Days-0</span
+                                >
+                              </div>
+
+                              <div class="ml-3 align-self-center">
+                                <i
+                                  class="icon-bookmarks icon-2x text-orange opacity-75"
+                                ></i>
+                              </div>
+                            </div>
+                          </a>
+                          <div class="progress mb-2" style="height: 0.125rem">
+                            <div
+                              class="progress-bar bg-orange"
+                              style="width: 80%"
+                            >
+                              <span class="sr-only">80% Complete</span>
+                            </div>
+                          </div>
+
+                          <div>
+                            <!-- <span class="float-right">80%</span> -->
+                            Tis Hazari
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-xl-3">
+                        <div class="card card-body">
+                          <a href="#">
+                            <div class="media mb-3">
+                              <div class="media-body">
+                                <h6 class="font-weight-semibold mb-0">
+                                  Prepared
+                                </h6>
+                                <span
+                                  class="text-muted tex-sm"
+                                  style="font-size: 11px"
+                                  >Today-0, 7 Days-0</span
+                                >
+                              </div>
+
+                              <div class="ml-3 align-self-center">
+                                <i
+                                  class="icon-paste2 icon-2x text-danger opacity-75"
+                                ></i>
+                              </div>
+                            </div>
+                          </a>
+                          <div class="progress mb-2" style="height: 0.125rem">
+                            <div
+                              class="progress-bar bg-danger"
+                              style="width: 80%"
+                            >
+                              <span class="sr-only">80% Complete</span>
+                            </div>
+                          </div>
+
+                          <div>Tis Hazari</div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-6 col-xl-3">
+                        <div class="card card-body bg-success-400 has-bg-image">
+                          <a class="text-white" href="#">
+                            <div class="media mb-3">
+                              <div class="media-body">
+                                <h6 class="font-weight-semibold mb-0">
+                                  Delivered
+                                </h6>
+                                <span class="opacity-75">Today (0)</span>
+                              </div>
+
+                              <div class="ml-3 align-self-center">
+                                <i class="icon-cog3 icon-2x"></i>
+                              </div>
+                            </div>
+                          </a>
+                          <div
+                            class="progress bg-blue mb-2"
+                            style="height: 0.125rem"
+                          >
+                            <div
+                              class="progress-bar bg-white"
+                              style="width: 100%"
+                            ></div>
+                          </div>
+
+                          <div>Last 7 Days-Tis Hazari (0)</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- /statistics with progress bar -->
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="card">
+                          <div class="card-header header-elements-inline">
+                            <h5
+                              class="card-title font-weight-bold text-teal-600"
+                            >
+                              e-True Copy Status Search
+                            </h5>
+                          </div>
+
+                          <div class="card-body">
+                            <ul
+                              class="nav nav-tabs nav-tabs-solid rounded border-0"
+                            >
+                              <li class="nav-item">
+                                <a
+                                  href="#solid-rounded-tab1"
+                                  class="nav-link rounded-left active"
+                                  data-toggle="tab"
+                                  >ETC ID No.</a
+                                >
+                              </li>
+                            </ul>
+
+                            <div class="tab-content">
+                              <div
+                                class="tab-pane fade show active"
+                                id="solid-rounded-tab1"
+                              >
+                                <form
+                                  action="#"
+                                  name="casearchfrm"
+                                  id="casearchfrm"
+                                  method="post"
+                                  accept-charset="utf-8"
+                                  autocomplete="off"
+                                >
+                                  <input
+                                    type="hidden"
+                                    name="csrf_test_lalit"
+                                    value=""
+                                  />
+                                  <div
+                                    class="row"
+                                    style="
+                                      margin-top: 40px;
+                                      margin-bottom: 40px;
+                                    "
+                                  >
+                                    <div class="col-sm-12">
+                                      <table
+                                        class="table table-xs mb-1"
+                                        style="float: center; width: 60%"
+                                      >
+                                        <tbody>
+                                          <tr>
+                                            <td
+                                              class="text-right"
+                                              style="
+                                                padding-left: 0.3rem;
+                                                padding-right: 0.3rem;
+                                              "
+                                            >
+                                              <div class="px-2 border">
+                                                <input
+                                                  name="cano"
+                                                  type="text"
+                                                  class="form-control border-right-0 border-left-0"
+                                                  placeholder="Enter ETC ID here"
+                                                  maxlength="10"
+                                                  minlength="10"
+                                                  required=""
+                                                />
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+
+                                    <div
+                                      class="text-right"
+                                      style="
+                                        padding-left: 0.9rem;
+                                        padding-right: 0.3rem;
+                                      "
+                                    >
+                                      <button
+                                        type="submit"
+                                        class="btn btn-primary mt-2 legitRipple"
+                                      >
+                                        <i class="icon-search4 mr-2"></i> Search
+                                      </button>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+
+                              <div
+                                class="tab-pane fade"
+                                id="solid-rounded-tab2"
+                              >
+                                <div
+                                  class="row"
+                                  style="margin-top: 40px; margin-bottom: 40px"
+                                >
+                                  <div class="col-sm-12">
+                                    <table
+                                      class="table table-xs mb-1"
+                                      style="float: center; width: 60%"
+                                    >
+                                      <tbody>
+                                        <tr>
+                                          <td
+                                            class="text-right"
+                                            style="
+                                              padding-left: 0.3rem;
+                                              padding-right: 0.3rem;
+                                            "
+                                          >
+                                            <div class="px-2 border">
+                                              <input
+                                                type="text"
+                                                class="form-control"
+                                              />
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+
+                                  <div
+                                    class="text-right"
+                                    style="
+                                      padding-left: 0.9rem;
+                                      padding-right: 0.3rem;
+                                    "
+                                  >
+                                    <button
+                                      type="button"
+                                      class="btn btn-primary mt-2 legitRipple"
+                                    >
+                                      <i class="icon-search4 mr-2"></i> Search
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div
+                                class="tab-pane fade"
+                                id="solid-rounded-tab3"
+                              >
+                                <div
+                                  class="row"
+                                  style="margin-top: 40px; margin-bottom: 40px"
+                                >
+                                  <div class="col-sm-12">
+                                    <table
+                                      class="table table-xs mb-1"
+                                      style="float: center; width: 60%"
+                                    >
+                                      <tbody>
+                                        <tr>
+                                          <td
+                                            class="text-right"
+                                            style="
+                                              padding-left: 0.3rem;
+                                              padding-right: 0.3rem;
+                                            "
+                                          >
+                                            <div class="px-2 border">
+                                              <input
+                                                type="text"
+                                                class="form-control"
+                                              />
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+
+                                  <div
+                                    class="text-right"
+                                    style="
+                                      padding-left: 0.9rem;
+                                      padding-right: 0.3rem;
+                                    "
+                                  >
+                                    <button
+                                      type="button"
+                                      class="btn btn-primary mt-2 legitRipple"
+                                    >
+                                      <i class="icon-search4 mr-2"></i> Search
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div
+                                class="tab-pane fade"
+                                id="solid-rounded-tab4"
+                              >
+                                <div
+                                  class="row"
+                                  style="margin-top: 40px; margin-bottom: 40px"
+                                >
+                                  <div class="col-sm-12">
+                                    <table
+                                      class="table table-xs mb-1"
+                                      style="float: center; width: 60%"
+                                    >
+                                      <tbody>
+                                        <tr>
+                                          <td
+                                            class="text-right"
+                                            style="
+                                              padding-left: 0.3rem;
+                                              padding-right: 0.3rem;
+                                            "
+                                          >
+                                            <div class="px-2 border">
+                                              <input
+                                                type="text"
+                                                class="form-control"
+                                              />
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+
+                                  <div
+                                    class="text-right"
+                                    style="
+                                      padding-left: 0.9rem;
+                                      padding-right: 0.3rem;
+                                    "
+                                  >
+                                    <button
+                                      type="button"
+                                      class="btn btn-primary mt-2 legitRipple"
+                                    >
+                                      <i class="icon-search4 mr-2"></i> Search
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- /Button class -->
+                  <!-- /combined table styles -->
+                </div>
+                <!-- /Right content -->
+                <!-- /inner container -->
+              </div>
+            </div>
+            <!-- /main content -->
+          </div>
+        </div>
+
+        <!-- Basic modal -->
+
+        <!-- /Basic modal -->
+
+        <!--Code of Sandeep footer added here /-->
+        <script
+          src="global_assets/js/plugins/forms/validation/validate.min.js "
+          type="text/javascript"
+        ></script>
+        <script
+          src="global_assets/js/plugins/forms/validation/additional_methods.min.js"
+          type="text/javascript"
+        ></script>
+
+        <!-- Footer -->
+        <div class="navbar navbar-expand-lg navbar-light">
+          <div class="text-center d-lg-none w-100">
+            <button
+              type="button"
+              class="navbar-toggler dropdown-toggle"
+              data-toggle="collapse"
+              data-target="#navbar-footer"
+            >
+              <i class="icon-unfold mr-2"></i>
+              Footer
+            </button>
+          </div>
+
+          <div class="navbar-collapse collapse" id="navbar-footer">
+            <span class="navbar-text">
+              © 2024 <a href="#">Delhi District Courts</a> by
+              <a href="#" target="_blank">IT-Cell (HQs),Tis Hazari</a>
+            </span>
+          </div>
+        </div>
+        <!-- /footer -->
+      </div>
+      <!-- /main content -->
+    </div>
+    <!-- /page content -->
+  </body>
+</html>

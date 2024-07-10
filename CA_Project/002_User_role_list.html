@@ -1,0 +1,4033 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Layers</title>
+
+    <!-- Global stylesheets -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/layerslogo.png"
+    />
+
+    <link href="assets/fonts/robo/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="global_assets/css/icons/icomoon/styles.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="global_assets/css/icons/fontawesome/styles.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/bootstrap_limitless.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="assets/css/layout.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+    <link href=assets/css/components.min.css rel="stylesheet" type="text/css">
+    <link href="assets/css/colors.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="assets/global_assets/css/icons/fontawesome/styles.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- /global stylesheets -->
+
+    <!-- Core JS files -->
+    <script src="global_assets/js/main/jquery.min.js"></script>
+    <script src="global_assets/js/main/bootstrap.bundle.min.js"></script>
+    <script src="global_assets/js/plugins/loaders/blockui.min.js"></script>
+    <script src="global_assets/js/plugins/ui/ripple.min.js"></script>
+    <script src="global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+    <script src="global_assets/js/plugins/ui/moment/moment.min.js"></script>
+    <script src="global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+    <script src="global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+    <script src="global_assets/js/plugins/forms/selects/select2.min.js"></script>
+
+    <script src="global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+    <script src="global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+    <script src="global_assets/js/demo_pages/form_multiselect.js"></script>
+    <script src="global_assets/js/demo_pages/form_select2.js"></script>
+
+    <script src="global_assets/js/demo_pages/dashboard.js"></script>
+    <script src="global_assets/js/plugins/extensions/jquery_ui/interactions.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="global_assets/js/demo_pages/form_layouts.js"></script>
+    <script src="global_assets/js/demo_pages/form_checkboxes_radios.js"></script>
+
+    <!-- /Date picker files JS files -->
+    <script src="global_assets/js/plugins/pickers/daterangepicker.js"></script>
+    <script src="global_assets/js/plugins/jQueryUI/jquery-ui.js"></script>
+    <script src="global_assets/js/plugins/pickers/anytime.min.js"></script>
+    <script src="global_assets/js/plugins/pickers/pickadate/picker.js"></script>
+    <script src="global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+    <script src="global_assets/js/plugins/pickers/pickadate/picker.time.js"></script>
+    <!-- Theme JS files -->
+    <script src="global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+    <script src="global_assets/js/plugins/extensions/session_timeout.min.js"></script>
+    <script src="assets/js/cryptojs-aes.min.js"></script>
+    <script src="assets/js/cryptojs-aes-format.js"></script>
+    <script src="assets/js/sha256.js" type="text/javascript"></script>
+    <script src="assets/js/jQuery.print.min.js"></script>
+
+    <!-- Theme JS files -->
+    <script src="global_assets/js/plugins/ui/fullcalendar/core/main.min.js"></script>
+    <script src="global_assets/js/plugins/ui/fullcalendar/daygrid/main.min.js"></script>
+    <script src="global_assets/js/plugins/ui/fullcalendar/timegrid/main.min.js"></script>
+    <script src="global_assets/js/plugins/ui/fullcalendar/list/main.min.js"></script>
+    <script src="global_assets/js/plugins/ui/fullcalendar/interaction/main.min.js"></script>
+    <!-- /theme JS files -->
+
+    <script src="global_assets/js/plugins/tables/datatables/extensions/jszip/jszip.min.js"></script>
+    <script src="global_assets/js/plugins/tables/datatables/extensions/pdfmake/pdfmake.min.js"></script>
+    <script src="global_assets/js/plugins/tables/datatables/extensions/pdfmake/vfs_fonts.min.js"></script>
+    <script src="global_assets/js/plugins/tables/datatables/extensions/buttons.min.js"></script>
+
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="sidebar-xs">
+    <!-- Main navbar -->
+    <div class="navbar navbar-expand-md navbar-dark bg-indigo navbar-static">
+      <div class="navbar-brand">
+        <a href="dashboard" class="d-inline-block">
+          <img src="assets/images/LayersLogoApp.png" alt="" />
+        </a>
+      </div>
+
+      <div class="d-md-none">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar-mobile"
+        >
+          <i class="icon-user"></i>
+        </button>
+        <button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+          <i class="icon-paragraph-justify3"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-mobile">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              href="#"
+              class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block legitRipple"
+            >
+              <i class="icon-paragraph-justify3"></i>
+            </a>
+          </li>
+        </ul>
+        <center>
+          <span class="navbar-text ml-md-3">
+            <span class="badge badge-mark border-orange-300 mr-2"></span>
+            <strong>CARE TAKING BRANCH, TIS HAZARI</strong>
+          </span>
+        </center>
+        <ul class="navbar-nav ml-md-auto">
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="navbar-nav-link dropdown-toggle legitRipple"
+              data-toggle="dropdown"
+            >
+              <i class="icon-user mr-2"></i>
+              KHEEM SINGH
+            </a>
+
+            <div
+              class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-250"
+              style="
+                background: url(global_assets/images/backgrounds/user_bg2.jpg)
+                  center center no-repeat;
+              "
+            >
+              <div class="card-body text-center">
+                <a href="#">
+                  <img
+                    src="global_assets/images/placeholders/placeholder.jpg"
+                    class="img-fluid rounded-circle shadow-1 mb-3"
+                    width="80"
+                    height="80"
+                    alt=""
+                  />
+                </a>
+                <h6 class="mb-0 text-white text-shadow-dark">KHEEM SINGH</h6>
+                <span class="font-size-sm text-white text-shadow-dark"
+                  >Chowkidar : 91021</span
+                >
+              </div>
+
+              <div class="sidebar-user-material-footer">
+                <a
+                  href="#user-nav"
+                  class="d-flex justify-content-between align-items-center text-shadow-dark dropdown-toggle legitRipple"
+                  data-toggle="collapse"
+                  ><span>My account</span></a
+                >
+              </div>
+              <div class="collapse" id="user-nav">
+                <ul class="nav nav-sidebar">
+                  <li class="nav-item">
+                    <a
+                      href="#"
+                      class="nav-link legitRipple"
+                      id="emp_personal_qual_detail_update_btn"
+                    >
+                      <i class="icon-user-plus"></i>
+                      <span>My profile</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="#" class="nav-link legitRipple">
+                      <i class="icon-cog5"></i>
+                      <span>Account settings</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <a href="auth/logout">
+                <div class="dropdown-content-footer bg-light">
+                  <span
+                    class="font-size-sm line-height-sm text-uppercase font-weight-semibold text-grey mr-auto"
+                    >Log Out</span
+                  >
+
+                  <div>
+                    <span
+                      href="#"
+                      class="text-grey"
+                      data-popup="tooltip"
+                      title="Log Out"
+                      ><i class="icon-switch2"></i
+                    ></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- /main navbar -->
+    <!-- Page content -->
+    <div class="page-content">
+      <!-- Main sidebar -->
+      <div class="sidebar sidebar-light sidebar-main sidebar-expand-md">
+        <!-- Sidebar mobile toggler -->
+        <div class="sidebar-mobile-toggler text-center">
+          <a href="#" class="sidebar-mobile-main-toggle">
+            <i class="icon-arrow-left8"></i>
+          </a>
+          <span class="font-weight-semibold">Navigation</span>
+          <a href="#" class="sidebar-mobile-expand">
+            <i class="icon-screen-full"></i>
+            <i class="icon-screen-normal"></i>
+          </a>
+        </div>
+        <!-- /sidebar mobile toggler -->
+
+        <!-- Sidebar content -->
+        <div class="sidebar-content">
+          <!-- Main navigation -->
+          <div class="card card-sidebar-mobile">
+            <ul class="nav nav-sidebar" data-nav-type="accordion">
+              <!-- Main -->
+              <li class="nav-item-header">
+                <div class="text-uppercase font-size-xs line-height-xs">
+                  Main
+                </div>
+                <i class="icon-menu" title="Main"></i>
+              </li>
+              <li class="nav-item">
+                <a href="copyist_dashboard.html" class="nav-link legitRipple">
+                  <i class="text-pink-800 icon-home2"></i>
+                  <span> Home </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link legitRipple">
+                  <i class="text-indigo fa fa-rupee-sign"></i>
+                  <span> Accounts </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link legitRipple">
+                  <i class="text-pink icon-clipboard3"></i>
+                  <span> Circulars </span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="" class="nav-link legitRipple">
+                  <i class="text-pink icon-users4"></i>
+                  <span> Employees </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link legitRipple" title="Hierarchy">
+                  <i class="text-blue icon-sort"></i>
+                  <span> Hierarchy </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link legitRipple">
+                  <i class="text-orange-800 icon-graduation"></i>
+                  <span>Digital Court</span>
+                </a>
+              </li>
+              <!-- Bail order link -->
+              <!--  Bail order link -->
+
+              <li class="nav-item">
+                <a href="" class="nav-link legitRipple">
+                  <i class="icon-stats-growth text-pink-300"></i>
+                  <span>Unit Criteria</span>
+                </a>
+              </li>
+
+              <!-- Inventory Employee / User Item Issued -->
+              <li class="nav-item">
+                <a href="" class="nav-link legitRipple">
+                  <i class="text-pink icon-calendar"></i>
+                  <span>Inventory</span>
+                </a>
+              </li>
+              <!-- Inventory Employee / User Item Issued -->
+              <!-- Server Status for System Analysts -->
+              <!-- Server Status for System Analysts -->
+              <li class="nav-item">
+                <a href="" class="nav-link legitRipple">
+                  <i class="text-pink-800 icon-phone"></i>
+                  <span>Extension Phone Numbers</span>
+                </a>
+              </li>
+              <!-- /main -->
+              <li class="nav-item">
+                <a
+                  accesskey="k"
+                  href="copyist_dashboard.html"
+                  class="nav-link legitRipple"
+                >
+                  <i class="icon-copy4"></i>
+                  <span>Certified Copy</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a accesskey="k" href="" class="nav-link legitRipple">
+                  <i class="icon-copy3 text-orange-800"></i>
+                  <span>Leaves</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a accesskey="k" href="" class="nav-link legitRipple">
+                  <i class="icon-file-text text-danger-800"></i>
+                  <span>Recruitment</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a accesskey="k" href="" class="nav-link legitRipple">
+                  <i class="icon-file-text text-danger-600"></i>
+                  <span>Misc Forms</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- /main navigation -->
+        </div>
+        <!-- /sidebar content -->
+      </div>
+      <!-- /main sidebar -->
+      <!-- Main content -->
+      <div class="content-wrapper">
+        <!-- Page content -->
+        <div class="page-content">
+          <!-- Main content -->
+          <div class="content-wrapper">
+            <!-- Page header -->
+            <div class="page-header page-header-light">
+              <div
+                class="breadcrumb-line breadcrumb-line-light header-elements-md-inline"
+              >
+                <div class="d-flex">
+                  <div class="breadcrumb">
+                    <a href="copyist_dashboard.html" class="breadcrumb-item"
+                      ><i class="icon-home2 mr-2"></i> Home</a
+                    >
+                    <span class="breadcrumb-item">CA</span
+                    ><span class="breadcrumb-item">Dashboard</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="header-elements-toggle text-default d-md-none"
+                    ><i class="icon-more"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="page-header-content header-elements-md-inline">
+                <div class="header-elements d-none">
+                  <div class="d-flex justify-content-center"></div>
+                </div>
+              </div>
+            </div>
+            <!-- /Page header -->
+
+            <!-- content area -->
+            <div class="content">
+              <!-- Inner container -->
+              <div class="d-md-flex align-items-md-start">
+                <style>
+                  .list-group-birthday {
+                    max-height: 450px;
+                    margin-bottom: 10px;
+                    padding: 10px;
+                    overflow: scroll;
+                    -webkit-overflow-scrolling: touch;
+                  }
+
+                  .fc-event {
+                    cursor: pointer;
+                  }
+                </style>
+                <!-- Left sidebar component -->
+                <div
+                  class="sidebar sidebar-light sidebar-component sidebar-component-left sidebar-expand-md"
+                  style="width: 20%"
+                >
+                  <!-- Sidebar content -->
+                  <div class="sidebar-content">
+                    <!-- Quarter Selection -->
+                    <div class="card card-collapsed">
+                      <div
+                        class="card-header bg-pink-600 header-elements-inline"
+                      >
+                        <a href="layersweb/ca/dashboard" class="text-white"
+                          ><span
+                            class="text-uppercase font-size-lg font-weight-bold"
+                            ><i class="icon-home mr-2"></i> Copying Agency</span
+                          >
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /Quarter Selection -->
+                    <!-- Unit Exemption -->
+                    <div class="card card-collapsed">
+                      <div
+                        class="card-header bg-transparent header-elements-inline"
+                      >
+                        <a
+                          accesskey="l"
+                          class="text-dark"
+                          href="layersweb/ca/registration"
+                          ><span
+                            class="text-uppercase font-size-sm font-weight-semibold"
+                            ><i class="icon-diff-added mr-2 text-pink"></i>
+                            Apply New CA</span
+                          >
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /Unit Exemption -->
+
+                    <!-- Offline CA Proccessing -->
+                    <div class="card card-collapsed">
+                      <div
+                        class="card-header bg-transparent header-elements-inline"
+                      >
+                        <span
+                          class="text-uppercase font-size-sm font-weight-semibold"
+                          ><i class="icon-copy2 mr-2 text-pink-600"></i> Offline
+                          CA Proccessing</span
+                        >
+                        <div class="header-elements">
+                          <div class="list-icons">
+                            <a
+                              class="list-icons-item rotate-180"
+                              data-action="collapse"
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-body p-0" style="display: none">
+                        <ul class="nav nav-sidebar" data-nav-type="accordion">
+                          <li class="nav-item">
+                            <a
+                              href="layersweb/ca/fetcher/file_fetched"
+                              class="nav-link legitRipple"
+                              ><i class="icon-folder-download2 mr-2"></i> File
+                              Fetching
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              href="ayersweb/ca/marker/marking_list"
+                              class="nav-link legitRipple"
+                              ><i class="icon-bookmarks mr-2"></i>Marking CA
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              href="layersweb/ca/prepare/prepare_list"
+                              class="nav-link legitRipple"
+                            >
+                              <i class="icon-paste2 mr-2"></i> Prepare CA
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              href="layersweb/ca/dashboard/prepared_list"
+                              class="nav-link legitRipple"
+                              ><i class="icon-diff-renamed mr-2"></i> CA
+                              Delivery
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              href="layersweb/ca/dashboard/todays_delivery_list"
+                              class="nav-link legitRipple"
+                              ><i class="icon-diff-renamed mr-2"></i> Today CA
+                              Delivery
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- Offline CA Proccessing -->
+                    <!-- Online CA Proccessing -->
+                    <div class="card card-collapsed">
+                      <div
+                        class="card-header bg-transparent header-elements-inline"
+                      >
+                        <span
+                          class="text-uppercase font-size-sm font-weight-semibold"
+                          ><i class="icon-copy2 mr-2 text-pink-600"></i> Online
+                          CA Proccessing</span
+                        >
+                        <div class="header-elements">
+                          <div class="list-icons">
+                            <a
+                              class="list-icons-item rotate-180"
+                              data-action="collapse"
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-body p-0" style="display: none">
+                        <ul class="nav nav-sidebar" data-nav-type="accordion">
+                          <li class="nav-item">
+                            <a
+                              href="layersweb/ca/verification/pending_list"
+                              class="nav-link legitRipple"
+                              ><i class="icon-list2"></i>Pending List
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              href="layersweb/ca/verification/assigned_list"
+                              class="nav-link legitRipple"
+                              ><i class="icon-list2"></i>Assigned List
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              href="layersweb/ca/verification/verified_list"
+                              class="nav-link legitRipple"
+                              ><i class="icon-list2"></i>Verified List
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              href="layersweb/ca/verification/rejected_list"
+                              class="nav-link legitRipple"
+                              ><i class="icon-list2"></i>Rejected List
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              href="layersweb/ca/verification/returned_list"
+                              class="nav-link legitRipple"
+                              ><i class="icon-list2"></i>Returned List
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- Online CA Proccessing -->
+                    <!-- CA Delivery Reschedule -->
+                    <div class="card card-collapsed">
+                      <div
+                        class="card-header bg-transparent header-elements-inline"
+                      >
+                        <a
+                          class="text-dark"
+                          href="layersweb/ca/settings/deliver_date_reschedule_list"
+                          ><span
+                            class="text-uppercase font-size-sm font-weight-semibold"
+                            ><i class="icon-alarm-add mr-2 text-pink"></i> CA
+                            Delivery Reschedule
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /CA Delivery Reschedule -->
+                    <!-- Setting -->
+                    <div class="card card-collapsed">
+                      <div
+                        class="card-header bg-transparent header-elements-inline"
+                      >
+                        <span
+                          class="text-uppercase font-size-sm font-weight-semibold"
+                          ><i class="icon-stack mr-2 text-pink-600"></i>
+                          Reports</span
+                        >
+                        <div class="header-elements">
+                          <div class="list-icons">
+                            <a
+                              class="list-icons-item rotate-180"
+                              data-action="collapse"
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-body p-0" style="display: none">
+                        <ul class="nav nav-sidebar" data-nav-type="accordion">
+                          <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="fa fa-rupee-sign"></i> Amount Report</a
+                            >
+                            <ul class="nav nav-group-sub" style="display: none">
+                              <li class="nav-item">
+                                <a
+                                  href="layersweb/ca/report/amount_received"
+                                  class="nav-link legitRipple"
+                                  ><i class="fa fa-rupee-sign"></i>Advance
+                                  Received
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a
+                                  href="layersweb/ca/report/amount_recovery"
+                                  class="nav-link legitRipple"
+                                  ><i class="fa fa-rupee-sign"></i>Recovery
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a
+                                  href="layersweb/ca/report/amount_refund"
+                                  class="nav-link legitRipple"
+                                  ><i class="fa fa-rupee-sign"></i>Refund
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a
+                                  href="layersweb/ca/report/consolidate_amount"
+                                  class="nav-link legitRipple"
+                                  ><i class="fa fa-rupee-sign"></i>Consolidate
+                                  Amount
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-files-empty"></i> CA Report</a
+                            >
+                            <ul class="nav nav-group-sub" style="display: none">
+                              <li class="nav-item">
+                                <a
+                                  href="layersweb/ca/report/ca_fetched"
+                                  class="nav-link legitRipple"
+                                  ><i class="icon-folder-download"></i>Fetched
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a
+                                  href="layersweb/ca/report/ca_marked"
+                                  class="nav-link legitRipple"
+                                  ><i class="icon-bookmarks"></i>Marked
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a
+                                  href="layersweb/ca/report/ca_prepared"
+                                  class="nav-link legitRipple"
+                                  ><i class="icon-paste2"></i>Prepared
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a
+                                  href="layersweb/ca/report/ca_delivered"
+                                  class="nav-link legitRipple"
+                                  ><i class="icon-diff-renamed"></i>Delivered
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a
+                                  href="layersweb/ca/report/ca_cancelled"
+                                  class="nav-link legitRipple"
+                                  ><i class="icon-diff-renamed"></i>Cancelled
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a
+                                  href="layersweb/ca/report/ca_pending"
+                                  class="nav-link legitRipple"
+                                  ><i class="icon-diff-renamed"></i>Total
+                                  Pending
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Setting -->
+
+                    <!-- Setting -->
+                    <div class="card card-collapsed">
+                      <div
+                        class="card-header bg-transparent header-elements-inline"
+                      >
+                        <span
+                          class="text-uppercase font-size-sm font-weight-semibold"
+                          ><i class="icon-cog2 mr-2 text-pink-600"></i>
+                          Settings</span
+                        >
+                        <div class="header-elements">
+                          <div class="list-icons">
+                            <a
+                              class="list-icons-item rotate-180"
+                              data-action="collapse"
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-body p-0" style="display: none">
+                        <ul class="nav nav-sidebar" data-nav-type="accordion">
+                          <li class="nav-item">
+                            <a
+                              href="User_role_list.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-collaboration"></i>User Roles
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              href="layersweb/ca/settings/delivery_date"
+                              class="nav-link legitRipple"
+                              ><i class="icon-calendar22"></i>Set Delivery Date
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Setting -->
+                  </div>
+                  <!-- /sidebar content -->
+                </div>
+
+                <!-- /Left sidebar component -->
+                <!-- Right content -->
+                <div class="" style="width: 100%">
+                  <!-- Button classes -->
+                  <div class="card">
+                    <div class="card-header bg-pink-600 header-elements-inline">
+                      <div class="col-sm-5">
+                        <h5 class="card-title">e-True Copy User Role List</h5>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="bg-light pl-2 pr-2"></div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div>
+                          <a class="nav-link" style="cursor: pointer"
+                            ><span
+                              class="btn btn-sm bg-primary legitRipple float-right font-weight-bold"
+                              data-toggle="modal"
+                              data-target="#search_emp_modal"
+                              ><i class="icon icon-pencil"></i> Add New
+                              User</span
+                            ></a
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <div
+                          id="userListTbl_wrapper"
+                          class="dataTables_wrapper no-footer"
+                        >
+                          <div
+                            class="dataTables_length"
+                            id="userListTbl_length"
+                          >
+                            <label
+                              >Show
+                              <select
+                                name="userListTbl_length"
+                                aria-controls="userListTbl"
+                                class=""
+                              >
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                              </select>
+                              entries</label
+                            >
+                          </div>
+                          <div
+                            id="userListTbl_filter"
+                            class="dataTables_filter"
+                          >
+                            <label
+                              >Search:<input
+                                type="search"
+                                class=""
+                                placeholder=""
+                                aria-controls="userListTbl"
+                            /></label>
+                          </div>
+                          <table
+                            class="table table-bordered table-hover dataTable no-footer"
+                            id="userListTbl"
+                            style="margin-top: 10px"
+                            role="grid"
+                            aria-describedby="userListTbl_info"
+                          >
+                            <thead>
+                              <tr role="row">
+                                <th
+                                  class="sorting_asc font-weight-semibold"
+                                  tabindex="0"
+                                  aria-controls="userListTbl"
+                                  rowspan="1"
+                                  colspan="1"
+                                  aria-sort="ascending"
+                                  aria-label="Emp Name : activate to sort column descending"
+                                  style="width: 75.453px"
+                                >
+                                  Emp Name
+                                </th>
+                                <th
+                                  class="sorting font-weight-semibold"
+                                  tabindex="0"
+                                  aria-controls="userListTbl"
+                                  rowspan="1"
+                                  colspan="1"
+                                  aria-label="Employee Code : activate to sort column ascending"
+                                  style="width: 63.984px"
+                                >
+                                  Employee Code
+                                </th>
+                                <th
+                                  class="sorting font-weight-semibold"
+                                  tabindex="0"
+                                  aria-controls="userListTbl"
+                                  rowspan="1"
+                                  colspan="1"
+                                  aria-label="Start Date: activate to sort column ascending"
+                                  style="width: 34.7656px"
+                                >
+                                  Start Date
+                                </th>
+                                <th
+                                  class="sorting font-weight-semibold"
+                                  tabindex="0"
+                                  aria-controls="userListTbl"
+                                  rowspan="1"
+                                  colspan="1"
+                                  aria-label="End Date: activate to sort column ascending"
+                                  style="width: 31.9844px"
+                                >
+                                  End Date
+                                </th>
+                                <th
+                                  class="sorting font-weight-semibold"
+                                  tabindex="0"
+                                  aria-controls="userListTbl"
+                                  rowspan="1"
+                                  colspan="1"
+                                  aria-label="District : activate to sort column ascending"
+                                  style="width: 40.875px"
+                                >
+                                  District
+                                </th>
+                                <th
+                                  class="sorting font-weight-semibold"
+                                  tabindex="0"
+                                  aria-controls="userListTbl"
+                                  rowspan="1"
+                                  colspan="1"
+                                  aria-label="Complex: activate to sort column ascending"
+                                  style="width: 50.359px"
+                                >
+                                  Complex
+                                </th>
+                                <th
+                                  class="sorting font-weight-semibold"
+                                  tabindex="0"
+                                  aria-controls="userListTbl"
+                                  rowspan="1"
+                                  colspan="1"
+                                  aria-label="Role : activate to sort column ascending"
+                                  style="width: 24.8125px"
+                                ></th>
+                                <th
+                                  class="sorting font-weight-semibold"
+                                  tabindex="0"
+                                  aria-controls="userListTbl"
+                                  rowspan="1"
+                                  colspan="1"
+                                  aria-label="Action: activate to sort column ascending"
+                                  style="width: 36.7656px"
+                                >
+                                  Action
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr role="row" class="odd">
+                                <td class="sorting_1">AMIT KUMAR</td>
+                                <td>72153450</td>
+                                <td>29-08-2022</td>
+                                <td>14-09-2022</td>
+                                <td>Central</td>
+                                <td>Tis Hazari</td>
+                                <td>Fetcher</td>
+                                <td>
+                                  <div class="list-icons">
+                                    <a
+                                      href="#"
+                                      data-id=""
+                                      data-empname="AMIT KUMAR"
+                                      class="list-icons-item text-danger-600 userdel"
+                                      ><i class="icon-trash"></i
+                                    ></a>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr role="row" class="even">
+                                <td class="sorting_1">AMIT SAXENA</td>
+                                <td>88150671</td>
+                                <td>25-06-2024</td>
+                                <td></td>
+                                <td>Central</td>
+                                <td>Tis Hazari</td>
+                                <td>Copyist</td>
+                                <td>
+                                  <div class="list-icons">
+                                    <a
+                                      href="#"
+                                      data-id=""
+                                      data-empname="AMIT SAXENA"
+                                      class="list-icons-item text-danger-600 userdel"
+                                      ><i class="icon-trash"></i
+                                    ></a>
+                                  </div>
+                                </td>
+                              </tr>
+
+                              <tr role="row" class="odd">
+                                <td class="sorting_1">ANIL KUMAR YADAV</td>
+                                <td>72153450</td>
+                                <td>12-09-2022</td>
+                                <td>14-09-2022</td>
+                                <td>Central</td>
+                                <td>Tis Hazari</td>
+                                <td>Admin</td>
+                                <td>
+                                  <div class="list-icons">
+                                    <a
+                                      href="#"
+                                      data-id=""
+                                      data-empname="ANIL KUMAR YADAV"
+                                      class="list-icons-item text-danger-600 userdel"
+                                      ><i class="icon-trash"></i
+                                    ></a>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div
+                            class="dataTables_info"
+                            id="userListTbl_info"
+                            role="status"
+                            aria-live="polite"
+                          >
+                            Showing 1 to 10 of 18 entries
+                          </div>
+                          <div
+                            class="dataTables_paginate paging_simple_numbers"
+                            id="userListTbl_paginate"
+                          >
+                            <a
+                              class="paginate_button previous disabled"
+                              aria-controls="userListTbl"
+                              data-dt-idx="0"
+                              tabindex="0"
+                              id="userListTbl_previous"
+                              >Previous</a
+                            >
+                            <span
+                              ><a
+                                class="paginate_button current"
+                                aria-controls="userListTbl"
+                                data-dt-idx="1"
+                                tabindex="0"
+                                >1</a
+                              ><a
+                                class="paginate_button"
+                                aria-controls="userListTbl"
+                                data-dt-idx="2"
+                                tabindex="0"
+                                >2</a
+                              ></span
+                            ><a
+                              class="paginate_button next"
+                              aria-controls="userListTbl"
+                              data-dt-idx="3"
+                              tabindex="0"
+                              id="userListTbl_next"
+                              >Next</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /combined table styles -->
+                </div>
+                <!-- /Right content -->
+              </div>
+              <!-- /Inner container -->
+            </div>
+            <!-- /content area -->
+          </div>
+          <!-- /main content -->
+        </div>
+
+        <!-- Modal -->
+        <!-- Search Employee modal -->
+        <div
+          id="search_emp_modal"
+          class="modal fade"
+          tabindex="-1"
+          style="display: none"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog xl" id="modal_large_model">
+            <div class="modal-content">
+              <div class="modal-header bg-indigo">
+                <h6 class="modal-title">
+                  <i class="fa fa-search"></i> Employee Search
+                </h6>
+                <button type="button" class="close" data-dismiss="modal">
+                  ×
+                </button>
+              </div>
+
+              <div class="modal-body loaderdiv_unit">
+                <!--<div class="card">-->
+                <div class="card-body">
+                  <div class="form-group row">
+                    <label class="col-form-label col-lg-3 font-weight-semibold"
+                      >Search Type</label
+                    >
+                    <div class="col-lg-9">
+                      <input
+                        type="hidden"
+                        id="redirect_link"
+                        value="ca/settings/assign_user_role"
+                      />
+                      <select
+                        class="form-control select"
+                        id="dpSearchTypes_model"
+                        data-select2-id="dpSearchTypes_model"
+                        tabindex="-1"
+                        aria-hidden="true"
+                      >
+                        <option value="" data-select2-id="27">
+                          Select Search Type
+                        </option>
+                        <option value="all">All Employees</option>
+                        <option value="branch">Branch</option>
+                        <option value="court">Court</option>
+                        <option value="both">Court + Branch</option>
+                        <option value="deputation">Deputation</option>
+                        <option value="diverted">Diverted</option>
+                        <option value="individual">Individual</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row hidden" id="divDistrict_model">
+                    <label class="col-form-label col-lg-3 font-weight-semibold"
+                      >Select District</label
+                    >
+                    <div class="col-lg-9" data-select2-id="49">
+                      <select
+                        class="form-control select"
+                        data-fouc=""
+                        name="dpDistrict"
+                        id="dpDistricts_model"
+                        data-placeholder="Select a District..."
+                        data-select2-id="dpDistricts_model"
+                        tabindex="-1"
+                        aria-hidden="true"
+                      >
+                        <option value="" data-select2-id="101">
+                          Select District
+                        </option>
+                        <option value="All" data-select2-id="421">All</option>
+                        <option value="1" data-select2-id="422">Central</option>
+                        <option value="14" data-select2-id="423">
+                          Central RA
+                        </option>
+                        <option value="9" data-select2-id="424">East</option>
+                        <option value="11" data-select2-id="425">
+                          New Delhi
+                        </option>
+                        <option value="6" data-select2-id="426">North</option>
+                        <option value="8" data-select2-id="427">
+                          North-East
+                        </option>
+                        <option value="7" data-select2-id="428">
+                          North-West
+                        </option>
+                        <option value="13" data-select2-id="429">Other</option>
+                        <option value="10" data-select2-id="430">
+                          Shahdara
+                        </option>
+                        <option value="5" data-select2-id="431">South</option>
+                        <option value="4" data-select2-id="432">
+                          South-East
+                        </option>
+                        <option value="3" data-select2-id="433">
+                          South-West
+                        </option>
+                        <option value="2" data-select2-id="34">West</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row hidden" id="divBranch_model">
+                    <label class="col-form-label col-lg-3 font-weight-semibold"
+                      >Select Branch</label
+                    >
+                    <div class="col-lg-9">
+                      <select
+                        class="form-control select overflow-auto"
+                        data-fouc=""
+                        name="dpBranch"
+                        id="dpBranchs_model"
+                        data-placeholder="Select a Branch..."
+                        data-select2-id="dpBranchs_model"
+                        tabindex="-1"
+                        aria-hidden="true"
+                      >
+                        <option value="" data-select2-id="29">
+                          Select Branch
+                        </option>
+                        <option value="All">All</option>
+                        <option value="24">Accounts Branch</option>
+                        <option value="59">ACJ Office</option>
+                        <option value="58">ACR Cell</option>
+                        <option value="45">Administration Branch</option>
+                        <option value="4">Administration Branch – I</option>
+                        <option value="5">Administration Branch – II</option>
+                        <option value="6">Administration Branch – III</option>
+                        <option value="49">
+                          Administration Branch - III (Pool)
+                        </option>
+                        <option value="48">
+                          Administration Branch - II (Pool)
+                        </option>
+                        <option value="47">
+                          Administration Branch - I (Pool)
+                        </option>
+                        <option value="46">Administration Branch (Pool)</option>
+                        <option value="57">Administrative Record Room</option>
+                        <option value="65">BMC Cell</option>
+                        <option value="27">Care Taking Branch</option>
+                        <option value="41">Cash Branch</option>
+                        <option value="18">CMM Office</option>
+                        <option value="26">Computer Branch</option>
+                        <option value="55">Copying Agency</option>
+                        <option value="13">Copying Agency (Civil)</option>
+                        <option value="15">Copying Agency (Criminal)</option>
+                        <option value="14">Copying Agency (Session)</option>
+                        <option value="16">Copying Agency (Small Cause)</option>
+                        <option value="43">Digitization Section</option>
+                        <option value="33">Disaster Management Cell</option>
+                        <option value="37">DJ Office</option>
+                        <option value="17">Evening Court Cell</option>
+                        <option value="25">Facilitation Centre</option>
+                        <option value="54">Filing Section Branch</option>
+                        <option value="12">Fine & Audit</option>
+                        <option value="56">
+                          First Appellate Authority of RTI
+                        </option>
+                        <option value="52">
+                          General Administration Branch
+                        </option>
+                        <option value="23">General Branch</option>
+                        <option value="60">
+                          Grievance Cell for former Judicial Officers
+                        </option>
+                        <option value="34">Hindi Section</option>
+                        <option value="64">IT Cell HQs</option>
+                        <option value="7">Judicial Branch</option>
+                        <option value="42">LAC Branch</option>
+                        <option value="21">Library</option>
+                        <option value="53">Litigation Branch</option>
+                        <option value="36">Mediation Centre</option>
+                        <option value="30">Nazarat Branch</option>
+                        <option value="39">Office Pool</option>
+                        <option value="63">Pension Cell</option>
+                        <option value="20">Plea Bargaining Cell</option>
+                        <option value="35">Pool Car Section</option>
+                        <option value="61">Promotion Cell</option>
+                        <option value="44">Protocol Branch</option>
+                        <option value="22">Purchase Cell</option>
+                        <option value="29">Receipt & Issue Branch</option>
+                        <option value="8">Record Room (Civil)</option>
+                        <option value="9">Record Room (Criminal)</option>
+                        <option value="10">Record Room (Session)</option>
+                        <option value="11">Record Room (Small Cause)</option>
+                        <option value="31">Recruitment Cell</option>
+                        <option value="32">RTI Branch</option>
+                        <option value="19">SCJ Office</option>
+                        <option value="40">Section Writer Branch</option>
+                        <option value="62">Security Cell</option>
+                        <option value="50">Stationary Branch</option>
+                        <option value="51">Telephone Exchange Branch</option>
+                        <option value="38">Vigilance Branch</option>
+                        <option value="28">Website Section</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row hidden" id="divBranchRole_model">
+                    <label class="col-form-label col-lg-3 font-weight-semibold"
+                      >Select Role In Branch</label
+                    >
+                    <div class="col-lg-9">
+                      <select
+                        class="form-control select"
+                        data-fouc=""
+                        name="dpBranchRole"
+                        id="dpBranchRoles_model"
+                        data-placeholder="Select a Role In Branch..."
+                        data-select2-id="dpBranchRoles_model"
+                        tabindex="-1"
+                        aria-hidden="true"
+                      >
+                        <option value="" data-select2-id="302">
+                          Select Branch Role
+                        </option>
+                        <option value="All" data-select2-id="13A">All</option>
+                        <option value="other" data-select2-id="12A">
+                          Other
+                        </option>
+                        <option value="in-charge" data-select2-id="13B">
+                          In-Charge
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row hidden" id="divCourtType_model">
+                    <label class="col-form-label col-lg-3 font-weight-semibold"
+                      >Select Court Type</label
+                    >
+                    <div class="col-lg-9" data-select2-id="133">
+                      <select
+                        class="form-control select"
+                        data-fouc=""
+                        name="dpCourt"
+                        id="dpCourts_model"
+                        data-placeholder="Select a Court Type..."
+                        data-select2-id="dpCourts_model"
+                        tabindex="-1"
+                        aria-hidden="true"
+                      >
+                        <option value="" data-select2-id="158">
+                          Select Court Type
+                        </option>
+                        <option value="All" data-select2-id="185">All</option>
+                        <option value="1" data-select2-id="186">
+                          Administrative Civil Judge Cum Addl. Rent Control
+                        </option>
+                        <option value="2" data-select2-id="187">
+                          Addl. Chief Metropolitan Magistrate
+                        </option>
+                        <option value="3" data-select2-id="188">
+                          Additional District Judge
+                        </option>
+                        <option value="4" data-select2-id="189">
+                          Additional Rent Controller
+                        </option>
+                        <option value="5" data-select2-id="190">
+                          Additional Sessions Judge
+                        </option>
+                        <option value="6" data-select2-id="191">
+                          ASJ/SPECIAL.JUDGE(NDPS)
+                        </option>
+                        <option value="7" data-select2-id="192">
+                          CCJ cum Addl. Rent Controller
+                        </option>
+                        <option value="8" data-select2-id="193">
+                          Civil Judge
+                        </option>
+                        <option value="9" data-select2-id="194">
+                          Chief Metropolitan Magistrate
+                        </option>
+                        <option value="10" data-select2-id="195">
+                          District and Sessions Judge
+                        </option>
+                        <option value="11" data-select2-id="196">
+                          JSCC-cum-Addl. SCJ-cum-Guardian Judge
+                        </option>
+                        <option value="12" data-select2-id="197">
+                          Judge, Family Court
+                        </option>
+                        <option value="13" data-select2-id="198">
+                          Metropolitan Magistrate
+                        </option>
+                        <option value="14" data-select2-id="199">
+                          Principal Judge, Family Court
+                        </option>
+                        <option value="15" data-select2-id="200">
+                          Presiding Off.-MACT
+                        </option>
+                        <option value="16" data-select2-id="201">
+                          Senior Civil Judge Cum Rent Controller
+                        </option>
+                        <option value="17" data-select2-id="202">
+                          Special Judge
+                        </option>
+                        <option value="18" data-select2-id="203">
+                          District Judge (Commercial Court)
+                        </option>
+                        <option value="19" data-select2-id="204">
+                          MM [METROPOLITAN MAGISTRATE] Mahila Court
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row hidden" id="divJudge_model">
+                    <label class="col-form-label col-lg-3 font-weight-semibold"
+                      >Select Judge</label
+                    >
+                    <div class="col-lg-9">
+                      <select
+                        class="form-control select"
+                        data-fouc=""
+                        name="dpJudge"
+                        id="dpJudges_model"
+                        data-placeholder="Select a Judge..."
+                        data-select2-id="dpJudges_model"
+                        tabindex="-1"
+                      >
+                        <option value="" data-select2-id="455">
+                          Select Judge
+                        </option>
+                        <option value="All">All</option>
+                        <option value="DL00366">
+                          Sh. Deepak Sherawat (DL00366)
+                        </option>
+                        <option value="DL00871">
+                          Ms. Shruti Chaudhary (DL00871)
+                        </option>
+                        <option value="DL00987">
+                          Sh. ANKIT KARAN SINGH (DL00987)
+                        </option>
+                        <option value="DL00072">
+                          Sh. Vikas Dhull (DL00072)
+                        </option>
+                        <option value="DL00956">
+                          Ms. SHIKHA CHAHAL (DL00956)
+                        </option>
+                        <option value="DL00229">
+                          Sh. RAJ KUMAR TRIPATHI (DL00229)
+                        </option>
+                        <option value="DL00219">
+                          Sh. Gorakh Nath Pandey (DL00219)
+                        </option>
+                        <option value="EVNT02">
+                          EV. Evening Court 2 (EVNT02)
+                        </option>
+                        <option value="EVWT05">
+                          Ev. EVENING COURT 5 (EVWT05)
+                        </option>
+                        <option value="DL00988">
+                          Sh. HARSHAL NEGI (DL00988)
+                        </option>
+                        <option value="DL00228">
+                          Ms. Geetanjli Goel (DL00228)
+                        </option>
+                        <option value="DL00228">
+                          Ms. Geetanjli Goel (DL00228)
+                        </option>
+                        <option value="DL00342">
+                          Sh. Prem Kr Barthwal (DL00342)
+                        </option>
+                        <option value="DL00041">
+                          Sh. Manoj Kr. Nagpal (DL00041)
+                        </option>
+                        <option value="DL00265">
+                          Sh. Sanjay Jindal (DL00265)
+                        </option>
+                        <option value="DL00374">
+                          Sh. Dinesh Bhatt (DL00374)
+                        </option>
+                        <option value="EVNT03">
+                          Ev. Evening Court 3 (EVNT03)
+                        </option>
+                        <option value="DL00894">
+                          Ms. Apoorva Rana (DL00894)
+                        </option>
+                        <option value="DL00958">
+                          Ms. AAYUSHI SAXENA (DL00958)
+                        </option>
+                        <option value="DL00247">
+                          Sh. Ajay Pandey (DL00247)
+                        </option>
+                        <option value="DL00898">
+                          Sh. Akash Sharma (DL00898)
+                        </option>
+                        <option value="DL00991">
+                          Sh. RAHUL JAIN (DL00991)
+                        </option>
+                        <option value="DL00403">
+                          Ms. Ekta Gauba (DL00403)
+                        </option>
+                        <option value="DL00427">
+                          Ms. Gurmohina Kaur (DL00427)
+                        </option>
+                        <option value="DL00402">
+                          Ms. Jasjeet Kaur (DL00402)
+                        </option>
+                        <option value="DL00022">
+                          Ms. Madhu Jain (DL00022)
+                        </option>
+                        <option value="DL00260">
+                          Sh. RAKESH PANDIT (DL00260)
+                        </option>
+                        <option value="DL00245">
+                          Ms. Navita Kumari Bagha (DL00245)
+                        </option>
+                        <option value="DL00334">
+                          Sh. Neeraj Gaur (DL00334)
+                        </option>
+                        <option value="DL00263">
+                          Sh. Joginder Prakash Nahar (DL00263)
+                        </option>
+                        <option value="DL00421">
+                          Ms. Colette Rashmi Kujur (DL00421)
+                        </option>
+                        <option value="DL00423">
+                          Sh. Pawan Singh Rajawat (DL00423)
+                        </option>
+                        <option value="DL01005">
+                          Sh. SAHIL GUPTA (DL01005)
+                        </option>
+                        <option value="DL00225">
+                          Sh. Vipin Kumar Rai (DL00225)
+                        </option>
+                        <option value="DL00960">
+                          Ms. ABHILASHA SINGH (DL00960)
+                        </option>
+                        <option value="DL00992">Ms. ADITI RAO (DL00992)</option>
+                        <option value="DL00333">
+                          Sh. Tarun Yogesh (DL00333)
+                        </option>
+                        <option value="DL00267">
+                          Sh. Vinod Kumar Gautam (DL00267)
+                        </option>
+                        <option value="DL00375">
+                          Sh. Arun Bhardwaj (DL00375)
+                        </option>
+                        <option value="DL00224">
+                          Sh. Naresh Kumar Malhotra (DL00224)
+                        </option>
+                        <option value="DL00271">
+                          Ms. Veena Rani (DL00271)
+                        </option>
+                        <option value="DL01049">
+                          Sh. ALOK SHUKLA (DL01049)
+                        </option>
+                        <option value="DL00504">
+                          Sh. Sujit Saurabh (DL00504)
+                        </option>
+                        <option value="DL00993">
+                          Ms. DEEKSHA RAO (DL00993)
+                        </option>
+                        <option value="DL00397">
+                          Sh. Rajinder Kumar (DL00397)
+                        </option>
+                        <option value="DL00214">
+                          Sh. Sanjay Bansal (DL00214)
+                        </option>
+                        <option value="DL01006">
+                          Ms. SHIVANGI VYAS (DL01006)
+                        </option>
+                        <option value="DL01010">
+                          Sh. SAURABH GOYAL (DL01010)
+                        </option>
+                        <option value="DL00936">
+                          Ms. AKANKSHA GARG (DL00936)
+                        </option>
+                        <option value="DL00303">
+                          Sh. Munish Markan (DL00303)
+                        </option>
+                        <option value="DL01003">
+                          Sh. ANAM RAIS KHAN (DL01003)
+                        </option>
+                        <option value="DL00884">
+                          Sh. Bharat Aggarwal (DL00884)
+                        </option>
+                        <option value="DL00962">Ms. BHUJALI (DL00962)</option>
+                        <option value="DL00238">
+                          Ms. Vrinda Kumari (DL00238)
+                        </option>
+                        <option value="DL01051">
+                          Sh. VIRENDER KUMAR KARTA (DL01051)
+                        </option>
+                        <option value="DL01054">
+                          Sh. SURENDER MOHIT SINGH (DL01054)
+                        </option>
+                        <option value="DL01007">
+                          Sh. APOORV BHARDWAJ (DL01007)
+                        </option>
+                        <option value="DL00842">
+                          Ms. Neha Pandey (DL00842)
+                        </option>
+                        <option value="EVWT06">
+                          Ev. EVENING COURT 6 (EVWT06)
+                        </option>
+                        <option value="DL00856">
+                          Sh. Ajeet Narayan (DL00856)
+                        </option>
+                        <option value="DL00256">
+                          Sh. Mukesh Kumar (DL00256)
+                        </option>
+                        <option value="DL00828">
+                          Sh. Arun Sukhija (DL00828)
+                        </option>
+                        <option value="DL01052">
+                          Sh. KUMAR RAJAT (DL01052)
+                        </option>
+                        <option value="DL00996">
+                          Sh. ANURAG CHHABRA (DL00996)
+                        </option>
+                        <option value="DL00829">
+                          Sh. Hasan Anzar (DL00829)
+                        </option>
+                        <option value="DL01053">
+                          Sh. SACHIN JAIN (DL01053)
+                        </option>
+                        <option value="DL01055">
+                          Sh. RAJESH KUMAR (DL01055)
+                        </option>
+                        <option value="DL00392">
+                          Sh. Prashant Sharma (DL00392)
+                        </option>
+                        <option value="DL00922">
+                          Ms. SAKSHI JAISWAL (DL00922)
+                        </option>
+                        <option value="DL00885">
+                          Sh. Rupinder Singh Dhiman (DL00885)
+                        </option>
+                        <option value="DL00967">Ms. NEHA GARG (DL00967)</option>
+                        <option value="DL00643">
+                          Ms. Deepali Sharma (DL00643)
+                        </option>
+                        <option value="DL00851">
+                          Sh. Sukhman Sandhu (DL00851)
+                        </option>
+                        <option value="DL00847">
+                          Sh. Nitish Kumar Sharma (DL00847)
+                        </option>
+                        <option value="EVET03">
+                          Ev. Evening Court 3 (EVET03)
+                        </option>
+                        <option value="DL00954">
+                          Sh. ANKIT MITTAL (DL00954)
+                        </option>
+                        <option value="DL00953">
+                          Sh. VIKAS MADAAN (DL00953)
+                        </option>
+                        <option value="DL00861">
+                          Sh. Rahul Verma (DL00861)
+                        </option>
+                        <option value="DL00976">
+                          Ms. KIRANDEEP KAUR (DL00976)
+                        </option>
+                        <option value="DL00978">
+                          Sh. SAHIL KHURMI (DL00978)
+                        </option>
+                        <option value="DL00862">
+                          Sh. Vaibhav Chaurasia (DL00862)
+                        </option>
+                        <option value="DL00979">
+                          Sh. ANSHUL SINGHAL (DL00979)
+                        </option>
+                        <option value="DL00980">
+                          Sh. PANKAJ RAI (DL00980)
+                        </option>
+                        <option value="DL00981">
+                          Sh. OMPAL SHOKEEN (DL00981)
+                        </option>
+                        <option value="DL00982">
+                          Sh. AKHIL MALIK (DL00982)
+                        </option>
+                        <option value="EVSE01">
+                          Ev. Evening Court 1 (EVSE01)
+                        </option>
+                        <option value="EVSE02">
+                          Ev. Evening Court 2 (EVSE02)
+                        </option>
+                        <option value="EVCT04">
+                          EV. Evening Court4 (EVCT04)
+                        </option>
+                        <option value="EVCT02">
+                          EV. Evening Court2 (EVCT02)
+                        </option>
+                        <option value="EVSW04">
+                          Ev. Evening Court 4 (EVSW04)
+                        </option>
+                        <option value="EVCT03">
+                          EV. Evening Court3 (EVCT03)
+                        </option>
+                        <option value="EVSW03">
+                          Ev. Evening Court 3 (EVSW03)
+                        </option>
+                        <option value="EVSW01">
+                          Ev. Evening Court 1 (EVSW01)
+                        </option>
+                        <option value="DL00249">
+                          Sh. Manoj Kumar (DL00249)
+                        </option>
+                        <option value="EVSW07">
+                          Ev. Evening Court 7 (EVSW07)
+                        </option>
+                        <option value="EVSW02">
+                          Ev. Evening Court 2 (EVSW02)
+                        </option>
+                        <option value="EVCT01">
+                          EV. Evening Court1 (EVCT01)
+                        </option>
+                        <option value="DL00513">
+                          Sh. Achal Tyagi (DL00513)
+                        </option>
+                        <option value="EVET02">Evening Court 2 (EVET02)</option>
+                        <option value="EVET05">Evening Court 5 (EVET05)</option>
+                        <option value="DL00416">
+                          Ms. BHAWANI SHARMA (DL00416)
+                        </option>
+                        <option value="DL00276">
+                          Sh. Sanjay Sharma-I (DL00276)
+                        </option>
+                        <option value="EVND01">
+                          EV. Evening Court 1 (EVND01)
+                        </option>
+                        <option value="EVND02">
+                          EV. Evening Court 2 (EVND02)
+                        </option>
+                        <option value="EVND03">
+                          EV. Evening Court 3 (EVND03)
+                        </option>
+                        <option value="EVNE01">
+                          Ev. Evening Court 1 (EVNE01)
+                        </option>
+                        <option value="EVNW01">
+                          Sh. Evening Court 1 (EVNW01)
+                        </option>
+                        <option value="EVNW03">
+                          Ev. Evening Court 3 (EVNW03)
+                        </option>
+                        <option value="EVNW02">
+                          Ev. Evening Court 2 (EVNW02)
+                        </option>
+                        <option value="EVET04">
+                          Ev. Evening Court 4 (EVET04)
+                        </option>
+                        <option value="EVST01">
+                          Ev. Evening Court 1 (EVST01)
+                        </option>
+                        <option value="EVSW08">
+                          Ev. Evening Court 8 (EVSW08)
+                        </option>
+                        <option value="EVSW06">
+                          Ev. Evening Court 6 (EVSW06)
+                        </option>
+                        <option value="EVSW05">
+                          Ev. Evening Court 5 (EVSW05)
+                        </option>
+                        <option value="DL00055">
+                          Ms. Sukhvinder Kaur (DL00055)
+                        </option>
+                        <option value="DL00213">
+                          Sh. Sanjay Sharma-II (DL00213)
+                        </option>
+                        <option value="DL00915">Sh. Visvesh (DL00915)</option>
+                        <option value="DL00923">
+                          Sh. NIDHISH KUMAR MEENA (DL00923)
+                        </option>
+                        <option value="EVNT01">
+                          EV. Evening Court 1 (EVNT01)
+                        </option>
+                        <option value="DL00237">
+                          Sh. Sameer Bajpai (DL00237)
+                        </option>
+                        <option value="DL00931">
+                          Sh. UMANG JOSHI (DL00931)
+                        </option>
+                        <option value="DL00149">
+                          Sh. Mahavir Singhal (DL00149)
+                        </option>
+                        <option value="DL00940">
+                          Ms. PADMA LANDOL (DL00940)
+                        </option>
+                        <option value="DL00920">
+                          Sh. MANUJ KAUSHAL (DL00920)
+                        </option>
+                        <option value="DL00242">
+                          Sh. Balwant Rai Bansal (DL00242)
+                        </option>
+                        <option value="DL00918">
+                          Ms. NEHA SAINI (DL00918)
+                        </option>
+                        <option value="DL00410">
+                          Sh. AMITABH RAWAT (DL00410)
+                        </option>
+                        <option value="DL00930">
+                          Sh. RAGHAV SHARMA (DL00930)
+                        </option>
+                        <option value="DL00932">
+                          Sh. GAURAV GOYAL (DL00932)
+                        </option>
+                        <option value="DL00934">
+                          Ms. EBBANI AGGARWAL (DL00934)
+                        </option>
+                        <option value="DL00938">
+                          Ms. CHHAVI BANSAL (DL00938)
+                        </option>
+                        <option value="DL00169">
+                          Sh. Ram Prakash Pandey (DL00169)
+                        </option>
+                        <option value="DL00169">
+                          Sh. R. P. Pandey (DL00169)
+                        </option>
+                        <option value="DL00058">
+                          Sh. Anand Swaroop Aggarwal (DL00058)
+                        </option>
+                        <option value="DL00230">
+                          Sh. Jitender Mishra (DL00230)
+                        </option>
+                        <option value="DL00376">
+                          Sh. Arvind Kumar (DL00376)
+                        </option>
+                        <option value="DL00986">
+                          Ms. DIVYA ARORA (DL00986)
+                        </option>
+                        <option value="DL00244">
+                          Sh. Devender Kumar Jangala (DL00244)
+                        </option>
+                        <option value="DL00369">
+                          Sh. Rajinder Singh (DL00369)
+                        </option>
+                        <option value="DL00127">
+                          Sh. Dharmesh Sharma (DL00127)
+                        </option>
+                        <option value="DL00056">
+                          Ms. Sarita Birbal (DL00056)
+                        </option>
+                        <option value="DL00171">
+                          Sh. VINAY KUMAR GUPTA (DL00171)
+                        </option>
+                        <option value="DL00034">
+                          Sh. Gurdeep Singh Saini (DL00034)
+                        </option>
+                        <option value="DL00387">
+                          Sh. Pawan Kumar Matto (DL00387)
+                        </option>
+                        <option value="DL00426">
+                          Sh. Ramesh Kumar-II (DL00426)
+                        </option>
+                        <option value="DL00253">
+                          Sh. Ravinder Bedi (DL00253)
+                        </option>
+                        <option value="DL00221">
+                          Sh. Sunil Chaudhary (DL00221)
+                        </option>
+                        <option value="DL00222">
+                          Ms. Sunena Sharma (DL00222)
+                        </option>
+                        <option value="DL00234">
+                          Sh. Gautam Manan (DL00234)
+                        </option>
+                        <option value="DL00240">
+                          Sh. Prashant Kumar (DL00240)
+                        </option>
+                        <option value="DL00264">
+                          Sh. Ram Lal Meena (DL00264)
+                        </option>
+                        <option value="DL00644">
+                          Ms. Hardeep Kaur (DL00644)
+                        </option>
+                        <option value="DL00635">
+                          Ms. Neelofer Abida Perveen (DL00635)
+                        </option>
+                        <option value="DL00637">
+                          Sh. Anil Antil (DL00637)
+                        </option>
+                        <option value="DL00616">
+                          Sh. Sanjeev Kumar (DL00616)
+                        </option>
+                        <option value="DL00298">Ms. Rekha (DL00298)</option>
+                        <option value="DL00310">
+                          Sh. Satish Kumar Arora (DL00310)
+                        </option>
+                        <option value="DL00311">
+                          Sh. Sumit Dass (DL00311)
+                        </option>
+                        <option value="DL00312">
+                          Sh. NARESH KUMAR LAKA (DL00312)
+                        </option>
+                        <option value="DL00339">
+                          Sh. Sudhanshu Kaushik (DL00339)
+                        </option>
+                        <option value="DL00836">
+                          Sh. Vineet Kumar (DL00836)
+                        </option>
+                        <option value="DL00371">
+                          Sh. Naveen Kumar Kashyap (DL00371)
+                        </option>
+                        <option value="DL00428">
+                          Sh. Harjyot Singh Bhalla (DL00428)
+                        </option>
+                        <option value="DL00429">
+                          Sh. Arul Varma (DL00429)
+                        </option>
+                        <option value="DL00422">
+                          Dr. Jagminder Singh (DL00422)
+                        </option>
+                        <option value="DL00432">
+                          Sh. Vipin Kharb (DL00432)
+                        </option>
+                        <option value="DL01059">
+                          Sh. DIVYANG THAKUR (DL01059)
+                        </option>
+                        <option value="DL01056">
+                          Ms. SHIVALI BANSAL (DL01056)
+                        </option>
+                        <option value="DL01057">
+                          Sh. SATYABRATA PANDA (DL01057)
+                        </option>
+                        <option value="DL01058">
+                          Sh. AJAY GULATI - II (DL01058)
+                        </option>
+                        <option value="DL00232">
+                          Sh. Raghubir Singh (DL00232)
+                        </option>
+                        <option value="DL00503">
+                          Sh. AJAY KUMAR MALIK (DL00503)
+                        </option>
+                        <option value="DL00525">
+                          Sh. Kapil Kumar (DL00525)
+                        </option>
+                        <option value="DL00526">
+                          Sh. Siddhartha Malik (DL00526)
+                        </option>
+                        <option value="DL00509">
+                          Sh. Puneet Pahwa (DL00509)
+                        </option>
+                        <option value="DL00527">
+                          Sh. Shirish Aggarwal (DL00527)
+                        </option>
+                        <option value="DL00528">
+                          Ms. Shivani Chauhan (DL00528)
+                        </option>
+                        <option value="DL00529">
+                          Sh. Rohit Gulia (DL00529)
+                        </option>
+                        <option value="DL00530">
+                          Ms. Snigdha Sarvaria (DL00530)
+                        </option>
+                        <option value="DL00543">
+                          Ms. Preeti Parewa (DL00543)
+                        </option>
+                        <option value="DL00541">
+                          Sh. Balwinder Singh (DL00541)
+                        </option>
+                        <option value="DL00514">
+                          Ms. Babita Puniya (DL00514)
+                        </option>
+                        <option value="DL00551">
+                          Ms. Deepti Devesh (DL00551)
+                        </option>
+                        <option value="DL00551">
+                          Ms. Deepti Devesh (DL00551)
+                        </option>
+                        <option value="DL00558">
+                          Ms. SONAM SINGH - I (DL00558)
+                        </option>
+                        <option value="DL00552">
+                          Ms. VIDHI GUPTA ANAND (DL00552)
+                        </option>
+                        <option value="DL00622">
+                          Ms. SALONI SINGH (DL00622)
+                        </option>
+                        <option value="DL00823">
+                          Ms. NEETI SURI MISHRA (DL00823)
+                        </option>
+                        <option value="DL00645">
+                          Sh. Harjeet Singh Jaspal (DL00645)
+                        </option>
+                        <option value="DL01015">
+                          Ms. DEEPIKA GOYAL SHOKEEN (DL01015)
+                        </option>
+                        <option value="DL00634">
+                          Sh. Vaibhav Mehta (DL00634)
+                        </option>
+                        <option value="DL00647">
+                          Ms. Swati Sharma (DL00647)
+                        </option>
+                        <option value="DL00626">
+                          Ms. Ruby Neeraj Kumar (DL00626)
+                        </option>
+                        <option value="DL00548">
+                          Sh. Anurag Thakur (DL00548)
+                        </option>
+                        <option value="DL00561">
+                          Sh. Deepak Kumar-II (DL00561)
+                        </option>
+                        <option value="DL00559">
+                          Ms. Vasundhra Chaunkar (DL00559)
+                        </option>
+                        <option value="DL00802">
+                          Ms. Shriya Agrawal (DL00802)
+                        </option>
+                        <option value="DL01046">
+                          Ms. DIVYA YADAV (DL01046)
+                        </option>
+                        <option value="DL00813">
+                          Ms. Niharika Kumar (DL00813)
+                        </option>
+                        <option value="DL00814">
+                          Ms. Paridhi Gupta (DL00814)
+                        </option>
+                        <option value="DL00817">
+                          Sh. Mayank Mittal (DL00817)
+                        </option>
+                        <option value="DL00818">
+                          Ms. SWATI GUPTA - I (DL00818)
+                        </option>
+                        <option value="DL00821">
+                          Sh. DEEPAK VATS (DL00821)
+                        </option>
+                        <option value="DL00820">
+                          Sh. Fahad Uddin (DL00820)
+                        </option>
+                        <option value="DL00833">Ms. Naina (DL00833)</option>
+                        <option value="DL00852">
+                          Ms. Shilpi Singh (DL00852)
+                        </option>
+                        <option value="DL00866">
+                          Sh. Anshul Mehta (DL00866)
+                        </option>
+                        <option value="DL00943">
+                          Ms. KRATIKA CHATURVEDI (DL00943)
+                        </option>
+                        <option value="DL00968">
+                          Ms. DEEKSHA SETHI (DL00968)
+                        </option>
+                        <option value="DL01012">
+                          Sh. SHUBHAM DEVADIYA (DL01012)
+                        </option>
+                        <option value="DL01013">Ms. KARUNA (DL01013)</option>
+                        <option value="DL01016">
+                          Ms. KANIKA JAIN (DL01016)
+                        </option>
+                        <option value="DL01017">
+                          Sh. NITESH GOEL (DL01017)
+                        </option>
+                        <option value="DL01018">
+                          Sh. AKSHAY SHARMA (DL01018)
+                        </option>
+                        <option value="DL01019">
+                          Sh. AYUSH SHARMA (DL01019)
+                        </option>
+                        <option value="DL01020">
+                          Ms. KOMAL GARG (DL01020)
+                        </option>
+                        <option value="DL01021">
+                          Sh. NAVDEEP GUPTA (DL01021)
+                        </option>
+                        <option value="DL01022">
+                          Ms. KRITIKA JAIN (DL01022)
+                        </option>
+                        <option value="DL01023">
+                          Ms. DIVYASHREE RAINA (DL01023)
+                        </option>
+                        <option value="DL01024">
+                          Ms. REETIKA JAIN (DL01024)
+                        </option>
+                        <option value="DL01025">
+                          Ms. ISRA ZAIDI (DL01025)
+                        </option>
+                        <option value="DL01026">
+                          Sh. SANKALP KAPOOR (DL01026)
+                        </option>
+                        <option value="DL01029">
+                          Sh. MAYANK AGGARWAL (DL01029)
+                        </option>
+                        <option value="DL01031">
+                          Sh. APOORV GUPTA (DL01031)
+                        </option>
+                        <option value="DL01032">
+                          Ms. CHAKITA SRIVASTAVA (DL01032)
+                        </option>
+                        <option value="DL01033">
+                          Ms. SUKRITI SINGH (DL01033)
+                        </option>
+                        <option value="DL01035">
+                          Sh. CHATINDER SINGH (DL01035)
+                        </option>
+                        <option value="DL01036">
+                          Sh. HIMANSHU TANWAR (DL01036)
+                        </option>
+                        <option value="DL01037">
+                          Sh. VINOD KUMAR (DL01037)
+                        </option>
+                        <option value="DL01040">
+                          Ms. SANGHMITRA (DL01040)
+                        </option>
+                        <option value="DL01044">Sh. JITENDER (DL01044)</option>
+                        <option value="DL01045">
+                          Ms. NEHA KHERIA (DL01045)
+                        </option>
+                        <option value="DL01047">
+                          Sh. ARVIND DEV (DL01047)
+                        </option>
+                        <option value="DL01060">
+                          Ms. DEEKSHA MADAAN (DL01060)
+                        </option>
+                        <option value="DL01061">
+                          Ms. ARCHITA GARG (DL01061)
+                        </option>
+                        <option value="DL01062">
+                          Ms. RASHI RAHEJA (DL01062)
+                        </option>
+                        <option value="DL01063">
+                          Ms. NIDHI CHITKARA (DL01063)
+                        </option>
+                        <option value="DL01070">
+                          Sh. SARTHAK PANWAR (DL01070)
+                        </option>
+                        <option value="DL01064">
+                          Ms. HIMANSHI TYAGI (DL01064)
+                        </option>
+                        <option value="DL01065">
+                          Ms. SHAZADI HALIMA SADIYA (DL01065)
+                        </option>
+                        <option value="DL01066">
+                          Sh. RISHABH TANWAR (DL01066)
+                        </option>
+                        <option value="DL01068">Ms. SHAGUN (DL01068)</option>
+                        <option value="DL01069">
+                          Ms. MEENA CHAUHAN (DL01069)
+                        </option>
+                        <option value="DL01071">
+                          Sh. SHASHANK NANDAN BHAT (DL01071)
+                        </option>
+                        <option value="DL00069">
+                          Sh. Sunil Kr. Aggarwal (DL00069)
+                        </option>
+                        <option value="DL01027">Ms. SANA KHAN (DL01027)</option>
+                        <option value="DL00061">
+                          Ms. Barkha Gupta (DL00061)
+                        </option>
+                        <option value="DL00379">
+                          Sh. Pankaj Gupta (DL00379)
+                        </option>
+                        <option value="DL00381">
+                          Sh. SANJEEV KUMAR AGGARWAL (DL00381)
+                        </option>
+                        <option value="DL00384">
+                          Sh. Virender Bhatt (DL00384)
+                        </option>
+                        <option value="DL00389">
+                          Ms. Hemani Malhotra (DL00389)
+                        </option>
+                        <option value="DL00020">
+                          Sh. Sanjeev Kumar Malhotra (DL00020)
+                        </option>
+                        <option value="DL00252">
+                          Ms. Kiran Bansal (DL00252)
+                        </option>
+                        <option value="DL00216">
+                          Sh. Rakesh Kumar-III (DL00216)
+                        </option>
+                        <option value="DL00340">
+                          Sh. Sharad Gupta (DL00340)
+                        </option>
+                        <option value="DL00359">Sh. Ajay Garg (DL00359)</option>
+                        <option value="DL00241">
+                          Sh. Pulastya Pramachala (DL00241)
+                        </option>
+                        <option value="DL00433">
+                          Sh. Sushil Anuj Tyagi (DL00433)
+                        </option>
+                        <option value="DL00435">
+                          Ms. Ruchika Singla (DL00435)
+                        </option>
+                        <option value="DL00411">
+                          Sh. Dheeraj Mor (DL00411)
+                        </option>
+                        <option value="DL00436">
+                          Sh. Nipun Awasthi (DL00436)
+                        </option>
+                        <option value="DL00437">
+                          Sh. Vikrant Vaid (DL00437)
+                        </option>
+                        <option value="DL00438">
+                          Sh. Navjeet Budhiraja (DL00438)
+                        </option>
+                        <option value="DL00439">
+                          Ms. NEHA PALIWAL SHARMA (DL00439)
+                        </option>
+                        <option value="DL00441">
+                          Ms. Shefali Sharma (DL00441)
+                        </option>
+                        <option value="DL00442">Ms. Neha (DL00442)</option>
+                        <option value="DL00443">
+                          Ms. Vijeta Singh Rawat (DL00443)
+                        </option>
+                        <option value="DL00424">
+                          Sh. Sunil Kr. Sharma (DL00424)
+                        </option>
+                        <option value="DL00446">
+                          Sh. Dinesh Kumar (DL00446)
+                        </option>
+                        <option value="DL00415">
+                          Sh. Atul Krishna Aggarwal (DL00415)
+                        </option>
+                        <option value="DL00505">
+                          Ms. Ankita Lal (DL00505)
+                        </option>
+                        <option value="DL00538">
+                          Ms. SHREYA ARORA MEHTA (DL00538)
+                        </option>
+                        <option value="DL00518">
+                          Ms. Richa Gusain Solanki (DL00518)
+                        </option>
+                        <option value="DL00519">Ms. Riya Guha (DL00519)</option>
+                        <option value="DL00534">
+                          Ms. Pooja Aggarwal (DL00534)
+                        </option>
+                        <option value="DL00517">
+                          Ms. Richa Manchanda (DL00517)
+                        </option>
+                        <option value="DL00618">
+                          Ms. Manu Goel Kharb (DL00618)
+                        </option>
+                        <option value="DL00535">
+                          Ms. Ritu Singh (DL00535)
+                        </option>
+                        <option value="DL00447">
+                          Sh. Arun Kumar Garg (DL00447)
+                        </option>
+                        <option value="DL00515">
+                          Ms. Richa Parihar (DL00515)
+                        </option>
+                        <option value="DL00515">
+                          Ms. Richa Parihar (DL00515)
+                        </option>
+                        <option value="DL00066">
+                          Ms. Nivedita Anil Sharma (DL00066)
+                        </option>
+                        <option value="DL00066">
+                          Ms. Nivedita Anil Sharma (DL00066)
+                        </option>
+                        <option value="DL00554">
+                          Sh. Aashish Gupta (DL00554)
+                        </option>
+                        <option value="DL00648">
+                          Ms. Samiksha Gupta (DL00648)
+                        </option>
+                        <option value="DL00827">
+                          Ms. T. PRIYADARSHINI (DL00827)
+                        </option>
+                        <option value="DL00872">
+                          Ms. Amardeep Kaur (DL00872)
+                        </option>
+                        <option value="DL00886">
+                          Ms. Medha Arya (DL00886)
+                        </option>
+                        <option value="DL00870">
+                          Sh. Vipul Sandwar (DL00870)
+                        </option>
+                        <option value="DL00919">
+                          Ms. CHHAYA TYAGI (DL00919)
+                        </option>
+                        <option value="DL00917">
+                          Ms. RITIKA KANSAL (DL00917)
+                        </option>
+                        <option value="DL00942">
+                          Sh. DEVANSHU SAJLAN (DL00942)
+                        </option>
+                        <option value="DL00957">Ms. SURBHI (DL00957)</option>
+                        <option value="DL00971">
+                          Ms. SHRUTI SHARMA - I (DL00971)
+                        </option>
+                        <option value="DL01009">
+                          Sh. GAURAV DAHIYA (DL01009)
+                        </option>
+                        <option value="DL01014">Ms. ANAMIKA (DL01014)</option>
+                        <option value="DL01034">
+                          Ms. SEEMA NIRMAL (DL01034)
+                        </option>
+                        <option value="DL01081">
+                          Sh. ANMOL NOHRIA (DL01081)
+                        </option>
+                        <option value="DL00909">
+                          Sh. DEV CHAUDHARY (DL00909)
+                        </option>
+                        <option value="DL00945">
+                          Ms. ARUSHI PARWAL (DL00945)
+                        </option>
+                        <option value="DL00924">
+                          Sh. VAIBHAV KUMAR (DL00924)
+                        </option>
+                        <option value="DL01073">
+                          Ms. KATYAYINI SHARMA KANDWAL (DL01073)
+                        </option>
+                        <option value="DL01075">
+                          Sh. ANKIT GARG (DL01075)
+                        </option>
+                        <option value="DL01076">
+                          Ms. DISHA SINGH (DL01076)
+                        </option>
+                        <option value="DL01078">
+                          Ms. GARIMA JINDAL (DL01078)
+                        </option>
+                        <option value="DL01079">
+                          Ms. SHIVANGI MANGLA (DL01079)
+                        </option>
+                        <option value="DL01080">
+                          Ms. SWATI MALIK (DL01080)
+                        </option>
+                        <option value="DL01082">
+                          Sh. VAIBHAV PRATAP SINGH (DL01082)
+                        </option>
+                        <option value="DL01083">Ms. NEHA GOEL (DL01083)</option>
+                        <option value="DL01084">
+                          Ms. VINERJEET KAUR (DL01084)
+                        </option>
+                        <option value="DL01085">
+                          Ms. SHUBHI GUPTA (DL01085)
+                        </option>
+                        <option value="DL01086">
+                          Sh. HARJOT SINGH (DL01086)
+                        </option>
+                        <option value="DL01087">
+                          Sh. AAKASH MOHAN SINGH (DL01087)
+                        </option>
+                        <option value="DL01088">
+                          Ms. POOJA YADAV (DL01088)
+                        </option>
+                        <option value="DL01089">
+                          Sh. KARANBIR SINGH (DL01089)
+                        </option>
+                        <option value="DL01090">
+                          Ms. PAYAL SINGAL (DL01090)
+                        </option>
+                        <option value="DL01093">
+                          Sh. AMAN KUMAR SHARMA (DL01093)
+                        </option>
+                        <option value="DL00279">
+                          Sh. Rakesh Kumar Sharma (DL00279)
+                        </option>
+                        <option value="DL00033">
+                          Sh. Brijesh Kumar Garg (DL00033)
+                        </option>
+                        <option value="DL00281">
+                          Sh. Rakesh Syal (DL00281)
+                        </option>
+                        <option value="DL00003">
+                          Sh. Chandra Shekhar (DL00003)
+                        </option>
+                        <option value="DL00026">
+                          Ms. Kaveri Baweja (DL00026)
+                        </option>
+                        <option value="DL00255">
+                          Sh. Jagdish Kumar (DL00255)
+                        </option>
+                        <option value="DL00289">
+                          Sh. Sanatan Prasad (DL00289)
+                        </option>
+                        <option value="DL00288">
+                          Sh. Pooran Chand (DL00288)
+                        </option>
+                        <option value="DL00324">
+                          Ms. Charu Aggarwal (DL00324)
+                        </option>
+                        <option value="DL00327">
+                          Sh. Murari Prasad Singh (DL00327)
+                        </option>
+                        <option value="DL00337">
+                          Sh. Gaurav Rao (DL00337)
+                        </option>
+                        <option value="DL00358">
+                          Sh. Manish Khurana (DL00358)
+                        </option>
+                        <option value="DL00417">
+                          Ms. Namrita Aggarwal (DL00417)
+                        </option>
+                        <option value="DL00419">
+                          Sh. Bhupinder Singh (DL00419)
+                        </option>
+                        <option value="DL00420">
+                          Sh. Vijay Kumar Jha (DL00420)
+                        </option>
+                        <option value="DL00367">
+                          Ms. Niyay Bindu (DL00367)
+                        </option>
+                        <option value="DL00444">
+                          Sh. Sudhir Kumar Sirohi (DL00444)
+                        </option>
+                        <option value="DL00449">
+                          Sh. VINOD KUMAR MEENA (DL00449)
+                        </option>
+                        <option value="DL00450">
+                          Sh. Gajender Singh Nagar (DL00450)
+                        </option>
+                        <option value="DL00451">
+                          Sh. SANDEEP GUPTA (DL00451)
+                        </option>
+                        <option value="DL00453">
+                          Sh. Satvir Singh Lamba (DL00453)
+                        </option>
+                        <option value="DL00454">
+                          Ms. Ambika Singh (DL00454)
+                        </option>
+                        <option value="DL00455">
+                          Ms. Charu Gupta (DL00455)
+                        </option>
+                        <option value="DL00459">
+                          Ms. Bhavna Kalia (DL00459)
+                        </option>
+                        <option value="DL00459">
+                          Ms. Bhavna Kalia (DL00459)
+                        </option>
+                        <option value="DL00460">
+                          Ms. Niti Phutela (DL00460)
+                        </option>
+                        <option value="DL00461">
+                          Ms. Susheel Bala Dagar (DL00461)
+                        </option>
+                        <option value="DL00462">
+                          Ms. Saumya Chauhan (DL00462)
+                        </option>
+                        <option value="DL00462">
+                          Ms. Saumya Chauhan (DL00462)
+                        </option>
+                        <option value="DL00520">
+                          Ms. Prabh Deep Kaur (DL00520)
+                        </option>
+                        <option value="DL00521">
+                          Ms. Shilpi Jain (DL00521)
+                        </option>
+                        <option value="DL00555">
+                          Sh. Himanshu Raman Singh (DL00555)
+                        </option>
+                        <option value="DL00246">
+                          Sh. DR. TARUN SAHRAWAT (DL00246)
+                        </option>
+                        <option value="DL00068">
+                          Ms. Illa Rawat (DL00068)
+                        </option>
+                        <option value="DL00353">
+                          Sh. Ankur Jain (DL00353)
+                        </option>
+                        <option value="DL00456">Ms. Aanchal (DL00456)</option>
+                        <option value="DL01102">
+                          Sh. ROHIT KUMAR (DL01102)
+                        </option>
+                        <option value="DL00533">
+                          Ms. Sheetal Chaudhary (DL00533)
+                        </option>
+                        <option value="DL00511">
+                          Sh. Santosh Kumar Singh (DL00511)
+                        </option>
+                        <option value="DL00875">
+                          Ms. Neha Mittal (DL00875)
+                        </option>
+                        <option value="DL00888">
+                          Sh. Siddhant Sihag (DL00888)
+                        </option>
+                        <option value="DL00916">
+                          Ms. NIDHI SINGH (DL00916)
+                        </option>
+                        <option value="DL00961">
+                          Ms. BHARTI BENIWAL (DL00961)
+                        </option>
+                        <option value="DL00963">
+                          Sh. DIVYAM LILA (DL00963)
+                        </option>
+                        <option value="DL00983">
+                          Sh. KUMAR RAHUL (DL00983)
+                        </option>
+                        <option value="DL01048">
+                          Ms. ANEEZA BISHNOI (DL01048)
+                        </option>
+                        <option value="DL00990">Ms. PREETI (DL00990)</option>
+                        <option value="DL00902">Sh. Pritu Raj (DL00902)</option>
+                        <option value="DL00999">Ms. SONIKA (DL00999)</option>
+                        <option value="DL00896">Ms. Akanksha (DL00896)</option>
+                        <option value="DL01000">
+                          Sh. KAPIL GUPTA (DL01000)
+                        </option>
+                        <option value="DL00859">
+                          Ms. Tarunpreet Kaur (DL00859)
+                        </option>
+                        <option value="DL00904">
+                          Sh. Dev Saroha (DL00904)
+                        </option>
+                        <option value="DL00927">
+                          Ms. AKANSHA GAUTAM (DL00927)
+                        </option>
+                        <option value="DL01096">Sh. RAVI (DL01096)</option>
+                        <option value="DL01097">
+                          Sh. VARUN CHANDRA (DL01097)
+                        </option>
+                        <option value="DL01098">
+                          Sh. KAWAL SINGH (DL01098)
+                        </option>
+                        <option value="DL00815">
+                          Ms. NEHA PRIYA (DL00815)
+                        </option>
+                        <option value="DL00867">
+                          Ms. Renu Chaudhary (DL00867)
+                        </option>
+                        <option value="DL00879">
+                          Sh. Umesh Kumar (DL00879)
+                        </option>
+                        <option value="DL00928">
+                          Ms. PREETI RAJORIA (DL00928)
+                        </option>
+                        <option value="DL00897">
+                          Sh. Ashish Kumar Meena (DL00897)
+                        </option>
+                        <option value="DL00901">
+                          Ms. Sanya Dalal (DL00901)
+                        </option>
+                        <option value="DL00905">
+                          Ms. Deepika Thakran (DL00905)
+                        </option>
+                        <option value="DL00031">
+                          Sh. Rajesh Kumar Singh (DL00031)
+                        </option>
+                        <option value="DL00011">
+                          Sh. SURINDER S. RATHI (DL00011)
+                        </option>
+                        <option value="DL00059">
+                          Ms. Anu Grover Baliga (DL00059)
+                        </option>
+                        <option value="DL00057">
+                          Ms. Nirja Bhatia (DL00057)
+                        </option>
+                        <option value="DL00217">
+                          Sh. Ajay Gupta (DL00217)
+                        </option>
+                        <option value="DL00223">
+                          Sh. Sanjeev Kumar Singh (DL00223)
+                        </option>
+                        <option value="DL00233">
+                          Ms. Smita Garg (DL00233)
+                        </option>
+                        <option value="DL00231">
+                          Sh. Shailender Malik (DL00231)
+                        </option>
+                        <option value="DL00236">
+                          Sh. Parveen Singh (DL00236)
+                        </option>
+                        <option value="DL00268">
+                          Sh. Satish Kumar (DL00268)
+                        </option>
+                        <option value="DL00640">
+                          Sh. Harish Kumar (DL00640)
+                        </option>
+                        <option value="DL00639">Ms. RAJRANI (DL00639)</option>
+                        <option value="DL00636">
+                          Dr. AJAY GULATI - I (DL00636)
+                        </option>
+                        <option value="DL00632">
+                          Sh. Rakesh Kumar-IV (DL00632)
+                        </option>
+                        <option value="DL00308">Ms. Savitri (DL00308)</option>
+                        <option value="DL00329">
+                          Ms. Kiran Gupta (DL00329)
+                        </option>
+                        <option value="DL00346">
+                          Sh. Deepak Dabas (DL00346)
+                        </option>
+                        <option value="DL00287">
+                          Sh. Sanjay Khangwal (DL00287)
+                        </option>
+                        <option value="DL00352">
+                          Ms. Twinkle Wadhwa (DL00352)
+                        </option>
+                        <option value="DL00354">
+                          Ms. Shelly Arora (DL00354)
+                        </option>
+                        <option value="DL00357">
+                          Ms. Shivali Sharma (DL00357)
+                        </option>
+                        <option value="DL00363">
+                          Sh. Rajesh Malik (DL00363)
+                        </option>
+                        <option value="DL00364">
+                          Ms. Pooja Talwar (DL00364)
+                        </option>
+                        <option value="DL00407">
+                          Ms. Harleen Singh (DL00407)
+                        </option>
+                        <option value="DL00418">
+                          Ms. Purva Sareen (DL00418)
+                        </option>
+                        <option value="DL00395">
+                          Sh. Jitendra Singh (DL00395)
+                        </option>
+                        <option value="DL00368">Ms. Vandana (DL00368)</option>
+                        <option value="DL00605">Sh. Hem Raj (DL00605)</option>
+                        <option value="DL00466">
+                          Sh. Harvinder Singh (DL00466)
+                        </option>
+                        <option value="DL00468">
+                          Ms. Aditi Garg (DL00468)
+                        </option>
+                        <option value="DL00469">
+                          Ms. Meenu Kaushik (DL00469)
+                        </option>
+                        <option value="DL00470">
+                          Ms. Manisha Tripathy (DL00470)
+                        </option>
+                        <option value="DL00473">Sh. Vikram (DL00473)</option>
+                        <option value="DL00475">
+                          Sh. Arvind Bansal (DL00475)
+                        </option>
+                        <option value="DL00476">
+                          Sh. Babru Bhan (DL00476)
+                        </option>
+                        <option value="DL00477">
+                          Sh. Pawan Kumar (DL00477)
+                        </option>
+                        <option value="DL00478">
+                          Sh. Aakash Jain (DL00478)
+                        </option>
+                        <option value="DL00479">
+                          Sh. Muneesh Garg (DL00479)
+                        </option>
+                        <option value="DL00835">
+                          Sh. Vivek Kumar Aggarwal (DL00835)
+                        </option>
+                        <option value="DL00873">
+                          Ms. Charu Asiwal (DL00873)
+                        </option>
+                        <option value="DL00952">
+                          Ms. NEHA BARUPAL (DL00952)
+                        </option>
+                        <option value="DL01001">
+                          Sh. AVIRAL SHUKLA (DL01001)
+                        </option>
+                        <option value="DL00908">
+                          Sh. Vijayshree Rathore (DL00908)
+                        </option>
+                        <option value="DL01099">
+                          Sh. SIDDHANT KUMAR (DL01099)
+                        </option>
+                        <option value="DL01100">
+                          Ms. MARILYN JOANNA KHAKHA (DL01100)
+                        </option>
+                        <option value="DL01101">Sh. KOMAL (DL01101)</option>
+                        <option value="DL01103">
+                          Ms. MOKSHA BAINS (DL01103)
+                        </option>
+                        <option value="DL00412">
+                          Sh. Ajay Kumar Jain (DL00412)
+                        </option>
+                        <option value="DL00251">Sh. Raj Kumar (DL00251)</option>
+                        <option value="DL00328">
+                          Ms. Surya Malik Grover (DL00328)
+                        </option>
+                        <option value="DL00463">
+                          Sh. Vishal Pahuja (DL00463)
+                        </option>
+                        <option value="DL00464">
+                          Ms. Manisha Khurana Kakkar (DL00464)
+                        </option>
+                        <option value="DL00465">
+                          Sh. Sachin Sangwan (DL00465)
+                        </option>
+                        <option value="DL00471">
+                          Sh. Dheeraj Mittal (DL00471)
+                        </option>
+                        <option value="DL00261">
+                          Sh. Rakesh Kumar-II (DL00261)
+                        </option>
+                        <option value="DL00457">
+                          Ms. Chhavi Kapoor (DL00457)
+                        </option>
+                        <option value="DL00040">
+                          Sh. ASHWANI KUMAR SARPAL (DL00040)
+                        </option>
+                        <option value="DL00383">
+                          Sh. Umed Singh (DL00383)
+                        </option>
+                        <option value="DL00383">
+                          Sh. Umed Singh Grewal (DL00383)
+                        </option>
+                        <option value="DL00609">
+                          Sh. Anurag Sain (DL00609)
+                        </option>
+                        <option value="DL00638">
+                          Sh. Mohd. Farrukh (DL00638)
+                        </option>
+                        <option value="DL00326">
+                          Sh. Vishal Gogne (DL00326)
+                        </option>
+                        <option value="DL00482">
+                          Ms. Shefali Barnala Tandon (DL00482)
+                        </option>
+                        <option value="DL00486">
+                          Sh. Jagmohan Singh (DL00486)
+                        </option>
+                        <option value="DL00540">
+                          Ms. Deepika Singh (DL00540)
+                        </option>
+                        <option value="DL01115">
+                          Sh. YASHDEEP CHAHAL (DL01115)
+                        </option>
+                        <option value="DL00492">
+                          Sh. Sachin Gupta (DL00492)
+                        </option>
+                        <option value="DL00633">
+                          Ms. Ruchi Aggarwal Asrani (DL00633)
+                        </option>
+                        <option value="DL01039">
+                          Sh. AJAY NARWAL (DL01039)
+                        </option>
+                        <option value="DL00481">Sh. Arun Goel (DL00481)</option>
+                        <option value="DL00481">Sh. Arun Goel (DL00481)</option>
+                        <option value="DL00484">
+                          Sh. Rakesh Kumar Singh (DL00484)
+                        </option>
+                        <option value="DL00413">
+                          Sh. CHANDER JIT SINGH (DL00413)
+                        </option>
+                        <option value="DL00491">
+                          Sh. Ravindra Kumar Pandey (DL00491)
+                        </option>
+                        <option value="DL00497">
+                          Sh. Kishor Kumar (DL00497)
+                        </option>
+                        <option value="DL00490">
+                          Sh. Pankaj Arora (DL00490)
+                        </option>
+                        <option value="DL00489">
+                          Ms. Manu Vedwan (DL00489)
+                        </option>
+                        <option value="DL00488">
+                          Sh. Subhash Kumar Mishra (DL00488)
+                        </option>
+                        <option value="DL01116">
+                          Dr. RAKESH KUMAR - II (DL01116)
+                        </option>
+                        <option value="DL00790">
+                          Ms. Divya Malhotra (DL00790)
+                        </option>
+                        <option value="DL00816">Ms. Pragati (DL00816)</option>
+                        <option value="DL00929">
+                          Ms. SHIPRA DHANKAR (DL00929)
+                        </option>
+                        <option value="DL01117">
+                          Ms. SEEMA MEENA (DL01117)
+                        </option>
+                        <option value="DL00001">
+                          Sh. Vinod Kumar (DL00001)
+                        </option>
+                        <option value="DL00007">
+                          Ms. Anju Bajaj Chandna (DL00007)
+                        </option>
+                        <option value="DL00220">
+                          Sh. RAJESH KUMAR GOEL (DL00220)
+                        </option>
+                        <option value="DL00487">
+                          Sh. Sunil Gupta (DL00487)
+                        </option>
+                        <option value="DL01107">
+                          Ms. SHEETAL RANI (DL01107)
+                        </option>
+                        <option value="DL00129">
+                          Sh. SANJAY GARG I (DL00129)
+                        </option>
+                        <option value="DL00174">
+                          Ms. Shail Jain (DL00174)
+                        </option>
+                        <option value="DL00390">
+                          Ms. Vineeta Goyal (DL00390)
+                        </option>
+                        <option value="DL00612">
+                          Ms. Neelam Singh (DL00612)
+                        </option>
+                        <option value="DL00404">
+                          Ms. APARNA SWAMI (DL00404)
+                        </option>
+                        <option value="DL00430">
+                          Ms. Anu Aggarwal (DL00430)
+                        </option>
+                        <option value="DL00625">
+                          Sh. Anubhav Jain (DL00625)
+                        </option>
+                        <option value="DL00807">
+                          Ms. PRIGYA GUPTA (DL00807)
+                        </option>
+                        <option value="DL00966">
+                          Sh. ABHINAV SINGH (DL00966)
+                        </option>
+                        <option value="DL00984">
+                          Sh. UDBHAV KUMAR JAIN (DL00984)
+                        </option>
+                        <option value="DL01074">
+                          Ms. SHAINA GOYAL (DL01074)
+                        </option>
+                        <option value="DL01105">
+                          Sh. ARJUN KIRAR (DL01105)
+                        </option>
+                        <option value="DL00445">
+                          Sh. Ashok Kumar (DL00445)
+                        </option>
+                        <option value="DL00610">
+                          Sh. Rajeev Bansal (DL00610)
+                        </option>
+                        <option value="DL00282">
+                          Dr. Kamini Lau (DL00282)
+                        </option>
+                        <option value="DL00079">Sh. Lal Singh (DL00079)</option>
+                        <option value="DL00044">Sh. Ajay Goel (DL00044)</option>
+                        <option value="DL00063">
+                          Sh. Ashutosh Kumar (DL00063)
+                        </option>
+                        <option value="DL00262">
+                          Sh. SUDESH KUMAR - II (DL00262)
+                        </option>
+                        <option value="DL00391">
+                          Ms. Monika Saroha (DL00391)
+                        </option>
+                        <option value="DL00493">
+                          Sh. Dharmender Singh (DL00493)
+                        </option>
+                        <option value="DL00495">
+                          Sh. Gaurav Gupta (DL00495)
+                        </option>
+                        <option value="DL00496">
+                          Sh. Chander Mohan (DL00496)
+                        </option>
+                        <option value="DL00483">
+                          Ms. Swati Katiyar (DL00483)
+                        </option>
+                        <option value="DL00994">
+                          Ms. TWINKLE CHAWLA (DL00994)
+                        </option>
+                        <option value="DL01106">
+                          Sh. NISHAT BANGARH (DL01106)
+                        </option>
+                        <option value="DL00170">
+                          Sh. VIMAL KUMAR YADAV (DL00170)
+                        </option>
+                        <option value="DL00206">
+                          Ms. MADHU JAIN (DL00206)
+                        </option>
+                        <option value="DL00045">
+                          Sh. Paramjit Singh (DL00045)
+                        </option>
+                        <option value="DL01094">
+                          Ms. POONAM SINGH (DL01094)
+                        </option>
+                        <option value="DL01109">Sh. SACHIN (DL01109)</option>
+                        <option value="DL00172">
+                          Ms. Shalinder Kaur (DL00172)
+                        </option>
+                        <option value="DL00173">
+                          Sh. Praveen Kumar (DL00173)
+                        </option>
+                        <option value="DL00097">
+                          Ms. Renu Bhatnagar (DL00097)
+                        </option>
+                        <option value="DL00210">
+                          Sh. VIRENDER KUMAR BANSAL (DL00210)
+                        </option>
+                        <option value="DL00211">
+                          Ms. Seema Maini (DL00211)
+                        </option>
+                        <option value="DL00067">
+                          Sh. VINAY KUMAR KHANNA (DL00067)
+                        </option>
+                        <option value="DL00009">
+                          Sh. Gurvinder Pal Singh (DL00009)
+                        </option>
+                        <option value="DL00046">
+                          Sh. SANJAY KUMAR AGGARWAL (DL00046)
+                        </option>
+                        <option value="DL00280">
+                          Sh. Sanjeev Aggarwal (DL00280)
+                        </option>
+                        <option value="DL00052">
+                          Sh. Bhupesh Kumar (DL00052)
+                        </option>
+                        <option value="DL00054">
+                          Ms. Savita Rao (DL00054)
+                        </option>
+                        <option value="DL00607">
+                          Sh. REETESH SINGH (DL00607)
+                        </option>
+                        <option value="DL00028">
+                          Ms. Preeti Aggarwal Gupta (DL00028)
+                        </option>
+                        <option value="DL00024">
+                          Sh. Sandeep Yadav (DL00024)
+                        </option>
+                        <option value="DL00042">
+                          Sh. Anil Kumar Sisodia (DL00042)
+                        </option>
+                        <option value="DL00019">
+                          Ms. Ruby Alka Gupta (DL00019)
+                        </option>
+                        <option value="DL00239">
+                          Sh. Devendra Kumar Sharma (DL00239)
+                        </option>
+                        <option value="DL00806">
+                          Ms. Vasundhara Azad (DL00806)
+                        </option>
+                        <option value="DL00306">
+                          Sh. Vivek Kumar Gulia (DL00306)
+                        </option>
+                        <option value="DL00307">
+                          Sh. Sonu Agnihotri (DL00307)
+                        </option>
+                        <option value="DL00331">
+                          Sh. Vishal Singh (DL00331)
+                        </option>
+                        <option value="DL00347">
+                          Sh. Deepak Wason (DL00347)
+                        </option>
+                        <option value="DL00838">
+                          Sh. Shivaji Anand (DL00838)
+                        </option>
+                        <option value="DL00362">
+                          Sh. Gagandeep Singh (DL00362)
+                        </option>
+                        <option value="DL00373">
+                          Ms. Geetanjali (DL00373)
+                        </option>
+                        <option value="DL00394">
+                          Ms. Chetna Singh (DL00394)
+                        </option>
+                        <option value="DL00396">
+                          Sh. Samar Vishal (DL00396)
+                        </option>
+                        <option value="DL00398">Sh. Lovleen (DL00398)</option>
+                        <option value="DL00409">
+                          Ms. Mona Tardi Kerketta (DL00409)
+                        </option>
+                        <option value="DL00989">
+                          Ms. NEHA SHARMA (DL00989)
+                        </option>
+                        <option value="DL00073">
+                          Ms. Anuradha Shukla Bhardwaj (DL00073)
+                        </option>
+                        <option value="DL00218">
+                          Sh. Lokesh Kumar Sharma (DL00218)
+                        </option>
+                        <option value="DL00399">
+                          Ms. Gomati Manocha (DL00399)
+                        </option>
+                        <option value="DL00507">
+                          Sh. Anuj Aggrawal (DL00507)
+                        </option>
+                        <option value="DL00431">
+                          Sh. Jay Thareja (DL00431)
+                        </option>
+                        <option value="DL00408">
+                          Sh. Sunil Kumar (DL00408)
+                        </option>
+                        <option value="DL00452">
+                          Sh. Viplav Dabas (DL00452)
+                        </option>
+                        <option value="DL00458">
+                          Sh. Pankaj Sharma (DL00458)
+                        </option>
+                        <option value="DL00467">
+                          Sh. Dhirendra Rana (DL00467)
+                        </option>
+                        <option value="DL00472">
+                          Ms. Mayuri Singh (DL00472)
+                        </option>
+                        <option value="DL00474">Ms. Manika (DL00474)</option>
+                        <option value="DL00646">
+                          Sh. GOPAL SINGH CHAUHAN (DL00646)
+                        </option>
+                        <option value="DL00499">
+                          Sh. Gagandeep Jindal (DL00499)
+                        </option>
+                        <option value="DL00500">
+                          Sh. Sushil Kumar (DL00500)
+                        </option>
+                        <option value="DL00502">
+                          Sh. Rakesh Kumar Rampuri (DL00502)
+                        </option>
+                        <option value="DL00536">
+                          Ms. Archana Beniwal (DL00536)
+                        </option>
+                        <option value="DL00536">
+                          Ms. Archana Beniwal (DL00536)
+                        </option>
+                        <option value="DL00522">
+                          Sh. Jitendra Pratap Singh (DL00522)
+                        </option>
+                        <option value="DL00523">
+                          Ms. Shama Gupta (DL00523)
+                        </option>
+                        <option value="DL00524">
+                          Ms. Anjani Mahajan (DL00524)
+                        </option>
+                        <option value="DL00043">
+                          Sh. Deepak Garg (DL00043)
+                        </option>
+                        <option value="DL00029">
+                          Sh. Vinod Yadav (DL00029)
+                        </option>
+                        <option value="DL00015">
+                          Sh. Dig Vinay Singh (DL00015)
+                        </option>
+                        <option value="DL00250">
+                          Sh. Amit Bansal (DL00250)
+                        </option>
+                        <option value="DL00227">
+                          Sh. Manish Yaduvanshi (DL00227)
+                        </option>
+                        <option value="DL00624">
+                          Sh. Manoj Kumar-II (DL00624)
+                        </option>
+                        <option value="DL00510">
+                          Ms. Kadambari Awasthi (DL00510)
+                        </option>
+                        <option value="DL00542">
+                          Sh. Virender Singh (DL00542)
+                        </option>
+                        <option value="DL00545">
+                          Sh. Ajay Nagar (DL00545)
+                        </option>
+                        <option value="DL00544">
+                          Ms. Rajani Ranga (DL00544)
+                        </option>
+                        <option value="DL00532">
+                          Sh. Anurag Dass (DL00532)
+                        </option>
+                        <option value="DL00621">
+                          Ms. Rajat Goyal (DL00621)
+                        </option>
+                        <option value="DL00623">
+                          Ms. Rashmi Gupta (DL00623)
+                        </option>
+                        <option value="DL00547">
+                          Sh. Deepak Kumar-I (DL00547)
+                        </option>
+                        <option value="DL00826">
+                          Sh. Anuj Kumar Singh (DL00826)
+                        </option>
+                        <option value="DL00811">
+                          Ms. Upasana Satija (DL00811)
+                        </option>
+                        <option value="DL00775">
+                          Ms. Priyanka Rajpoot (DL00775)
+                        </option>
+                        <option value="DL00809">
+                          Ms. Tanya BAMNIYAL (DL00809)
+                        </option>
+                        <option value="DL00881">
+                          Sh. Vivek Beniwal (DL00881)
+                        </option>
+                        <option value="DL00853">
+                          Ms. Tania Singh (DL00853)
+                        </option>
+                        <option value="DL00864">
+                          Ms. Akriti Mahendru (DL00864)
+                        </option>
+                        <option value="DL00863">
+                          Sh. Mayank Goel (DL00863)
+                        </option>
+                        <option value="DL00865">
+                          Sh. Pranav Joshi (DL00865)
+                        </option>
+                        <option value="DL00831">
+                          Ms. Neetu Nagar (DL00831)
+                        </option>
+                        <option value="DL00845">
+                          Sh. Paras Dalal (DL00845)
+                        </option>
+                        <option value="DL00869">
+                          Sh. Tushar Gupta (DL00869)
+                        </option>
+                        <option value="DL00832">
+                          Ms. Udita Jain (DL00832)
+                        </option>
+                        <option value="DL00891">
+                          Ms. Deepali Srivastava (DL00891)
+                        </option>
+                        <option value="DL00850">
+                          Ms. Arjinder Kaur (DL00850)
+                        </option>
+                        <option value="DL00549">
+                          Sh. Abhishek Kumar (DL00549)
+                        </option>
+                        <option value="DL00857">
+                          Sh. Vinod Joshi (DL00857)
+                        </option>
+                        <option value="DL00890">
+                          Ms. Manu Shree (DL00890)
+                        </option>
+                        <option value="DL00846">
+                          Sh. Ashwani Panwar (DL00846)
+                        </option>
+                        <option value="DL00876">
+                          Ms. Mansi Malik (DL00876)
+                        </option>
+                        <option value="DL00860">
+                          Sh. Animesh Bhaskar Mani Tripathi (DL00860)
+                        </option>
+                        <option value="DL00878">
+                          Sh. Swayam Siddha Tripathi (DL00878)
+                        </option>
+                        <option value="DL00893">
+                          Ms. Bharti Garg (DL00893)
+                        </option>
+                        <option value="DL00944">
+                          Ms. AISHWARYA SINGH KASHYAP (DL00944)
+                        </option>
+                        <option value="DL00947">
+                          Ms. ISHA SINGH (DL00947)
+                        </option>
+                        <option value="DL00951">
+                          Sh. HIMANSHU SEHLOTH (DL00951)
+                        </option>
+                        <option value="DL00933">
+                          Ms. NIDHI BALA (DL00933)
+                        </option>
+                        <option value="DL00948">
+                          Sh. P. BHARGAV RAO (DL00948)
+                        </option>
+                        <option value="DL00939">
+                          Sh. ABHITESH KUMAR (DL00939)
+                        </option>
+                        <option value="DL00935">
+                          Ms. KANIKA AGARWAL (DL00935)
+                        </option>
+                        <option value="DL00925">
+                          Sh. ARIDAMAN SINGH CHEEMA (DL00925)
+                        </option>
+                        <option value="DL00955">
+                          Ms. CHITRANSHI ARORA (DL00955)
+                        </option>
+                        <option value="DL00911">
+                          Ms. NEETIKA KAPOOR (DL00911)
+                        </option>
+                        <option value="DL00912">
+                          Sh. ANIMESH KUMAR (DL00912)
+                        </option>
+                        <option value="DL00964">
+                          Sh. ABHINAV AHLAWAT (DL00964)
+                        </option>
+                        <option value="DL00965">
+                          Ms. VAISHALI SINGH (DL00965)
+                        </option>
+                        <option value="DL00900">
+                          Ms. Aishwarya Sharma (DL00900)
+                        </option>
+                        <option value="DL00972">
+                          Ms. SHIVLI TALWAR (DL00972)
+                        </option>
+                        <option value="DL00973">
+                          Ms. SONAM SINGH - II (DL00973)
+                        </option>
+                        <option value="DL00974">
+                          Sh. BHANU PRATAP SINGH (DL00974)
+                        </option>
+                        <option value="DL00997">
+                          Ms. JYOTI NAIN (DL00997)
+                        </option>
+                        <option value="DL00998">
+                          Ms. SWATI GUPTA - II (DL00998)
+                        </option>
+                        <option value="DL00903">
+                          Sh. Rishabh Kapoor (DL00903)
+                        </option>
+                        <option value="DL00949">
+                          Ms. KAVITA BIST (DL00949)
+                        </option>
+                        <option value="DL00906">
+                          Ms. Deepakshi Rana (DL00906)
+                        </option>
+                        <option value="DL00907">
+                          Ms. Poorva Mehra (DL00907)
+                        </option>
+                        <option value="DL01028">
+                          Sh. SNEHIL SHARMA (DL01028)
+                        </option>
+                        <option value="DL01038">
+                          Sh. GAURAV KATARIYA (DL01038)
+                        </option>
+                        <option value="DL01041">
+                          Sh. BHAVAYA KARHAIL (DL01041)
+                        </option>
+                        <option value="DL01042">
+                          Ms. DEVANSHI JANMEJA (DL01042)
+                        </option>
+                        <option value="DL01092">
+                          Sh. AZAD SEHRAWAT (DL01092)
+                        </option>
+                        <option value="DL00531">
+                          Ms. Mahima Rai Singh (DL00531)
+                        </option>
+                        <option value="DL00877">
+                          Sh. Ajay Singh Parihar (DL00877)
+                        </option>
+                        <option value="DL00877">
+                          Sh. Ajay Singh Parihar (DL00877)
+                        </option>
+                        <option value="DL00877">
+                          Sh. Ajay Singh Parihar (DL00877)
+                        </option>
+                        <option value="DL01004">Sh. KAUTUK (DL01004)</option>
+                        <option value="DL01004">
+                          Ms. ANEEZA OMPAL SHOKEEN (DL01004)
+                        </option>
+                        <option value="DL01108">
+                          Ms. DIVYA SINGH (DL01108)
+                        </option>
+                        <option value="DL00995">
+                          Sh. SAHIL MONGA (DL00995)
+                        </option>
+                        <option value="DL01104">
+                          Sh. RAJ KUMAR SINGH (DL01104)
+                        </option>
+                        <option value="DL00087">
+                          Sh. NAROTTAM KAUSHAL (DL00087)
+                        </option>
+                        <option value="DL00087">
+                          Sh. Narottam Kaushal (DL00087)
+                        </option>
+                        <option value="DL01095">Ms. MANYA (DL01095)</option>
+                        <option value="DL01095">Ms. MANYA (DL01095)</option>
+                        <option value="DL00087">
+                          Sh. NAROTTAM KAUSHAL (DL00087)
+                        </option>
+                        <option value="DL00087">
+                          Sh. Narottam Kaushal (DL00087)
+                        </option>
+                        <option value="DL00247">
+                          Sh. Ajay Pandey (DL00247)
+                        </option>
+                        <option value="DL00959">
+                          Sh. KARTIK TAPARIA (DL00959)
+                        </option>
+                        <option value="DL00360">
+                          Sh. Ajay Singh Shekhawat (DL00360)
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row hidden" id="divCourtRole_model">
+                    <label class="col-form-label col-lg-3 font-weight-semibold"
+                      >Select Role In Court</label
+                    >
+                    <div class="col-lg-9">
+                      <select
+                        class="form-control select"
+                        data-fouc=""
+                        name="dpCourtRole"
+                        id="dpCourtRoles_model"
+                        data-placeholder="Select a Role In Court..."
+                        data-select2-id="dpCourtRoles_model"
+                        tabindex="-1"
+                      >
+                        <option value="" data-select2-id="33">
+                          Select Court Role
+                        </option>
+                        <option value="All">All</option>
+                        <option value="Peon">Peon</option>
+                        <option value="Assistant Alhmad">
+                          Assistant Alhmad
+                        </option>
+                        <option value="Ahlmad">Ahlmad</option>
+                        <option value="Judge">Judge</option>
+                        <option value="Reader">Reader</option>
+                        <option value="Stenographer">Stenographer</option>
+                        <option value="Nazir">Nazir</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row hidden" id="divDesignation_model">
+                    <label class="col-form-label col-lg-3 font-weight-semibold"
+                      >Select Designation</label
+                    >
+                    <div class="col-lg-9">
+                      <select
+                        class="form-control select"
+                        data-fouc=""
+                        name="dpDesignation"
+                        id="dpDesignations_model"
+                        data-placeholder="Select a Designation..."
+                        data-select2-id="dpDesignations_model"
+                        tabindex="-1"
+                      >
+                        <option value="" data-select2-id="34">
+                          Select Designation
+                        </option>
+                        <option value="All">All</option>
+                        <option value="9">Accounts Officer</option>
+                        <option value="4">
+                          Administrative Officer (Judicial)
+                        </option>
+                        <option value="10">Assistant Accounts Officer</option>
+                        <option value="17">Assistant Programmer</option>
+                        <option value="18">
+                          Assistant Public Relation Officer
+                        </option>
+                        <option value="28">Baliffs</option>
+                        <option value="33">Book Binder</option>
+                        <option value="35">Chowkidar</option>
+                        <option value="16">Civil Nazir / District Nazir</option>
+                        <option value="29">Data Entry Operator Grade-A</option>
+                        <option value="25">Data Entry Operator Grade-B</option>
+                        <option value="40">
+                          Delhi Higher Judicial Service
+                        </option>
+                        <option value="39">Delhi Judicial Service</option>
+                        <option value="3">Deputy Controller of Accounts</option>
+                        <option value="26">
+                          Driver / Staff Car Driver (Grade-I)
+                        </option>
+                        <option value="30">
+                          Driver / Staff Car Driver (Grade-II)
+                        </option>
+                        <option value="22">
+                          Driver / Staff Car Driver (Special Grade)
+                        </option>
+                        <option value="37">
+                          Frash / Frash-cum-Dak-Messenger
+                        </option>
+                        <option value="27">
+                          Gestetnor Operator/Dispatch Rider
+                        </option>
+                        <option value="32">Head Jamadar/ Daftri</option>
+                        <option value="12">
+                          Information Officer- cum-Librarian
+                        </option>
+                        <option value="20">Judicial Assistant</option>
+                        <option value="24">Junior Judicial Assistant</option>
+                        <option value="21">Librarian</option>
+                        <option value="36">Maali</option>
+                        <option value="23">Naib Nazir</option>
+                        <option value="34">Peon/Orderly/Dak Peon</option>
+                        <option value="19">Personal Assistant</option>
+                        <option value="31">Process Server</option>
+                        <option value="8">Programmer Group II Executive</option>
+                        <option value="13">Public Relation Officer</option>
+                        <option value="6">Senior Accounts Officer</option>
+                        <option value="2">Senior Administrative Officer</option>
+                        <option value="14">Senior Judicial Assistant</option>
+                        <option value="7">Senior Librarian Grade 'A'</option>
+                        <option value="15">Senior Personal Assistant</option>
+                        <option value="38">Sweeper / Safai Karamchari</option>
+                        <option value="5">
+                          System Analyst Group I Executive
+                        </option>
+                        <option value="11">Technical Officer</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row hidden" id="divRole_model">
+                    <label class="col-form-label col-lg-3 font-weight-semibold"
+                      >Select Role</label
+                    >
+                    <div class="col-lg-9">
+                      <select
+                        class="form-control select"
+                        data-fouc=""
+                        name="dpRole"
+                        id="dpRoles_model"
+                        data-placeholder="Select a Role..."
+                        data-select2-id="dpRoles_model"
+                        tabindex="-1"
+                        aria-hidden="true"
+                      >
+                        <option value="" data-select2-id="35">
+                          Select Role
+                        </option>
+                        <option value="All">All</option>
+                        <option value="undefined">Other</option>
+                        <option value="undefined">Peon</option>
+                        <option value="undefined">Assistant Alhmad</option>
+                        <option value="undefined">Ahlmad</option>
+                        <option value="undefined">Judge</option>
+                        <option value="undefined">Reader</option>
+                        <option value="undefined">Stenographer</option>
+                        <option value="undefined">Nazir</option>
+                        <option value="undefined">Deputation/Diverted</option>
+                        <option value="undefined">In-Charge</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row hidden" id="divFilterOption_model">
+                    <label class="col-form-label col-lg-3 font-weight-semibold"
+                      >Select Filter Option</label
+                    >
+                    <div class="col-lg-9">
+                      <select
+                        class="form-control select"
+                        name="dpOption"
+                        id="dpOptions_model"
+                        style="width: 100%"
+                        data-select2-id="dpOptions_model"
+                        tabindex="-1"
+                        aria-hidden="true"
+                      >
+                        <option value="ecode" data-select2-id="11">
+                          Employee Code
+                        </option>
+                        <option value="ename">Name</option>
+                        <option value="efname">Father Name</option>
+                        <!--<option value="edob_model">Date of Birth</option>-->
+                        <option value="emobile">Mobile</option>
+                        <!--<option value="epan">PAN</option>-->
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row hidden" id="divFilterText_model">
+                    <label class="col-form-label col-lg-3 font-weight-semibold"
+                      >Enter Filter Text</label
+                    >
+                    <div class="col-lg-9">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="txtOption"
+                        id="txtOptions_model"
+                        required=""
+                        placeholder="Enter Employee Code"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="form-group row hidden"
+                    id="divDivertedPosting_model"
+                  >
+                    <label class="col-form-label col-lg-3 font-weight-semibold"
+                      >Select Posting</label
+                    >
+                    <div class="col-lg-9">
+                      <select
+                        class="form-control select"
+                        data-fouc=""
+                        name="dpDivertedPosting"
+                        id="dpDivertedPostings_model"
+                        data-placeholder="Select a Posting..."
+                        data-select2-id="dpDivertedPostings_model"
+                        tabindex="-1"
+                        aria-hidden="true"
+                      >
+                        <option value="" data-select2-id="36">
+                          Select Diverted
+                        </option>
+                        <option value="All">All</option>
+                        <option value="1">Delhi High Court</option>
+                        <option value="2">Delhi Judicial Academy</option>
+                        <option value="3">Delhi Family Court</option>
+                        <option value="4">
+                          Delhi High Court Legal Service
+                        </option>
+                        <option value="5">
+                          Delhi State Legal Service Auth.
+                        </option>
+                        <option value="6">National Green Tribunal</option>
+                        <option value="7">LJ&amp;LA</option>
+                        <option value="8">Hon'ble Lokayukta Delhi</option>
+                        <option value="9">NALSA</option>
+                        <option value="10">Supreme Court of India</option>
+                        <option value="11">Appellate Tribunal, MCD</option>
+                        <option value="12">
+                          State Consumer Dispute Redressal Co
+                        </option>
+                        <option value="13">New Delhi Municipal Council</option>
+                        <option value="14">Delhi Development Authority</option>
+                        <option value="15">
+                          National Consumer Dis. Red. Comm.
+                        </option>
+                        <option value="16">Comp. Auth. DUSIB</option>
+                        <option value="17">Delhi intr. Arbt Center, DHC</option>
+                        <option value="18">
+                          Supreme Court Legal Service Comtti.
+                        </option>
+                        <option value="19">Swabhiman Parisar</option>
+                        <option value="20">
+                          Office of Sec. AIJO Pay Comm. 2017
+                        </option>
+                        <option value="21">Armed Forces Tribunal</option>
+                        <option value="22">
+                          Secretary of the Inquiry Committee , Govt. Of Indi
+                        </option>
+                        <option value="23">
+                          Dept. of Legal Affairs, M/o L&amp;J, Govt. Of India
+                        </option>
+                        <option value="24">
+                          Nodal Office to Hon'ble Justice (Retd)
+                        </option>
+                        <option value="25">
+                          Appellate Tribunal for Electricity, New Delhi
+                        </option>
+                        <option value="27">
+                          Real Estate App. Tri. GNCT Delhi &amp; UT Chandigarh
+                        </option>
+                        <option value="28">
+                          Vaccination Camp, Tis Hazari Court Complex
+                        </option>
+                        <option value="29">
+                          Dispensary, Tis Hazari Court Complex
+                        </option>
+                        <option value="30">
+                          Vaccination Camp, Rouse Avenue Court Complex
+                        </option>
+                        <option value="31">
+                          Dispensary, Patiala House Court Complex
+                        </option>
+                        <option value="32">
+                          Delhi Electricity Regulatory Commission
+                        </option>
+                        <option value="33">
+                          Debt Recovery Appellate Tribunal
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="form-group row hidden"
+                    id="divDeputationsPosting_model"
+                  >
+                    <label class="col-form-label col-lg-3 font-weight-semibold"
+                      >Select Posting</label
+                    >
+                    <div class="col-lg-9">
+                      <select
+                        class="form-control select"
+                        data-fouc=""
+                        name="dpDeputationsPosting"
+                        id="dpDeputationsPostings_model"
+                        data-placeholder="Select a Posting..."
+                        data-select2-id="dpDeputationsPostings_model"
+                        tabindex="-1"
+                        aria-hidden="true"
+                      >
+                        <option value="" data-select2-id="37">
+                          Select Deputation
+                        </option>
+                        <option value="All">All</option>
+                        <option value="1">Delhi High Court</option>
+                        <option value="2">Delhi Judicial Academy</option>
+                        <option value="3">Delhi Family Court</option>
+                        <option value="4">
+                          Delhi High Court Legal Service
+                        </option>
+                        <option value="5">
+                          Delhi State Legal Service Auth.
+                        </option>
+                        <option value="6">National Green Tribunal</option>
+                        <option value="7">LJ&LA</option>
+                        <option value="8">Hon'ble Lokayukta Delhi</option>
+                        <option value="9">NALSA</option>
+                        <option value="10">Supreme Court of India</option>
+                        <option value="11">Appellate Tribunal, MCD</option>
+                        <option value="12">
+                          State Consumer Dispute Redressal Co
+                        </option>
+                        <option value="13">New Delhi Municipal Council</option>
+                        <option value="14">Delhi Development Authority</option>
+                        <option value="15">
+                          National Consumer Dis. Red. Comm.
+                        </option>
+                        <option value="16">Comp. Auth. DUSIB</option>
+                        <option value="17">Delhi intr. Arbt Center, DHC</option>
+                        <option value="18">
+                          Supreme Court Legal Service Comtti.
+                        </option>
+                        <option value="19">Swabhiman Parisar</option>
+                        <option value="20">
+                          Office of Sec. AIJO Pay Comm. 2017
+                        </option>
+                        <option value="21">Armed Forces Tribunal</option>
+                        <option value="22">
+                          Secretary of the Inquiry Committee , Govt. Of Indi
+                        </option>
+                        <option value="23">
+                          Dept. of Legal Affairs, M/o L&J, Govt. Of India
+                        </option>
+                        <option value="24">
+                          Nodal Office to Hon'ble Justice (Retd)
+                        </option>
+                        <option value="25">
+                          Appellate Tribunal for Electricity, New Delhi
+                        </option>
+                        <option value="27">
+                          Real Estate App. Tri. GNCT Delhi& UT Chandigarh
+                        </option>
+                        <option value="28">
+                          Vaccination Camp, Tis Hazari Court Complex
+                        </option>
+                        <option value="29">
+                          Dispensary, Tis Hazari Court Complex
+                        </option>
+                        <option value="30">
+                          Vaccination Camp, Rouse Avenue Court Complex
+                        </option>
+                        <option value="31">
+                          Dispensary, Patiala House Court Complex
+                        </option>
+                        <option value="32">
+                          Delhi Electricity Regulatory Commission
+                        </option>
+                        <option value="33">
+                          Debt Recovery Appellate Tribunal
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer" style="text-align: right">
+                  <button
+                    type="submit"
+                    class="btn bg-indigo legitRipple"
+                    id="btnSearch_model"
+                  >
+                    Search <i class="icon-search4 ml-1"></i>
+                  </button>
+                </div>
+                <div
+                  class="blockui-message bg-slate-700 text-white rounded px-3 py-2"
+                  style="display: none"
+                >
+                  <i class="icon-spinner10 spinner mt-1"></i>
+                  <span class="font-weight-semibold d-block mt-2"
+                    >Please Wait...</span
+                  >
+                </div>
+                <!--                </div>-->
+                <div class="hidden" id="searchTableCard_model">
+                  <div id="divSearchTables_model">
+                    <div
+                      id="searchTbls_model_wrapper"
+                      class="dataTables_wrapper no-footer"
+                    >
+                      <div
+                        class="dataTables_length"
+                        id="searchTbls_model_length"
+                      >
+                        <label
+                          >Show
+                          <select
+                            name="searchTbls_model_length"
+                            aria-controls="searchTbls_model"
+                            class=""
+                            fdprocessedid="pcnx4q"
+                          >
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                          </select>
+                          entries</label
+                        >
+                      </div>
+                      <div
+                        id="searchTbls_model_filter"
+                        class="dataTables_filter"
+                      >
+                        <label
+                          >Search:<input
+                            type="search"
+                            class=""
+                            placeholder=""
+                            aria-controls="searchTbls_model"
+                        /></label>
+                      </div>
+                      <table
+                        class="table table-bordered dataTable no-footer"
+                        id="searchTbls_model"
+                        width="100%"
+                        data-ordering="false"
+                        role="grid"
+                        aria-describedby="searchTbls_model_info"
+                        style="width: 100%"
+                      >
+                        <thead>
+                          <tr role="row">
+                            <th
+                              class="sorting_disabled"
+                              rowspan="1"
+                              colspan="1"
+                              style="width: 57.5938px"
+                            >
+                              Emp Code
+                            </th>
+                            <th
+                              class="sorting_disabled"
+                              rowspan="1"
+                              colspan="1"
+                              style="width: 114.328px"
+                            >
+                              Name
+                            </th>
+                            <th
+                              class="sorting_disabled"
+                              rowspan="1"
+                              colspan="1"
+                              style="width: 134.656px"
+                            >
+                              Father Name
+                            </th>
+                            <th
+                              class="sorting_disabled"
+                              rowspan="1"
+                              colspan="1"
+                              style="width: 125.328px"
+                            >
+                              Designation
+                            </th>
+                            <th
+                              class="sorting_disabled"
+                              rowspan="1"
+                              colspan="1"
+                              style="width: 224.797px"
+                            >
+                              Posting
+                            </th>
+                            <th
+                              class="sorting_disabled"
+                              rowspan="1"
+                              colspan="1"
+                              style="width: 40.9219px"
+                            >
+                              District
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr role="row" class="odd">
+                            <td>
+                              <a
+                                href=""
+                                data-toggle="modal"
+                                data-target="#assign_user_role"
+                                >91021</a
+                              >
+                            </td>
+                            <td>KHEEM SINGH</td>
+                            <td>LT. GUMAN SINGH</td>
+                            <td>Chowkidar</td>
+                            <td>Care Taking Branch, Tis Hazari</td>
+                            <td>Central</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div
+                        class="dataTables_info"
+                        id="searchTbls_model_info"
+                        role="status"
+                        aria-live="polite"
+                      >
+                        Showing 1 to 10 of 1,499 entries
+                      </div>
+                      <div
+                        class="dataTables_paginate paging_simple_numbers"
+                        id="searchTbls_model_paginate"
+                      >
+                        <a
+                          class="paginate_button previous disabled"
+                          aria-controls="searchTbls_model"
+                          data-dt-idx="0"
+                          tabindex="0"
+                          id="searchTbls_model_previous"
+                          >Previous</a
+                        >
+                        <span
+                          ><a
+                            class="paginate_button current"
+                            aria-controls="searchTbls_model"
+                            data-dt-idx="1"
+                            tabindex="0"
+                            >1</a
+                          ><a
+                            class="paginate_button"
+                            aria-controls="searchTbls_model"
+                            data-dt-idx="2"
+                            tabindex="0"
+                            >2</a
+                          ><span class="ellipsis">…</span
+                          ><a
+                            class="paginate_button"
+                            aria-controls="searchTbls_model"
+                            data-dt-idx="6"
+                            tabindex="0"
+                            >10</a
+                          ></span
+                        ><a
+                          class="paginate_button next"
+                          aria-controls="searchTbls_model"
+                          data-dt-idx="7"
+                          tabindex="0"
+                          id="searchTbls_model_next"
+                          >Next</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+        <!-- /Search Employee modal -->
+        <!-- Add user role modal -->
+        <div
+          id="assign_user_role"
+          class="modal fade"
+          tabindex="-1"
+          style="display: none"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+              <div class="modal-header bg-pink-600">
+                <h6 class="modal-title">Assign User Role</h6>
+                <button type="button" class="close" data-dismiss="modal">
+                  ×
+                </button>
+              </div>
+
+              <div class="modal-body">
+                <div class="card-body">
+                  <div class="table" data-select2-id="33">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <fieldset>
+                          <legend class="font-weight-semibold">
+                            <i class="icon-reading mr-2"></i> Personal details
+                          </legend>
+
+                          <div class="form-group">
+                            <label>Employee name:</label>
+                            <input type="hidden" name="empuuid" value="" />
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Employee name"
+                              name="empname"
+                              value="KHEEM SINGH"
+                              readonly=""
+                            />
+                          </div>
+
+                          <div class="form-group">
+                            <label>Employee's Father Name:</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Employee's father name"
+                              name="empfather"
+                              value="LT. GUMAN SINGH"
+                              readonly=""
+                            />
+                          </div>
+                          <div class="form-group">
+                            <label>Employee Code:</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Employee Code"
+                              name="empcode"
+                              value="91021"
+                              readonly=""
+                            />
+                          </div>
+                        </fieldset>
+                      </div>
+
+                      <div class="col-md-6" data-select2-id="32">
+                        <fieldset data-select2-id="31">
+                          <legend class="font-weight-semibold">
+                            <i class="icon-truck mr-2"></i> Posting details
+                          </legend>
+
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label>Posting at:</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Employee Posting"
+                                  name="empposting"
+                                  value="Care Taking Branch, Tis Hazari"
+                                  readonly=""
+                                />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label>District:</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Employee District"
+                                  name="empdistrict"
+                                  value="Central"
+                                  readonly=""
+                                />
+                              </div>
+                            </div>
+
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label>Complex:</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Employee Complex"
+                                  name="empcomplex"
+                                  value="Tis Hazari"
+                                  readonly=""
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row" data-select2-id="30">
+                            <div class="col-md-6" data-select2-id="29">
+                              <div class="form-group" data-select2-id="78">
+                                <label>Select User Role:</label>
+                                <select
+                                  data-placeholder="Select User Role"
+                                  class="form-control form-control-select2"
+                                  data-fouc=""
+                                  data-select2-id="28"
+                                  tabindex="-1"
+                                  aria-hidden="true"
+                                  name="emprole"
+                                  required=""
+                                >
+                                  <option data-select2-id="30"></option>
+                                  <option value="Admin" data-select2-id="82">
+                                    Admin
+                                  </option>
+                                  <option value="Copyist" data-select2-id="83">
+                                    Copyist
+                                  </option>
+                                  <option value="Fetcher" data-select2-id="84">
+                                    Fetcher
+                                  </option>
+                                  option
+                                </select>
+                              </div>
+                            </div>
+
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label>Role Assign Date:</label>
+                                <input
+                                  type="text"
+                                  class="form-control daterange-single hasDatepicker"
+                                  placeholder="Select Date"
+                                  name="assigndate"
+                                  value="01-07-2024"
+                                  required=""
+                                  id=""
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <div class="text-right">
+                  <button
+                    type="submit"
+                    id="submitButton"
+                    class="btn btn-primary legitRipple"
+                  >
+                    Submit form <i class="icon-paperplane ml-2"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Add user role modal -->
+        <!-- /Modal -->
+        <!--Code of Sandeep footer added here /-->
+        <script
+          src="global_assets/js/plugins/forms/validation/validate.min.js "
+          type="text/javascript"
+        ></script>
+        <script
+          src="global_assets/js/plugins/forms/validation/additional_methods.min.js"
+          type="text/javascript"
+        ></script>
+        <!--Code of Sandeep footer added here /-->
+
+        <!-- Footer -->
+        <div class="navbar navbar-expand-lg navbar-light">
+          <div class="text-center d-lg-none w-100">
+            <button
+              type="button"
+              class="navbar-toggler dropdown-toggle"
+              data-toggle="collapse"
+              data-target="#navbar-footer"
+            >
+              <i class="icon-unfold mr-2"></i>
+              Footer
+            </button>
+          </div>
+
+          <div class="navbar-collapse collapse" id="navbar-footer">
+            <span class="navbar-text">
+              © 2024 <a href="#">Delhi District Courts</a> by
+              <a href="#" target="_blank">IT-Cell (HQs),Tis Hazari</a>
+            </span>
+          </div>
+        </div>
+        <!-- /footer -->
+      </div>
+      <!-- /main content -->
+    </div>
+    <!-- /page content -->
+  </body>
+  <script>
+    // Hide divs of select options
+    $("#dpSearchTypes_model").on("change", function () {
+      //hide all divs
+      hideall_model();
+      var _option = $(this).val();
+      console.log(_option);
+      if (_option == "all") {
+        $("#divDistrict_model").removeClass("hidden");
+      } else if (_option == "branch") {
+        $("#divDistrict_model").removeClass("hidden");
+        $("#divBranch_model").removeClass("hidden");
+        $("#divBranchRole_model").removeClass("hidden");
+        $("#divDistrict_model").removeClass("hidden");
+      } else if (_option == "court") {
+        $("#divDistrict_model").removeClass("hidden");
+        $("#divCourtType_model").removeClass("hidden");
+        $("#divJudge_model").removeClass("hidden");
+        $("#divCourtRole_model").removeClass("hidden");
+        $("#divDistrict_model").removeClass("hidden");
+      } else if (_option == "both") {
+        $("#divDistrict_model").removeClass("hidden");
+        $("#divDistrict_model").removeClass("hidden");
+        $("#divDistrict_model").removeClass("hidden");
+      } else if (_option == "individual") {
+        $("#divFilterOption_model").removeClass("hidden");
+        $("#divFilterText_model").removeClass("hidden");
+      } else if (_option == "deputation") {
+        $("#divDeputationsPosting_model").removeClass("hidden");
+      } else if (_option == "diverted") {
+        $("#divDivertedPosting_model").removeClass("hidden");
+      }
+    });
+
+    function hideall_model() {
+      $("#divDistrict_model").addClass("hidden");
+      $("#divBranch_model").addClass("hidden");
+      $("#divBranchRole_model").addClass("hidden");
+      $("#divCourtType_model").addClass("hidden");
+      $("#divJudge_model").addClass("hidden");
+      $("#divCourtRole_model").addClass("hidden");
+      $("#divDistrict_model").addClass("hidden");
+      $("#divDistrict_model").addClass("hidden");
+      $("#divFilterOption_model").addClass("hidden");
+      $("#divFilterText_model").addClass("hidden");
+      $("#divDivertedPosting_model").addClass("hidden");
+      $("#divDeputationsPosting_model").addClass("hidden");
+    }
+    // Hide divs of select options
+
+    // This script for temp. search employee (Ritika)
+    document
+      .getElementById("btnSearch_model")
+      .addEventListener("click", function () {
+        // Toggle the visibility of the div
+        const searchDiv = document.getElementById("searchTableCard_model");
+        searchDiv.classList.toggle("hidden");
+      });
+
+    // Temp. modal closing (Ritika)
+    $("#assign_user_role").on("show.bs.modal", function () {
+      $("#search_emp_modal").modal("hide");
+    });
+
+    // Temp. add user role script (Ritika)
+    document
+      .getElementById("submitButton")
+      .addEventListener("click", function () {
+        $("#assign_user_role").modal("hide"); // Close the modal
+        alert("Add user role successfully!"); // Show success message
+      });
+  </script>
+</html>
