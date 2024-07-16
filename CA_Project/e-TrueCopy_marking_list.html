@@ -7,27 +7,22 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>
-      Home - LAYERS : Linked Applications and Extended Reporting System
-    </title>
+    <title>e-True Copy marking list</title>
 
     <!-- Global stylesheets -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/layerslogo.png"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900"
       rel="stylesheet"
       type="text/css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <link href="assets/fonts/robo/style.css" rel="stylesheet" type="text/css" />
     <link
       href="global_assets/css/icons/icomoon/styles.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="global_assets/css/icons/fontawesome/styles.min.css"
       rel="stylesheet"
       type="text/css"
     />
@@ -41,11 +36,15 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/layout.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+    <link href=assets/css/components.min.css rel="stylesheet" type="text/css">
     <link href="assets/css/colors.min.css" rel="stylesheet" type="text/css" />
-
+    <link
+      href="global_assets/css/icons/fontawesome/styles.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <!-- /global stylesheets -->
 
     <!-- Core JS files -->
@@ -53,42 +52,57 @@
     <script src="global_assets/js/main/bootstrap.bundle.min.js"></script>
     <script src="global_assets/js/plugins/loaders/blockui.min.js"></script>
     <script src="global_assets/js/plugins/ui/ripple.min.js"></script>
-    <!-- /core JS files -->
-
-    <!-- Theme JS files -->
-    <script src="global_assets/js/plugins/visualization/d3/d3.min.js"></script>
-    <script src="global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+    <script src="global_assets/js/plugins/forms/styling/switchery.min.js"></script>
     <script src="global_assets/js/plugins/ui/moment/moment.min.js"></script>
-    <script src="global_assets/js/plugins/pickers/daterangepicker.js"></script>
     <script src="global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
-
     <script src="global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
-
-    <script src="global_assets/js/demo_pages/form_multiselect.js"></script>
     <script src="global_assets/js/plugins/forms/selects/select2.min.js"></script>
 
+    <script src="global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+    <script src="global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+    <script src="global_assets/js/demo_pages/form_multiselect.js"></script>
+    <script src="global_assets/js/demo_pages/form_select2.js"></script>
     <script src="global_assets/js/demo_pages/datatables_basic.js"></script>
-    <script src="global_assets/js/plugins/forms/styling/uniform.min.js"></script>
-    <script src="global_assets/js/plugins/forms/styling/switchery.min.js"></script>
-    <script src="global_assets/js/plugins/forms/styling/switch.min.js"></script>
+    <script src="global_assets/js/demo_pages/dashboard.js"></script>
+    <script src="global_assets/js/plugins/extensions/jquery_ui/interactions.min.js"></script>
+    <script src="global_assets/js/demo_pages/picker_date.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="global_assets/js/demo_pages/form_layouts.js"></script>
     <script src="global_assets/js/demo_pages/form_checkboxes_radios.js"></script>
 
-    <script src="global_assets/js/demo_pages/form_select2.js"></script>
-    <script src="global_assets/js/demo_pages/dashboard.js"></script>
-    <script src="global_assets/js/demo_charts/pages/dashboard/light/streamgraph.js"></script>
-    <script src="global_assets/js/demo_charts/pages/dashboard/light/sparklines.js"></script>
-    <script src="global_assets/js/demo_charts/pages/dashboard/light/lines.js"></script>
-    <script src="global_assets/js/demo_charts/pages/dashboard/light/areas.js"></script>
-    <script src="global_assets/js/demo_charts/pages/dashboard/light/donuts.js"></script>
-    <script src="global_assets/js/demo_charts/pages/dashboard/light/bars.js"></script>
-    <script src="global_assets/js/demo_charts/pages/dashboard/light/progress.js"></script>
-    <script src="global_assets/js/demo_charts/pages/dashboard/light/heatmaps.js"></script>
-    <script src="global_assets/js/demo_charts/pages/dashboard/light/pies.js"></script>
-    <script src="global_assets/js/demo_charts/pages/dashboard/light/bullets.js"></script>
+    <!-- /Date picker files JS files -->
+    <script src="global_assets/js/plugins/pickers/daterangepicker.js"></script>
+    <script src="global_assets/js/plugins/jQueryUI/jquery-ui.js"></script>
+    <script src="global_assets/js/plugins/pickers/anytime.min.js"></script>
+    <script src="global_assets/js/plugins/pickers/pickadate/picker.js"></script>
+    <script src="global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+    <script src="global_assets/js/plugins/pickers/pickadate/picker.time.js"></script>
+    <!-- Theme JS files -->
+    <script src="global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+    <script src="global_assets/js/plugins/extensions/session_timeout.min.js"></script>
+    <script src="assets/js/cryptojs-aes.min.js"></script>
+    <script src="assets/js/cryptojs-aes-format.js"></script>
+    <script src="assets/js/sha256.js"></script>
+    <script src="assets/js/jQuery.print.min.js"></script>
+
+    <!-- Theme JS files -->
+    <script src="global_assets/js/plugins/ui/fullcalendar/core/main.min.js"></script>
+    <script src="global_assets/js/plugins/ui/fullcalendar/daygrid/main.min.js"></script>
+    <script src="global_assets/js/plugins/ui/fullcalendar/timegrid/main.min.js"></script>
+    <script src="global_assets/js/plugins/ui/fullcalendar/list/main.min.js"></script>
+    <script src="global_assets/js/plugins/ui/fullcalendar/interaction/main.min.js"></script>
     <!-- /theme JS files -->
 
-    <!-- /theme JS files -->
+    <script src="global_assets/js/plugins/tables/datatables/extensions/jszip/jszip.min.js"></script>
+    <script src="global_assets/js/plugins/tables/datatables/extensions/pdfmake/pdfmake.min.js"></script>
+    <script src="global_assets/js/plugins/tables/datatables/extensions/pdfmake/vfs_fonts.min.js"></script>
+    <script src="global_assets/js/plugins/tables/datatables/extensions/buttons.min.js"></script>
+
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
   </head>
   <body class="sidebar-xs">
     <!-- Main navbar -->
@@ -127,7 +141,7 @@
         <center>
           <span class="navbar-text ml-md-3">
             <span class="badge badge-mark border-orange-300 mr-2"></span>
-            <strong>CARE TAKING BRANCH, TIS HAZARI</strong>
+            <strong>COPYING AGENCY, TIS HAZARI</strong>
           </span>
         </center>
         <ul class="navbar-nav ml-md-auto">
@@ -138,7 +152,7 @@
               data-toggle="dropdown"
             >
               <i class="icon-user mr-2"></i>
-              KHEEM SINGH
+              DINESH BABU KULSRESHTHA
             </a>
 
             <div
@@ -158,9 +172,11 @@
                     alt=""
                   />
                 </a>
-                <h6 class="mb-0 text-white text-shadow-dark">KHEEM SINGH</h6>
+                <h6 class="mb-0 text-white text-shadow-dark">
+                  DINESH BABU KULSRESHTHA
+                </h6>
                 <span class="font-size-sm text-white text-shadow-dark"
-                  >Bracnh In-charge : 91021</span
+                  >Senior Judicial Assistant : 68694179</span
                 >
               </div>
 
@@ -193,7 +209,7 @@
                   </li>
                 </ul>
               </div>
-              <a href="auth/logout">
+              <a href="#">
                 <div class="dropdown-content-footer bg-light">
                   <span
                     class="font-size-sm line-height-sm text-uppercase font-weight-semibold text-grey mr-auto"
@@ -289,6 +305,7 @@
               </li>
               <!-- /Hierarchy -->
               <!-- digital court -->
+
               <li class="nav-item">
                 <a href="#" class="nav-link legitRipple">
                   <i class="text-orange-800 icon-graduation"></i>
@@ -314,7 +331,6 @@
                 </a>
               </li>
               <!-- /Extension phone numbers -->
-
               <!-- online CA -->
               <li class="nav-item">
                 <a accesskey="k" href="#" class="nav-link legitRipple">
@@ -372,7 +388,7 @@
                       ><i class="icon-home2 mr-2"></i> Home</a
                     >
                     <span class="breadcrumb-item">e-True Copy</span
-                    ><span class="breadcrumb-item">Dashboard</span>
+                    ><span class="breadcrumb-item">Marking List </span>
                   </div>
                   <a
                     href="#"
@@ -450,60 +466,138 @@
 
                       <div class="card-body p-0" style="display: none">
                         <ul class="nav nav-sidebar" data-nav-type="accordion">
-                          <!-- Applied list -->
+                          <!-- Received list -->
                           <li class="nav-item">
-                            <a
-                              href="ETC_applied_list.html"
-                              class="nav-link legitRipple"
-                              ><i class="icon-list2"></i>Applied List
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-file-check2"></i>Received
                             </a>
                           </li>
-                          <!-- /Applied list -->
-                          <!-- Pending list -->
+                          <!-- /Received list -->
+                          <!-- Marked list -->
                           <li class="nav-item">
                             <a
-                              href="ETC_pending_list.html"
+                              href="e-TrueCopy_marking_list.html"
                               class="nav-link legitRipple"
-                              ><i class="icon-list2"></i>Pending List
+                              ><i class="icon-bookmarks"></i>Marked
                             </a>
                           </li>
-                          <!-- /pending list -->
-                          <!-- Assigned list -->
+                          <!-- /Marked list -->
+                          <!-- Prepared list -->
                           <li class="nav-item">
                             <a
-                              href="ETC_pending_list.html"
+                              href="e-TrueCopy_prepare_list.html"
                               class="nav-link legitRipple"
-                              ><i class="icon-list2"></i>Assigned List
+                              ><i class="icon-paste2"></i>Prepared
                             </a>
                           </li>
-                          <!-- /Assigned list -->
-                          <!-- verified list -->
+                          <!-- /Prepared list -->
+                          <!-- Objections list -->
                           <li class="nav-item">
-                            <a
-                              href="ETC_pending_list.html"
-                              class="nav-link legitRipple"
-                              ><i class="icon-list2"></i>Verified List
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-blocked"></i>Objection
                             </a>
                           </li>
-                          <!-- /verified list -->
+                          <!-- /Objections list -->
                           <!-- rejected list -->
                           <li class="nav-item">
-                            <a
-                              href="ETC_pending_list.html"
-                              class="nav-link legitRipple"
-                              ><i class="icon-list2"></i>Rejected List
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-blocked"></i>Rejected
                             </a>
                           </li>
                           <!-- /rejected list -->
-                          <!-- returned list -->
+
+                          <!-- Convert to CA -->
                           <li class="nav-item">
-                            <a
-                              href="ETC_pending_list.html"
-                              class="nav-link legitRipple"
-                              ><i class="icon-list2"></i>Returned List
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-diff-renamed"></i>Convert to CA
                             </a>
                           </li>
-                          <!-- /returned list -->
+                          <!-- /Convert to CA -->
+                          <!-- Delivered list -->
+                          <li class="nav-item">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-diff-renamed"></i>Delivered
+                            </a>
+                          </li>
+                          <!-- /Delivered list -->
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /ETC Proccessing -->
+
+                    <!-- ETC Reports -->
+                    <div class="card card-collapsed">
+                      <div
+                        class="card-header bg-transparent header-elements-inline"
+                      >
+                        <span
+                          class="text-uppercase font-size-sm font-weight-semibold"
+                          ><i class="icon-stack mr-2 text-pink-600"></i> ETC
+                          Reports
+                        </span>
+                        <div class="header-elements">
+                          <div class="list-icons">
+                            <a
+                              class="list-icons-item rotate-180"
+                              data-action="collapse"
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-body p-0" style="display: none">
+                        <ul class="nav nav-sidebar" data-nav-type="accordion">
+                          <!-- Received list -->
+                          <!-- <li class="nav-item">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-file-check2"></i>Received
+                            </a>
+                          </li> -->
+                          <!-- /Received list -->
+
+                          <!-- Marked list -->
+                          <li class="nav-item">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-bookmarks"></i>Marked
+                            </a>
+                          </li>
+                          <!-- /Marked list -->
+                          <!-- Prepared list -->
+                          <li class="nav-item">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-paste2"></i>Prepared
+                            </a>
+                          </li>
+                          <!-- /Prepared list -->
+                          <!-- Objection list -->
+                          <li class="nav-item">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-blocked"></i>Objections
+                            </a>
+                          </li>
+                          <!-- /Objection list -->
+                          <!-- Rejected list -->
+                          <li class="nav-item">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-blocked"></i>Rejected
+                            </a>
+                          </li>
+                          <!-- /Rejected list -->
+
+                          <!-- Convert to CA -->
+                          <li class="nav-item">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-diff-renamed"></i>Convert to CA
+                            </a>
+                          </li>
+                          <!-- /Convert to CA -->
+                          <!-- Delivered list -->
+                          <li class="nav-item">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-diff-renamed"></i>Delivered
+                            </a>
+                          </li>
+                          <!-- /Delivered list -->
                         </ul>
                       </div>
                     </div>
@@ -524,94 +618,6 @@
                       </div>
                     </div>
                     <!-- /ETC Delivery Reschedule -->
-                    <!-- Reports -->
-                    <div class="card card-collapsed">
-                      <div
-                        class="card-header bg-transparent header-elements-inline"
-                      >
-                        <span
-                          class="text-uppercase font-size-sm font-weight-semibold"
-                          ><i class="icon-stack mr-2 text-pink-600"></i>
-                          Reports</span
-                        >
-                        <div class="header-elements">
-                          <div class="list-icons">
-                            <a
-                              class="list-icons-item rotate-180"
-                              data-action="collapse"
-                            ></a>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="card-body p-0" style="display: none">
-                        <ul class="nav nav-sidebar" data-nav-type="accordion">
-                          <li class="nav-item nav-item-submenu">
-                            <a href="#" class="nav-link legitRipple"
-                              ><i class="fa fa-rupee-sign"></i> Amount Report</a
-                            >
-                            <ul class="nav nav-group-sub" style="display: none">
-                              <li class="nav-item">
-                                <a href="#" class="nav-link legitRipple"
-                                  ><i class="fa fa-rupee-sign"></i>Advance
-                                  Received
-                                </a>
-                              </li>
-                              <li class="nav-item">
-                                <a href="#" class="nav-link legitRipple"
-                                  ><i class="fa fa-rupee-sign"></i>Recovery
-                                </a>
-                              </li>
-                              <li class="nav-item">
-                                <a href="#" class="nav-link legitRipple"
-                                  ><i class="fa fa-rupee-sign"></i>Refund
-                                </a>
-                              </li>
-                              <li class="nav-item">
-                                <a href="#" class="nav-link legitRipple"
-                                  ><i class="fa fa-rupee-sign"></i>Consolidate
-                                  Amount
-                                </a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="nav-item nav-item-submenu">
-                            <a href="#" class="nav-link legitRipple"
-                              ><i class="icon-files-empty"></i> ETC Report</a
-                            >
-                            <ul class="nav nav-group-sub" style="display: none">
-                              <li class="nav-item">
-                                <a href="" class="nav-link legitRipple"
-                                  ><i class="icon-bookmarks"></i>Marked
-                                </a>
-                              </li>
-                              <li class="nav-item">
-                                <a href="" class="nav-link legitRipple"
-                                  ><i class="icon-paste2"></i>Prepared
-                                </a>
-                              </li>
-                              <li class="nav-item">
-                                <a href="" class="nav-link legitRipple"
-                                  ><i class="icon-diff-renamed"></i>Delivered
-                                </a>
-                              </li>
-                              <li class="nav-item">
-                                <a href="" class="nav-link legitRipple"
-                                  ><i class="icon-diff-renamed"></i>Cancelled
-                                </a>
-                              </li>
-                              <li class="nav-item">
-                                <a href="" class="nav-link legitRipple"
-                                  ><i class="icon-diff-renamed"></i>Total
-                                  Pending
-                                </a>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <!-- /Reports -->
 
                     <!-- Setting -->
                     <div class="card card-collapsed">
@@ -636,7 +642,9 @@
                       <div class="card-body p-0" style="display: none">
                         <ul class="nav nav-sidebar" data-nav-type="accordion">
                           <li class="nav-item">
-                            <a href="" class="nav-link legitRipple"
+                            <a
+                              href="etc_User_role_list.html"
+                              class="nav-link legitRipple"
                               ><i class="icon-collaboration"></i>User Roles
                             </a>
                           </li>
@@ -662,8 +670,52 @@
                       <div class="col-sm-8">
                         <h5 class="card-title text-uppercase font-weight-bold">
                           <i class="icon-bookmarks mr-2"></i> e-True Copy
-                          Applied List
+                          Marking List
                         </h5>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="bg-light pl-2 pr-2">
+                          <select
+                            id="copyist"
+                            name="copyist"
+                            required=""
+                            data-placeholder="Select Copyist..."
+                            class="form-control select-search select2-hidden-accessible"
+                            data-fouc=""
+                            data-select2-id="copyist"
+                            tabindex="-1"
+                            aria-hidden="true"
+                          >
+                            <option data-select2-id="28"></option>
+                            <option value="">
+                              AZAHARUDDIN (Files: 10/Pages: 100)
+                            </option>
+                            <option value="">
+                              RAJ KUMAR (Files: 5/Pages: 203)
+                            </option>
+                            <option value="">
+                              SUNIL KUMAR (Files: 3/Pages: 32)
+                            </option>
+                            <option value="">
+                              KHEEM SINGH (Files: 0/Pages: 0)
+                            </option>
+                            <option value="">SAMEER (Files: 0/Pages: 0)</option>
+                            <option value="">
+                              AMIT SAXENA (Files: 0/Pages: 0)
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-sm-1">
+                        <div>
+                          <button
+                            type="submit"
+                            id="marking_submit"
+                            class="btn bg-primary legitRipple"
+                          >
+                            Submit
+                          </button>
+                        </div>
                       </div>
                     </div>
 
@@ -698,7 +750,7 @@
                           /></label>
                         </div>
                         <table
-                          class="table table-bordered table-hover dataTable no-footer"
+                          class="table table-bordered table-hover border-top dataTable no-footer"
                           id="marking_tbl"
                           role="grid"
                           aria-describedby="marking_tbl_info"
@@ -712,10 +764,21 @@
                                 rowspan="1"
                                 colspan="1"
                                 aria-sort="ascending"
-                                aria-label="CA ID : activate to sort column descending"
-                                style="width: 61.734px"
+                                aria-label="#: activate to sort column descending"
+                                style="width: 6.9375px"
                               >
-                                CA ID
+                                #
+                              </th>
+                              <th
+                                class="sorting"
+                                tabindex="0"
+                                aria-controls="marking_tbl"
+                                rowspan="1"
+                                colspan="1"
+                                aria-label="CA ID : activate to sort column ascending"
+                                style="width: 74.141px"
+                              >
+                                ETC ID
                               </th>
                               <th
                                 class="sorting"
@@ -724,7 +787,7 @@
                                 rowspan="1"
                                 colspan="1"
                                 aria-label="Case Title: activate to sort column ascending"
-                                style="width: 360.812px"
+                                style="width: 99.016px"
                               >
                                 Case Title
                               </th>
@@ -735,7 +798,7 @@
                                 rowspan="1"
                                 colspan="1"
                                 aria-label="Judge Name: activate to sort column ascending"
-                                style="width: 107.172px"
+                                style="width: 51.406px"
                               >
                                 Judge Name
                               </th>
@@ -746,7 +809,7 @@
                                 rowspan="1"
                                 colspan="1"
                                 aria-label="CA Type: activate to sort column ascending"
-                                style="width: 58.078px"
+                                style="width: 38.984px"
                               >
                                 CA Type
                               </th>
@@ -757,7 +820,7 @@
                                 rowspan="1"
                                 colspan="1"
                                 aria-label="Applied on: activate to sort column ascending"
-                                style="width: 56.453px"
+                                style="width: 42.953px"
                               >
                                 Applied on
                               </th>
@@ -767,10 +830,10 @@
                                 aria-controls="marking_tbl"
                                 rowspan="1"
                                 colspan="1"
-                                aria-label="Status: activate to sort column ascending"
-                                style="width: 39.547px"
+                                aria-label="Delivery: activate to sort column ascending"
+                                style="width: 45.453px"
                               >
-                                Status
+                                Delivery
                               </th>
                               <th
                                 class="sorting"
@@ -778,90 +841,109 @@
                                 aria-controls="marking_tbl"
                                 rowspan="1"
                                 colspan="1"
-                                aria-label="District: activate to sort column ascending"
-                                style="width: 40.875px"
+                                aria-label="Pages: activate to sort column ascending"
+                                style="width: 35.3281px"
                               >
-                                District
-                              </th>
-                              <th
-                                class="sorting"
-                                tabindex="0"
-                                aria-controls="marking_tbl"
-                                rowspan="1"
-                                colspan="1"
-                                aria-label="Complex: activate to sort column ascending"
-                                style="width: 50.359px"
-                              >
-                                Complex
-                              </th>
-                              <th
-                                class="sorting"
-                                tabindex="0"
-                                aria-controls="marking_tbl"
-                                rowspan="1"
-                                colspan="1"
-                                aria-label="Action: activate to sort column ascending"
-                                style="width: 51.578px"
-                              >
-                                Action
+                                Pages
                               </th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr role="row" class="odd">
                               <td class="sorting_1">
-                                <a href="status_of_pending_list.html"
-                                  >ECA23000075</a
-                                >
+                                <input
+                                  name="canomarked[]"
+                                  value="2201000132"
+                                  type="checkbox"
+                                />
                               </td>
                               <td>
-                                <span
-                                  >IDFC FIRST BANK
-                                  <span style="color: red"><b>Vs.</b> </span>
-                                  RJINDER KUMAR 111</span
-                                >
+                                <a href="">2201000132 <br /> </a>
                               </td>
-                              <td><span> Mr.Samar Vishal </span></td>
-                              <td><span> CRIMINAL </span></td>
-                              <td><span> 2023-09-26</span></td>
-                              <td>DISPOSED</td>
-                              <td>Central</td>
-                              <td>Tis Hazari</td>
                               <td>
-                                <a
-                                  class="btn btn-sm btn-danger legitRipple"
-                                  href="etc_assigned_list.html"
-                                  >Assign</a
-                                >
+                                ASDF
+                                <span style="color: red"><b>Vs.</b> </span>
+                                SADF
                               </td>
+                              <td>KAVITA BIST</td>
+                              <td>CIVIL</td>
+                              <td>02-11-2022</td>
+                              <td>04-11-2022</td>
+                              <td>10</td>
                             </tr>
-
+                            <tr role="row" class="even">
+                              <td class="sorting_1">
+                                <input
+                                  name="canomarked[]"
+                                  value=""
+                                  type="checkbox"
+                                />
+                              </td>
+                              <td>
+                                <a href="">2201000134 <br /> </a>
+                              </td>
+                              <td>
+                                ASDF
+                                <span style="color: red"><b>Vs.</b> </span>
+                                ASD
+                              </td>
+                              <td>SAURABH GOYAL</td>
+                              <td>CIVIL</td>
+                              <td>01-11-2022</td>
+                              <td>03-11-2022</td>
+                              <td>10</td>
+                            </tr>
                             <tr role="row" class="odd">
                               <td class="sorting_1">
-                                <a href="status_of_pending_list.html"
-                                  >ECA23000086</a
-                                >
+                                <input
+                                  name="canomarked[]"
+                                  value=""
+                                  type="checkbox"
+                                />
+                              </td>
+                              <td>
+                                <a href="">2201000145 <br /> </a>
                               </td>
                               <td>
                                 <span
-                                  >M/S VIPUL OVERSEAS PVT. LTD.
+                                  >TEST
                                   <span style="color: red"><b>Vs.</b> </span>
-                                  SANJEEV BHASIN @ SANJAY BHASIN</span
+                                  TEST</span
                                 >
                               </td>
-                              <td><span> Mr. Naveen Gupta </span></td>
-                              <td><span> SESSIONS </span></td>
-                              <td><span> 2023-10-13</span></td>
-                              <td>PENDING</td>
-                              <td>Central</td>
-                              <td>Tis Hazari</td>
+                              <td><span> KAVITA BIST </span></td>
+                              <td><span> CRIMINAL </span></td>
+                              <td><span> 11-11-2022</span></td>
+                              <td><span>15-11-2022</span></td>
+                              <td>10</td>
+                            </tr>
+                            <tr role="row" class="even">
+                              <td class="sorting_1">
+                                <input
+                                  name="canomarked[]"
+                                  value=""
+                                  type="checkbox"
+                                />
+                              </td>
                               <td>
-                                <a
-                                  class="btn btn-sm btn-danger legitRipple"
-                                  href="etc_assigned_list.html"
-                                  >Assign</a
-                                >
+                                <a href=""
+                                  >2301000050 <br />
+                                  <span
+                                    class="badge badge-success badge-pill text-white"
+                                    ><i class="icon-sphere"></i> ECA23000073
+                                  </span>
+                                </a>
                               </td>
+                              <td>
+                                GAURAV OHRI AND ORS
+                                <span style="color: red"><b>Vs.</b> </span>
+                                MANJALI OHRI
+                              </td>
+                              <td>MR.NAVEEN KUMAR KASHYAP</td>
+                              <td>SESSIONS</td>
+                              <td>21-09-2023</td>
+                              <td>25-09-2023</td>
+                              <td>45</td>
                             </tr>
                           </tbody>
                         </table>
@@ -871,7 +953,7 @@
                           role="status"
                           aria-live="polite"
                         >
-                          Showing 1 to 10 of 14 entries
+                          Showing 1 to 10 of 16 entries
                         </div>
                         <div
                           class="dataTables_paginate paging_simple_numbers"

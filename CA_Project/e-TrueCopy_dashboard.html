@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>CA Dashboard</title>
+    <title>e-True Copy Dashboard</title>
 
     <!-- Global stylesheets -->
     <link
@@ -108,8 +108,14 @@
     <!-- Main navbar -->
     <div class="navbar navbar-expand-md navbar-dark bg-indigo navbar-static">
       <div class="navbar-brand">
-        <a href="layersweb/app/dashboard" class="d-inline-block">
-          <img src="assets/images/LayersLogoApp.png" alt="" />
+        <a
+          href="http://10.199.31.113/layersweb/app/dashboard"
+          class="d-inline-block"
+        >
+          <img
+            src="http://10.199.31.113/layersweb/assets/images/LayersLogoApp.png"
+            alt=""
+          />
         </a>
       </div>
 
@@ -141,7 +147,7 @@
         <center>
           <span class="navbar-text ml-md-3">
             <span class="badge badge-mark border-orange-300 mr-2"></span>
-            <strong>CARE TAKING BRANCH, TIS HAZARI</strong>
+            <strong>COPYING AGENCY, TIS HAZARI</strong>
           </span>
         </center>
         <ul class="navbar-nav ml-md-auto">
@@ -152,7 +158,7 @@
               data-toggle="dropdown"
             >
               <i class="icon-user mr-2"></i>
-              KHEEM SINGH
+              DINESH BABU KULSRESHTHA
             </a>
 
             <div
@@ -172,9 +178,11 @@
                     alt=""
                   />
                 </a>
-                <h6 class="mb-0 text-white text-shadow-dark">KHEEM SINGH</h6>
+                <h6 class="mb-0 text-white text-shadow-dark">
+                  DINESH BABU KULSRESHTHA
+                </h6>
                 <span class="font-size-sm text-white text-shadow-dark"
-                  >Bracnh In-charge : 91021</span
+                  >Senior Judicial Assistant : 68694179</span
                 >
               </div>
 
@@ -207,12 +215,13 @@
                   </li>
                 </ul>
               </div>
-              <a href="auth/logout">
+              <a href="#">
                 <div class="dropdown-content-footer bg-light">
                   <span
                     class="font-size-sm line-height-sm text-uppercase font-weight-semibold text-grey mr-auto"
                     >Log Out</span
                   >
+
                   <div>
                     <span
                       href="#"
@@ -463,70 +472,138 @@
 
                       <div class="card-body p-0" style="display: none">
                         <ul class="nav nav-sidebar" data-nav-type="accordion">
-                          <!-- Applied list -->
+                          <!-- Received list -->
                           <li class="nav-item">
-                            <a
-                              href="ETC_applied_list.html"
-                              class="nav-link legitRipple"
-                              ><i class="icon-list2"></i>Received
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-file-check2"></i>Received
                             </a>
                           </li>
-                          <!-- /Applied list -->
-
-                          <!-- Assigned list -->
+                          <!-- /Received list -->
+                          <!-- Marked list -->
                           <li class="nav-item">
                             <a
-                              href="ETC_pending_list.html"
+                              href="e-TrueCopy_marking_list.html"
                               class="nav-link legitRipple"
-                              ><i class="icon-list2"></i>Marked
+                              ><i class="icon-bookmarks"></i>Marked
                             </a>
                           </li>
-                          <!-- /Assigned list -->
-                          <!-- verified list -->
+                          <!-- /Marked list -->
+                          <!-- Prepared list -->
                           <li class="nav-item">
                             <a
-                              href="ETC_pending_list.html"
+                              href="e-TrueCopy_prepare_list.html"
                               class="nav-link legitRipple"
-                              ><i class="icon-list2"></i>Prepared
+                              ><i class="icon-paste2"></i>Prepared
                             </a>
                           </li>
-                          <!-- /verified list -->
+                          <!-- /Prepared list -->
+                          <!-- Objections list -->
+                          <li class="nav-item">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-blocked"></i>Objection
+                            </a>
+                          </li>
+                          <!-- /Objections list -->
                           <!-- rejected list -->
                           <li class="nav-item">
-                            <a
-                              href="ETC_pending_list.html"
-                              class="nav-link legitRipple"
-                              ><i class="icon-list2"></i>Rejected
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-blocked"></i>Rejected
                             </a>
                           </li>
                           <!-- /rejected list -->
-                          <!-- Objection list -->
-                          <li class="nav-item">
-                            <a
-                              href="ETC_pending_list.html"
-                              class="nav-link legitRipple"
-                              ><i class="icon-list2"></i>Objection
-                            </a>
-                          </li>
-                          <!-- /Objection list -->
-                          <!-- Delivered list -->
-                          <li class="nav-item">
-                            <a
-                              href="ETC_pending_list.html"
-                              class="nav-link legitRipple"
-                              ><i class="icon-list2"></i>Delivered
-                            </a>
-                          </li>
-                          <!-- /Delivered list -->
+
                           <!-- Convert to CA -->
                           <li class="nav-item">
-                            <a
-                              href="ETC_pending_list.html"
-                              class="nav-link legitRipple"
-                              ><i class="icon-list2"></i>Convert to CA
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-diff-renamed"></i>Convert to CA
                             </a>
                           </li>
                           <!-- /Convert to CA -->
+                          <!-- Delivered list -->
+                          <li class="nav-item">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-diff-renamed"></i>Delivered
+                            </a>
+                          </li>
+                          <!-- /Delivered list -->
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /ETC Proccessing -->
+
+                    <!-- ETC Reports -->
+                    <div class="card card-collapsed">
+                      <div
+                        class="card-header bg-transparent header-elements-inline"
+                      >
+                        <span
+                          class="text-uppercase font-size-sm font-weight-semibold"
+                          ><i class="icon-stack mr-2 text-pink-600"></i> ETC
+                          Reports
+                        </span>
+                        <div class="header-elements">
+                          <div class="list-icons">
+                            <a
+                              class="list-icons-item rotate-180"
+                              data-action="collapse"
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-body p-0" style="display: none">
+                        <ul class="nav nav-sidebar" data-nav-type="accordion">
+                          <!-- Received list -->
+                          <!-- <li class="nav-item">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-file-check2"></i>Received
+                            </a>
+                          </li> -->
+                          <!-- /Received list -->
+
+                          <!-- Marked list -->
+                          <li class="nav-item">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-bookmarks"></i>Marked
+                            </a>
+                          </li>
+                          <!-- /Marked list -->
+                          <!-- Prepared list -->
+                          <li class="nav-item">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-paste2"></i>Prepared
+                            </a>
+                          </li>
+                          <!-- /Prepared list -->
+                          <!-- Objection list -->
+                          <li class="nav-item">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-blocked"></i>Objections
+                            </a>
+                          </li>
+                          <!-- /Objection list -->
+                          <!-- Rejected list -->
+                          <li class="nav-item">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-blocked"></i>Rejected
+                            </a>
+                          </li>
+                          <!-- /Rejected list -->
+
+                          <!-- Convert to CA -->
+                          <li class="nav-item">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-diff-renamed"></i>Convert to CA
+                            </a>
+                          </li>
+                          <!-- /Convert to CA -->
+                          <!-- Delivered list -->
+                          <li class="nav-item">
+                            <a href="#" class="nav-link legitRipple"
+                              ><i class="icon-diff-renamed"></i>Delivered
+                            </a>
+                          </li>
+                          <!-- /Delivered list -->
                         </ul>
                       </div>
                     </div>
@@ -547,65 +624,6 @@
                       </div>
                     </div>
                     <!-- /ETC Delivery Reschedule -->
-                    <!-- Reports -->
-                    <div class="card card-collapsed">
-                      <div
-                        class="card-header bg-transparent header-elements-inline"
-                      >
-                        <span
-                          class="text-uppercase font-size-sm font-weight-semibold"
-                          ><i class="icon-stack mr-2 text-pink-600"></i>
-                          Reports</span
-                        >
-                        <div class="header-elements">
-                          <div class="list-icons">
-                            <a
-                              class="list-icons-item rotate-180"
-                              data-action="collapse"
-                            ></a>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="card-body p-0" style="display: none">
-                        <ul class="nav nav-sidebar" data-nav-type="accordion">
-                          <li class="nav-item nav-item-submenu">
-                            <a href="#" class="nav-link legitRipple"
-                              ><i class="icon-files-empty"></i> ETC Report</a
-                            >
-                            <ul class="nav nav-group-sub" style="display: none">
-                              <li class="nav-item">
-                                <a href="" class="nav-link legitRipple"
-                                  ><i class="icon-bookmarks"></i>Marked
-                                </a>
-                              </li>
-                              <li class="nav-item">
-                                <a href="" class="nav-link legitRipple"
-                                  ><i class="icon-paste2"></i>Prepared
-                                </a>
-                              </li>
-                              <li class="nav-item">
-                                <a href="" class="nav-link legitRipple"
-                                  ><i class="icon-diff-renamed"></i>Delivered
-                                </a>
-                              </li>
-                              <li class="nav-item">
-                                <a href="" class="nav-link legitRipple"
-                                  ><i class="icon-diff-renamed"></i>Rejected
-                                </a>
-                              </li>
-                              <li class="nav-item">
-                                <a href="" class="nav-link legitRipple"
-                                  ><i class="icon-diff-renamed"></i>Total
-                                  Pending
-                                </a>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <!-- /Reports -->
 
                     <!-- Setting -->
                     <div class="card card-collapsed">
@@ -630,7 +648,9 @@
                       <div class="card-body p-0" style="display: none">
                         <ul class="nav nav-sidebar" data-nav-type="accordion">
                           <li class="nav-item">
-                            <a href="" class="nav-link legitRipple"
+                            <a
+                              href="etc_User_role_list.html"
+                              class="nav-link legitRipple"
                               ><i class="icon-collaboration"></i>User Roles
                             </a>
                           </li>
@@ -667,7 +687,7 @@
                                 <h3 class="font-weight-black mb-0">10</h3>
                                 <span
                                   class="text-uppercase font-size-lg text-muted"
-                                  >APPLIED
+                                  >Received
                                 </span>
                               </div>
                             </div>
@@ -703,7 +723,7 @@
                           <a class="text-white" href="#">
                             <div class="media">
                               <div class="mr-3 align-self-center">
-                                <i class="icon-blocked icon-3x"></i>
+                                <i class="icon-exclamation icon-3x"></i>
                               </div>
 
                               <div class="media-body text-right">
@@ -723,7 +743,7 @@
                             <div class="media">
                               <div class="mr-3 align-self-center">
                                 <i
-                                  class="icon-exclamation icon-3x text-danger-400"
+                                  class="icon-3x text-danger-400 icon-diff-renamed"
                                 ></i>
                               </div>
 

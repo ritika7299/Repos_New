@@ -571,6 +571,13 @@
                             class="dropdown-item"
                             ><i class="icon-fold"></i> Receipt</a
                           >
+                          <a
+                            href="#"
+                            data-toggle="modal"
+                            data-target="#modal_ca_edit"
+                            class="dropdown-item"
+                            ><i class="icon-fold"></i> Forward to CA</a
+                          >
                           <!-- <a
                             href="#"
                             data-toggle="modal"
@@ -1164,20 +1171,19 @@
                           </div>
                           <!-- upload verifiy file -->
                           <!-- send to user -->
-                          <div class="table-responsive d-flex mt-2">
-                            <div class="uniform-checker mt-1">
+                          <div class="form-check form-check-inline mt-2">
+                            <label class="form-check-label">
                               <input
                                 type="checkbox"
-                                class="form-check-input-styled"
-                                data-fouc=""
+                                class="form-check-input text-semibold"
                               />
-                            </div>
-                            <p class="Undersigned ml-1 mt-1">Undersigned</p>
+                              Undersigned....
+                            </label>
                           </div>
-                          <div class="verified-button ml-2 mt-3">
+                          <div class="verified-button ml-2 mt-3 float-right">
                             <button
                               type="submit"
-                              class="btn btn-success btn-lg btn-float-center"
+                              class="btn btn-success btn-lg"
                             >
                               Verifiy and Send
                               <i class="icon-paperplane ml-1"></i>
@@ -1201,7 +1207,7 @@
 
         <!-- Basic modal -->
         <!-- Reject modal -->
-        <div id="modal_reject" class="modal fade" tabindex="-1">
+        <!-- <div id="modal_reject" class="modal fade" tabindex="-1">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header bg-danger-600">
@@ -1254,7 +1260,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- /Reject modal -->
         <!-- Objection modal -->
         <div id="modal_objection" class="modal fade" tabindex="-1">
@@ -1270,7 +1276,7 @@
               </div>
 
               <div class="modal-body">
-                <div class="table border-top">
+                <div class="table">
                   <table class="table table-xs table-bordered text-nowrap">
                     <tbody>
                       <tr>
@@ -1313,7 +1319,7 @@
                   Submit
                 </button>
 
-                <div class="table-responsive border-top mt-2">
+                <div class="table-responsive mt-2">
                   <table class="table table-xs table-bordered text-nowrap">
                     <tbody>
                       <tr>

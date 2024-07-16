@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Home - LAYERS : Linked Applications and Extended Reporting System</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
+		type="text/css">
+	<link href="../../../../global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="../../../../global_assets/css/icons/material/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="../../../../global_assets/css/icons/fontawesome/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/layout.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script src="../../../../global_assets/js/main/jquery.min.js"></script>
+	<script src="../../../../global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/ui/ripple.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script src="../../../../global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="../../../../global_assets/js/plugins/pickers/daterangepicker.js"></script>
+	<script src="../../../../global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+
+	<script src="../../../../global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+
+	<script src="../../../../global_assets/js/demo_pages/form_multiselect.js"></script>
+	<script src="../../../../global_assets/js/plugins/forms/selects/select2.min.js"></script>
+
+	<script src="../../../../global_assets/js/demo_pages/datatables_basic.js"></script>
+
+	<script src="assets/js/app.js"></script>
+
+	<script src="../../../../global_assets/js/demo_pages/form_select2.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/dashboard.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/form_checkboxes_radios.js"></script>
+    
+	<!-- /theme JS files -->
+	
+</head>
+
+<body class="sidebar-xs sidebar-mobile-component">
+
+	<!-- Main navbar -->
+	<div class="navbar navbar-expand-md navbar-dark bg-indigo navbar-static">
+		<div class="navbar-brand">
+			<a href="index.html" class="d-inline-block">
+				<img src="assets_local/images/LayersLogoApp.png" alt="">
+			</a>
+		</div>
+
+		<div class="d-md-none">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+				<i class="icon-user"></i>
+			</button>
+			<button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+				<i class="icon-paragraph-justify3"></i>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-mobile">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+						<i class="icon-paragraph-justify3"></i>
+					</a>
+				</li>
+			</ul>
+
+
+
+			<ul class="navbar-nav ml-md-auto">
+
+				<li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-user mr-2"></i>
+						Amit Kumar
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-250"
+						style="background: url(../../../../global_assets/images/backgrounds/user_bg2.jpg) center center no-repeat;">
+						<div class="card-body text-center">
+							<a href="#">
+								<img src="assets_local/images/amitPic.jpg"
+									class="img-fluid rounded-circle shadow-1 mb-3" width="80" height="80" alt="">
+							</a>
+							<h6 class="mb-0 text-white text-shadow-dark">Amit Kumar</h6>
+							<span class="font-size-sm text-white text-shadow-dark">System Analyst : 12228</span>
+						</div>
+
+						<div class="sidebar-user-material-footer">
+							<a href="#user-nav"
+								class="d-flex justify-content-between align-items-center text-shadow-dark dropdown-toggle"
+								data-toggle="collapse"><span>My account</span></a>
+						</div>
+						<div class="collapse" id="user-nav">
+							<ul class="nav nav-sidebar">
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="icon-user-plus"></i>
+										<span>My profile</span>
+									</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="icon-comment-discussion"></i>
+										<span>Messages</span>
+										<span class="badge bg-teal-400 badge-pill align-self-center ml-auto">58</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="icon-cog5"></i>
+										<span>Account settings</span>
+									</a>
+								</li>
+
+							</ul>
+						</div>
+						<a href="#">
+							<div class="dropdown-content-footer bg-light">
+								<span
+									class="font-size-sm line-height-sm text-uppercase font-weight-semibold text-grey mr-auto">Log
+									Out</span>
+
+
+								<div>
+									<span href="#" class="text-grey" data-popup="tooltip" title="Log Out"><i
+											class="icon-switch2"></i></span>
+
+								</div>
+							</div>
+						</a>
+					</div>
+				</li>
+
+
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+
+	<!-- Page content -->
+	<div class="page-content">
+
+		<!-- Main sidebar -->
+		<div class="sidebar sidebar-light sidebar-main sidebar-expand-md">
+
+			<!-- Sidebar mobile toggler -->
+			<div class="sidebar-mobile-toggler text-center">
+				<a href="#" class="sidebar-mobile-main-toggle">
+					<i class="icon-arrow-left8"></i>
+				</a>
+				<span class="font-weight-semibold">Navigation</span>
+				<a href="#" class="sidebar-mobile-expand">
+					<i class="icon-screen-full"></i>
+					<i class="icon-screen-normal"></i>
+				</a>
+			</div>
+			<!-- /sidebar mobile toggler -->
+
+
+			<!-- Sidebar content -->
+			<div class="sidebar-content">
+
+
+
+				<!-- Main navigation -->
+				<div class="card card-sidebar-mobile">
+					<ul class="nav nav-sidebar" data-nav-type="accordion">
+
+						<!-- Main -->
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu"
+								title="Main"></i>
+						</li>
+						<li class="nav-item">
+							<a href="index.html" class="nav-link ">
+								<i class="icon-home4"></i>
+								<span>
+									Home
+								</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="002dashboard.html" class="nav-link ">
+								<i class="icon-home4"></i>
+								<span>
+									Dashboard
+								</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="index.html" class="nav-link">
+								<i class="text-pink icon-clipboard3"></i>
+								<span>
+									Circulars
+								</span>
+							</a>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link active"><i class="icon-user text-blue-700"></i>
+								<span>Employees</span></a>
+							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
+								<li class="nav-item"><a href="004searchEmployee.html" class="nav-link active"> Search
+										Employee</a></li>
+								<li class="nav-item"><a href="004searchEmployee.html" class="nav-link">Transfer &
+										Posting</a></li>
+							</ul>
+						</li>
+						<!-- /main -->
+						<!-- Components -->
+						<li class="nav-item-header">
+							<div class="text-uppercase font-size-xs line-height-xs">Components</div> <i
+								class="icon-menu" title="Components"></i>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-grid"></i> <span>Basic components</span></a>
+							<ul class="nav nav-group-sub" data-submenu-title="Basic components">
+								<li class="nav-item"><a href="components_modals.html" class="nav-link">Modals</a></li>
+								<li class="nav-item"><a href="components_dropdowns.html" class="nav-link">Dropdown
+										menus</a></li>
+								<li class="nav-item"><a href="components_tabs.html" class="nav-link">Tabs component</a>
+								</li>
+
+							</ul>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-puzzle2"></i> <span>Content styling</span></a>
+							<ul class="nav nav-group-sub" data-submenu-title="Content styling">
+								<li class="nav-item"><a href="content_page_header.html" class="nav-link">Page header</a>
+								</li>
+								<li class="nav-item"><a href="content_page_footer.html" class="nav-link disabled">Page
+										footer <span class="badge bg-transparent align-self-center ml-auto">Coming
+											soon</span></a></li>
+								<li class="nav-item-divider"></li>
+
+							</ul>
+						</li>
+
+						<!-- /components -->
+
+					</ul>
+				</div>
+				<!-- /main navigation -->
+
+			</div>
+			<!-- /sidebar content -->
+
+		</div>
+		<!-- /main sidebar -->
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<!-- Page header -->
+			<div class="page-header page-header-light">
+
+
+				<div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+					<div class="d-flex">
+						<div class="breadcrumb">
+							<a href="002dashboard.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i>
+								Dashboard </a>
+							<a href="004searchEmployee.html" class="breadcrumb-item active">Copying Agency</a>
+							<a href="004searchEmployee.html" class="breadcrumb-item active">CA Details</a>
+
+
+						</div>
+
+						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+					</div>
+
+					<!-- <div class="header-elements d-none">
+						<div class="breadcrumb justify-content-center">
+							<a href="#" class="breadcrumb-elements-item">
+								<i class="icon-help text-warning-300 mr-2"></i><i
+									class="icon-file-text text-indigo-300 mr-2"></i><i
+									class="icon-file-presentation2 text-info-600 mr-2"></i></i><i
+									class="icon-play3 text-green-600 mr-2"></i>
+								Help
+							</a>
+						</div>
+					</div> -->
+                
+				</div>
+				
+			</div>
+			<!-- /page header -->
+
+			<div class="content">
+
+
+
+				<!-- Inner container -->
+				<div class="d-md-flex align-items-md-start">
+
+					<!-- Left sidebar component -->
+					<div class="sidebar sidebar-light sidebar-component sidebar-component-left sidebar-expand-md mb-3">
+
+						<!-- Sidebar content -->
+						<div class="sidebar-content">
+							<!-- Quarter Selection -->
+							<div class="card card-collapsed">
+								<div class="card-header bg-pink-600 header-elements-inline">
+									<span class="text-uppercase font-size-lg font-weight-bold"><i class="icon-home5 mr-2"></i> Copying Agency</span>
+
+								</div>
+
+								
+							</div>
+							<!-- /Quarter Selection -->
+							
+
+							<!-- Unit Exemption -->
+							<div class="card card-collapsed">
+								<div class="card-header bg-transparent header-elements-inline">
+									<span class="text-uppercase font-size-sm font-weight-semibold"><i
+											class="icon-diff-added mr-2 text-pink"></i> Apply New CA</span>
+								</div>
+							</div>
+							<!-- /Unit Exemption -->
+							<!-- Judicial Officer Leave -->
+							<div class="card card-collapsed">
+								<div class="card-header bg-transparent header-elements-inline">
+									<span class="text-uppercase font-size-sm font-weight-semibold"><i
+											class="icon-folder-download2 mr-2 text-pink"></i> File Fetching</span>
+								</div>
+							</div>
+							<!-- /Judicial Officer Leave -->
+							<!-- Judicial Officer Leave -->
+							<div class="card card-collapsed">
+								<div class="card-header bg-transparent header-elements-inline">
+									<span class="text-uppercase font-size-sm font-weight-semibold"><i
+											class="icon-bookmarks mr-2 text-pink"></i>  Marking CA</span>
+								</div>
+							</div>
+							<!-- /Judicial Officer Leave -->
+							<!-- Judicial Officer Leave -->
+							<div class="card card-collapsed">
+								<div class="card-header bg-transparent header-elements-inline">
+									<span class="text-uppercase font-size-sm font-weight-semibold"><i
+											class="icon-paste2 mr-2 text-pink"></i> Prepare CA</span>
+								</div>
+							</div>
+							<!-- /Judicial Officer Leave -->
+							
+							<!-- Judicial Officer Leave -->
+							<div class="card card-collapsed">
+								<div class="card-header bg-transparent header-elements-inline">
+									<span class="text-uppercase font-size-sm font-weight-semibold"><i
+											class="icon-diff-renamed mr-2 text-pink"></i> CA Delivery</span>
+								</div>
+							</div>
+							<!-- /Judicial Officer Leave -->
+							<!-- Setting -->
+							<div class="card card-collapsed">
+								<div class="card-header bg-transparent header-elements-inline">
+									<span class="text-uppercase font-size-sm font-weight-semibold"><i
+											class="icon-cog2 mr-2 text-pink-600"></i> Settings</span>
+									<div class="header-elements">
+										<div class="list-icons">
+											<a class="list-icons-item" data-action="collapse"></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="card-body p-0">
+									<ul class="nav nav-sidebar" data-nav-type="accordion">
+
+										<li class="nav-item">
+											<a href="#" class="nav-link"><i class="icon-collaboration"></i>User Roles
+												 </a>
+										</li>
+										
+
+									</ul>
+								</div>
+							</div>
+							<!-- /Setting -->
+
+
+						</div>
+						<!-- /sidebar content -->
+
+					</div>
+					<!-- /left sidebar component -->
+
+
+					<!-- Right content -->
+					<div class="" style="width: 100%;">
+						<!-- Button classes -->
+						<div class="card">
+							<div class="card-header bg-pink-600 header-elements-inline" style="padding-top: 10px; padding-bottom: 10px;">
+								<h5 class="card-title">E True Copy Application Details  </h5>
+								<div class="btn-group " style="float: right;">
+									
+									<button type="button" class="btn btn-danger ml-1"><i class="icon-cancel-circle2 mr-1"></i> Reject</button>
+									<button type="button" class="btn btn-info ml-1"><i class="icon-check mr-1"></i> Mark to Copyist</button>
+									<button type="button" class="btn bg-orange-600 ml-1"><i class="icon-rotate-ccw mr-1"></i> Convert to CA</button>
+									<button type="button" class="btn bg-slate dropdown-toggle ml-1" data-toggle="dropdown"><i class="icon-cog5 mr-1"></i> Options</button>
+									<div class="dropdown-menu dropdown-menu-right">
+										<a href="#" class="dropdown-item"><i class="icon-blocked"></i> Mark Objection</a>
+										<a href="#" class="dropdown-item"><i class="icon-printer4"></i> Print Receipt</a>
+										<a href="#" class="dropdown-item"><i class="icon-history text-orange-500"></i> Changelog</a>
+									</div>
+								</div>
+							</div>
+							<div class="card-body">
+								<!-- Progress counters -->
+								<div class="row">
+									<div class="col-sm-6  mb-3">
+										<div class="table-responsive">
+											<table class="table table-striped table-bordered table-hover">
+												<tr>
+													<th class="text-danger-700" colspan="2">E True Copy Application Details</th>
+													
+												</tr>
+												<tr>
+													<th style="width: 35%;">ETC ID</th>
+													<td>2206000045</td>
+												</tr>
+												<tr>
+													<th>Case Title</th>
+													<td>M/s Bharat Electricals <span class="font-weight-black">Vs.</span> Mr. Ajeet Pranjal</td>
+												</tr>
+												<tr>
+													<th>CNR and Case Number</th>
+													<td>DLCT010001252021</td>
+												</tr>
+												<tr>
+													<th>Case Details</th>
+													<td style="padding-top: 0.1rem; padding-bottom: 0.1rem;"><button type="button" class="btn btn-sm bg-indigo-300"><i class="mi-view-day mr-2"></i>view</button></td>
+												</tr>
+												<tr>
+													<th>Pages Applied</th>
+													<td>50</td>
+												</tr>
+												<tr>
+													<th>Copy Mode</th>
+													<td>Urgent - Payable</td>
+												</tr>
+												<tr>
+													<th>Copying Agency</th>
+													<td>Civil</td>
+												</tr>
+												<tr>
+													<th>District </th>
+													<td>Central, Tis Hazari Courts</td>
+												</tr>
+											</table>
+										</div>
+										<div class="table-responsive mt-3">
+											<table class="table table-striped table-bordered table-hover">
+												<tr>
+													<th class="text-danger-700" colspan="2">Applicant Details</th>
+													
+												</tr>
+												<tr>
+													<th style="width: 35%;">Name</th>
+													<td>Sh. Yogender Sharma</td>
+												</tr>
+												<tr>
+													<th>Mobile</th>
+													<td>9999999999</td>
+												</tr>
+												<tr>
+													<th>Email ID</th>
+													<td>yogendersharma@gmail.com</td>
+												</tr>
+												<tr>
+													<th>Address</th>
+													<td>B/423 - 4th Floor, Akashganga Apartment, Sector - 121, NOIDA, Uttar Pradesh </td>
+												</tr>
+												<tr>
+													<th>Applicant Type</th>
+													<td>Petitioner Advocate </td>
+												</tr>
+												
+											</table>
+										</div>
+									</div>
+									<div class="col-sm-6  mb-3">
+										<div class="">
+											<button type="button" class="btn bg-pink mb-3"> Create E-True Copy File <i class="ml-2 icon-square-up-right"></i></button>
+										</div>
+										<div class="table-responsive">
+											<table class="table table-striped table-bordered table-hover">
+												<tr>
+													<th style="width: 40%;">Current Status</th>
+													<td><button type="button" class="btn btn-sm bg-success" data-toggle="collapse" href="#catimeline"> Accepted <i class="icon-arrow-down5 ml-1"></i></button></td>
+												</tr>
+												<tr>
+													<th colspan="2" class="text-pink-600"> 
+														<div id="catimeline" class="collapse">
+															Timeline <br>
+															<!-- Top aligned -->
+															<div class="pt-3 list-feed list-feed-rhombus list-feed-solid">
+																<div class="list-feed">
+																	<div class="list-feed-item border-danger">
+																		<div class="text-muted">Jan 11, 10:25</div>
+																		<a href="#">CA Delivered </a> 
+																		<div class="text-muted" style="font-size: 10px;"> (Sh. Surinder Kumar, 09.01.2022-10.14 AM)</div>
+																	</div>
+
+																	<div class="list-feed-item border-danger">
+																		<div class="text-muted">Jan 10, 09:37</div>
+																		<a href="#">Final Payment - Refund Rs. 25 </a> 
+																		<div class="text-muted" style="font-size: 10px; font-style: italic;"> (Sh. Surinder Kumar, 09.01.2022-10.14 AM)</div>
+																	</div>
+																	<div class="list-feed-item border-danger">
+																		<div class="text-muted">Jan 9, 08:28</div>
+																		<a href="#">CA Prepared </a> <div style="font-size: 10px; font-style: italic;" class="text-muted"> (Sh. Aman Ahuja, 09.01.2022-10.14 AM)</div>
+																	</div>
+																	<div class="list-feed-item border-danger">
+																		<div class="text-muted">Jan 9, 08:28</div>
+																		<a href="#">CA Marked </a> to Sh. Sanjay Sharma <div style="font-size: 10px; font-style: italic;" class="text-muted"> (Sh. Mukesh Raj, 09.01.2022-10.14 AM)</div>
+																	</div>
+																	<div class="list-feed-item border-danger">
+																		<div class="text-muted">Jan 9, 08:28</div>
+																		<a href="#"> Objection Removed </a> Money Short, pay Rs. 200 more <div style="font-size: 10px; font-style: italic;" class="text-muted"> (Sh. Surinder Kumar, 09.01.2022-10.14 AM)</div>
+																	</div>
+																	<div class="list-feed-item border-danger">
+																		<div class="text-muted">Jan 9, 08:28</div>
+																		<a href="#"> Part Payment 1 received </a> <div style="font-size: 10px; font-style: italic;" class="text-muted"> (Sh. Surinder Kumar, 09.01.2022-10.14 AM)</div>
+																	</div>
+																	<div class="list-feed-item border-danger">
+																		<div class="text-muted">Jan 9, 08:28</div>
+																		<a href="#">Marked Objection </a> Money Short, pay Rs. 200 more <div style="font-size: 10px; font-style: italic;" class="text-muted"> (Sh. Mukesh Raj, 09.01.2022-10.14 AM)</div>
+																	</div>
+
+																	<div class="list-feed-item border-danger">
+																		<div class="text-muted">Jan 8, 07:58</div>
+																		<a href="#">File Fetched </a> by Sh. Niranjan Sinha <div style="font-size: 10px; font-style: italic;" class="text-muted"> (Sh. Mukesh Raj, 08.01.2022-12.24 PM) </div>
+																	</div>
+
+																	<div class="list-feed-item border-danger">
+																		<div class="text-muted">Jan 7, 06:32</div>
+																		<a href="#">Copy Applied</a>  <div style="font-size: 10px; font-style: italic;" class="text-muted"> (Sh. Surinder Kumar, 07.01.2022-11.20 AM)  </div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<!-- /top aligned -->
+													</th> 
+													
+													
+												</tr>
+												
+											</table>
+										</div>
+										
+										<!-- Messaging -->
+										<div class="table-responsive mt-3">
+											<table class="table table-striped table-bordered ">
+												<tr>
+													<th>
+														<a data-toggle="collapse" href="#etcconv">Messaging <i class="icon-arrow-down5 ml-1"></i></a>
+													</th>
+													
+													
+												</tr>
+												<tr>
+													<td colspan="2">
+														<div class="p-3 collapse" id="etcconv">
+															<div class="">
+																<ul class="media-list media-chat media-chat-scrollable mb-3">
+																	<li class="media content-divider justify-content-center text-muted mx-0">Monday, Feb 10</li>
+				
+																	<li class="media">
+																		<div class="mr-3">
+																			<a href="../../../../global_assets/images/placeholders/placeholder.jpg">
+																				<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="40" height="40" alt="">
+																			</a>
+																		</div>
+				
+																		<div class="media-body">
+																			<div class="media-chat-item">Below mounted advantageous spread yikes bat stubbornly crud a and a excepting</div>
+																			<div class="font-size-sm text-muted mt-2">Mon, 9:54 am <a href="#"><i class="icon-pin-alt ml-2 text-muted"></i></a></div>
+																		</div>
+																	</li>
+				
+																	<li class="media media-chat-item-reverse">
+																		<div class="media-body">
+																			<div class="media-chat-item">Far squid and that hello fidgeted and when. As this oh darn but slapped casually husky sheared that cardinal hugely one and some unnecessary factiously hedgehog a feeling one rudely much but one owing sympathetic regardless more astonishing evasive tasteful much.</div>
+																			<div class="font-size-sm text-muted mt-2">Mon, 10:24 am <a href="#"><i class="icon-pin-alt ml-2 text-muted"></i></a></div>
+																		</div>
+				
+																		<div class="ml-3">
+																			<a href="../../../../global_assets/images/placeholders/placeholder.jpg">
+																				<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="40" height="40" alt="">
+																			</a>
+																		</div>
+																	</li>
+				
+																	<li class="media">
+																		<div class="mr-3">
+																			<a href="../../../../global_assets/images/placeholders/placeholder.jpg">
+																				<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="40" height="40" alt="">
+																			</a>
+																		</div>
+				
+																		<div class="media-body">
+																			<div class="media-chat-item">Darn over sour then cynically less roadrunner up some cast buoyant. Macaw krill when and upon less contrary warthog jeez some koala less since therefore minimal.</div>
+																			<div class="font-size-sm text-muted mt-2">Mon, 10:56 am <a href="#"><i class="icon-pin-alt ml-2 text-muted"></i></a></div>
+																		</div>
+																	</li>
+				
+																	<li class="media media-chat-item-reverse">
+																		<div class="media-body">
+																			<div class="media-chat-item">Some upset impious a and submissive when far crane the belched coquettishly. More the puerile dove wherever</div>
+																			<div class="font-size-sm text-muted mt-2">Mon, 11:29 am <a href="#"><i class="icon-pin-alt ml-2 text-muted"></i></a></div>
+																		</div>
+				
+																		<div class="ml-3">
+																			<a href="../../../../global_assets/images/placeholders/placeholder.jpg">
+																				<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="40" height="40" alt="">
+																			</a>
+																		</div>
+																	</li>
+				
+																	<li class="media content-divider justify-content-center text-muted mx-0">Yesterday</li>
+				
+																	<li class="media">
+																		<div class="mr-3">
+																			<a href="../../../../global_assets/images/placeholders/placeholder.jpg">
+																				<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="40" height="40" alt="">
+																			</a>
+																		</div>
+				
+																		<div class="media-body">
+																			<div class="media-chat-item">Regardless equitably hello heron glum cassowary jocosely before reliably a jeepers wholehearted shuddered more that some where far by koala.</div>
+																			<div class="font-size-sm text-muted mt-2">Tue, 6:40 am <a href="#"><i class="icon-pin-alt ml-2 text-muted"></i></a></div>
+																		</div>
+																	</li>
+				
+																	<li class="media">
+																		<div class="mr-3">
+																			<a href="../../../../global_assets/images/placeholders/placeholder.jpg">
+																				<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="40" height="40" alt="">
+																			</a>
+																		</div>
+				
+																		<div class="media-body">
+																			<div class="media-chat-item">Crud reran and while much withdrew ardent much crab hugely met dizzily that more jeez gent equivalent unsafely far one hesitant so therefore.</div>
+																			<div class="font-size-sm text-muted mt-2">Tue, 10:28 am <a href="#"><i class="icon-pin-alt ml-2 text-muted"></i></a></div>
+																		</div>
+																	</li>
+				
+																	<li class="media media-chat-item-reverse">
+																		<div class="media-body">
+																			<div class="media-chat-item">Thus superb the tapir the wallaby blank frog execrably much since dalmatian by in hot. Uninspiringly arose mounted stared one curt safe</div>
+																			<div class="font-size-sm text-muted mt-2">Tue, 8:12 am <a href="#"><i class="icon-pin-alt ml-2 text-muted"></i></a></div>
+																		</div>
+				
+																		<div class="ml-3">
+																			<a href="../../../../global_assets/images/placeholders/placeholder.jpg">
+																				<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="40" height="40" alt="">
+																			</a>
+																		</div>
+																	</li>
+				
+																	<li class="media content-divider justify-content-center text-muted mx-0">Today</li>
+				
+																	<li class="media">
+																		<div class="mr-3">
+																			<a href="../../../../global_assets/images/placeholders/placeholder.jpg">
+																				<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="40" height="40" alt="">
+																			</a>
+																		</div>
+				
+																		<div class="media-body">
+																			<div class="media-chat-item">Tolerantly some understood this stubbornly after snarlingly frog far added insect into snorted more auspiciously heedless drunkenly jeez foolhardy oh.</div>
+																			<div class="font-size-sm text-muted mt-2">Wed, 4:20 pm <a href="#"><i class="icon-pin-alt ml-2 text-muted"></i></a></div>
+																		</div>
+																	</li>
+				
+																	<li class="media media-chat-item-reverse">
+																		<div class="media-body">
+																			<div class="media-chat-item">Satisfactorily strenuously while sleazily dear frustratingly insect menially some shook far sardonic badger telepathic much jeepers immature much hey.</div>
+																			<div class="font-size-sm text-muted mt-2">2 hours ago <a href="#"><i class="icon-pin-alt ml-2 text-muted"></i></a></div>
+																		</div>
+				
+																		<div class="ml-3">
+																			<a href="../../../../global_assets/images/placeholders/placeholder.jpg">
+																				<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="40" height="40" alt="">
+																			</a>
+																		</div>
+																	</li>
+				
+																	<li class="media">
+																		<div class="mr-3">
+																			<a href="../../../../global_assets/images/placeholders/placeholder.jpg">
+																				<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="40" height="40" alt="">
+																			</a>
+																		</div>
+				
+																		<div class="media-body">
+																			<div class="media-chat-item">Grunted smirked and grew less but rewound much despite and impressive via alongside out and gosh easy manatee dear ineffective yikes.</div>
+																			<div class="font-size-sm text-muted mt-2">13 minutes ago <a href="#"><i class="icon-pin-alt ml-2 text-muted"></i></a></div>
+																		</div>
+																	</li>
+				
+																	<li class="media media-chat-item-reverse">
+																		<div class="media-body">
+																			<div class="media-chat-item"><i class="icon-menu"></i></div>
+																		</div>
+				
+																		<div class="ml-3">
+																			<a href="../../../../global_assets/images/placeholders/placeholder.jpg">
+																				<img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle" width="40" height="40" alt="">
+																			</a>
+																		</div>
+																	</li>
+																</ul>
+				
+																<textarea name="enter-message" class="form-control mb-3" rows="3" cols="1" placeholder="Enter your message..."></textarea>
+				
+																<div class="d-flex align-items-center">
+																	<div class="list-icons list-icons-extended">
+																		
+																		<a href="#" class="list-icons-item" data-popup="tooltip" data-container="body" title="Send file"><i class="icon-file-plus"></i></a>
+																	</div>
+				
+																	<button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-right ml-auto"><b><i class="icon-paperplane"></i></b> Send</button>
+																</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</div>
+										
+										<!-- /Messaging -->
+										<div class="table-responsive mt-3">
+											<table class="table table-striped table-bordered table-hover">
+												<tr>
+													<th class="text-danger-700 font-weight-bold" colspan="2">Final upload of E-True Copy (PDF File) - Digitally Signed</th>
+													
+												</tr>
+												<tr>
+													<th style="width: 50%;">Upload PDF File</th>
+													<td style="padding-top: 0.1rem; padding-bottom: 0.1rem;">
+														<input type="file" class="form-control-plaintext"> 
+														<button type="button" class="btn btn-primary mt-3 mb-2"> <i class="mr-2 icon-upload"></i>Upload and Lock</button>
+													</td>
+												</tr>
+												
+											</table>
+										</div>
+										<div class="table-responsive mt-3">
+											<table class="table table-striped table-bordered table-hover">
+												<tr>
+													<th class="text-danger-700 font-weight-bold" colspan="2">Verification of E-True Copy (PDF File)</th>
+													
+												</tr>
+												<tr>
+													<th style="width: 50%;"><a href="#">Click here to View or Download E-true Copy (PDF File)</a></th>
+													
+												</tr>
+												<tr>
+													<td style="padding-top: 0.1rem; padding-bottom: 0.1rem;">
+														<div class="mt-3"><input type="checkbox" class="mr-2">  I, Amit Kumar, do hereby undertake that I have verified the E-True Copy file. </div>
+														<button type="button" style="height: 80px; font-size: large;" class="btn btn-success mt-3 mb-2"> <i style="font-size: larger;" class="mr-2 icon-checkmark"></i>Vefify & Publish </button>
+													</td>
+												</tr>
+												
+											</table>
+										</div>
+										
+									</div>
+								</div>
+								
+								<!-- /progress counters -->
+							</div>
+							
+						</div>
+						
+					</div>
+					<!-- /card navigation options -->
+
+				</div>
+			</div>
+			<!-- /button classes -->
+		</div>
+		<!-- /right content -->
+	</div>
+	<!-- /inner container -->
+	</div>
+	<!-- Footer -->
+	<div class="navbar navbar-expand-lg navbar-light">
+		<div class="text-center d-lg-none w-100">
+			<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse"
+				data-target="#navbar-footer">
+				<i class="icon-unfold mr-2"></i>
+				Footer
+			</button>
+		</div>
+
+		<div class="navbar-collapse collapse" id="navbar-footer">
+			<span class="navbar-text">
+				&copy; 2015 - 2018. <a href="#">Limitless Web App Kit</a> by <a
+					href="http://themeforest.net/user/Kopyov" target="_blank">Eugene Kopyov</a>
+			</span>
+
+			<ul class="navbar-nav ml-lg-auto">
+				<li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link" target="_blank"><i
+							class="icon-lifebuoy mr-2"></i> Support</a></li>
+				<li class="nav-item"><a href="http://demo.interface.club/limitless/docs/" class="navbar-nav-link"
+						target="_blank"><i class="icon-file-text2 mr-2"></i> Docs</a>
+				</li>
+				<li class="nav-item"><a
+						href="https://themeforest.net/item/limitless-responsive-web-application-kit/13080328?ref=kopyov"
+						class="navbar-nav-link font-weight-semibold"><span class="text-pink-400"><i
+								class="icon-cart2 mr-2"></i> Purchase</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /footer -->
+
+	</div>
+	<!-- /main content -->
+
+	</div>
+	<!-- /page content -->
+
+</body>
+
+</html>
