@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>e-True Copy Rejected Report</title>
+
+    <!-- Global stylesheets -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/layerslogo.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="assets/fonts/robo/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="global_assets/css/icons/icomoon/styles.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/bootstrap_limitless.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="assets/css/layout.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+    <link href=assets/css/components.min.css rel="stylesheet" type="text/css">
+    <link href="assets/css/colors.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="global_assets/css/icons/fontawesome/styles.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- /global stylesheets -->
+
+    <!-- Core JS files -->
+    <script src="global_assets/js/main/jquery.min.js"></script>
+    <script src="global_assets/js/main/bootstrap.bundle.min.js"></script>
+    <script src="global_assets/js/plugins/loaders/blockui.min.js"></script>
+    <script src="global_assets/js/plugins/ui/ripple.min.js"></script>
+    <script src="global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+    <script src="global_assets/js/plugins/ui/moment/moment.min.js"></script>
+    <script src="global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+    <script src="global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+    <script src="global_assets/js/plugins/forms/selects/select2.min.js"></script>
+
+    <script src="global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+    <script src="global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+    <script src="global_assets/js/demo_pages/form_multiselect.js"></script>
+    <script src="global_assets/js/demo_pages/form_select2.js"></script>
+    <script src="global_assets/js/demo_pages/datatables_basic.js"></script>
+    <script src="global_assets/js/demo_pages/dashboard.js"></script>
+    <script src="global_assets/js/plugins/extensions/jquery_ui/interactions.min.js"></script>
+    <script src="global_assets/js/demo_pages/picker_date.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="global_assets/js/demo_pages/form_layouts.js"></script>
+    <script src="global_assets/js/demo_pages/form_checkboxes_radios.js"></script>
+
+    <!-- /Date picker files JS files -->
+    <script src="global_assets/js/plugins/pickers/daterangepicker.js"></script>
+    <script src="global_assets/js/plugins/jQueryUI/jquery-ui.js"></script>
+    <script src="global_assets/js/plugins/pickers/anytime.min.js"></script>
+    <script src="global_assets/js/plugins/pickers/pickadate/picker.js"></script>
+    <script src="global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+    <script src="global_assets/js/plugins/pickers/pickadate/picker.time.js"></script>
+    <!-- Theme JS files -->
+    <script src="global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+    <script src="global_assets/js/plugins/extensions/session_timeout.min.js"></script>
+    <script src="assets/js/cryptojs-aes.min.js"></script>
+    <script src="assets/js/cryptojs-aes-format.js"></script>
+    <script src="assets/js/sha256.js"></script>
+    <script src="assets/js/jQuery.print.min.js"></script>
+
+    <!-- Theme JS files -->
+    <script src="global_assets/js/plugins/ui/fullcalendar/core/main.min.js"></script>
+    <script src="global_assets/js/plugins/ui/fullcalendar/daygrid/main.min.js"></script>
+    <script src="global_assets/js/plugins/ui/fullcalendar/timegrid/main.min.js"></script>
+    <script src="global_assets/js/plugins/ui/fullcalendar/list/main.min.js"></script>
+    <script src="global_assets/js/plugins/ui/fullcalendar/interaction/main.min.js"></script>
+    <!-- /theme JS files -->
+
+    <script src="global_assets/js/plugins/tables/datatables/extensions/jszip/jszip.min.js"></script>
+    <script src="global_assets/js/plugins/tables/datatables/extensions/pdfmake/pdfmake.min.js"></script>
+    <script src="global_assets/js/plugins/tables/datatables/extensions/pdfmake/vfs_fonts.min.js"></script>
+    <script src="global_assets/js/plugins/tables/datatables/extensions/buttons.min.js"></script>
+
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="sidebar-xs">
+    <!-- Main navbar -->
+    <div class="navbar navbar-expand-md navbar-dark bg-indigo navbar-static">
+      <div class="navbar-brand">
+        <a href="#" class="d-inline-block">
+          <img src="assets/images/LayersLogoApp.png" alt="" />
+        </a>
+      </div>
+
+      <div class="d-md-none">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar-mobile"
+        >
+          <i class="icon-user"></i>
+        </button>
+        <button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+          <i class="icon-paragraph-justify3"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar-mobile">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              href="#"
+              class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block legitRipple"
+            >
+              <i class="icon-paragraph-justify3"></i>
+            </a>
+          </li>
+        </ul>
+        <center>
+          <span class="navbar-text ml-md-3">
+            <span class="badge badge-mark border-orange-300 mr-2"></span>
+            <strong>COPYING AGENCY, TIS HAZARI</strong>
+          </span>
+        </center>
+        <ul class="navbar-nav ml-md-auto">
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="navbar-nav-link dropdown-toggle legitRipple"
+              data-toggle="dropdown"
+            >
+              <i class="icon-user mr-2"></i>
+              DINESH BABU KULSRESHTHA
+            </a>
+
+            <div
+              class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-250"
+              style="
+                background: url(global_assets/images/backgrounds/user_bg2.jpg)
+                  center center no-repeat;
+              "
+            >
+              <div class="card-body text-center">
+                <a href="#">
+                  <img
+                    src="global_assets/images/placeholders/placeholder.jpg"
+                    class="img-fluid rounded-circle shadow-1 mb-3"
+                    width="80"
+                    height="80"
+                    alt=""
+                  />
+                </a>
+                <h6 class="mb-0 text-white text-shadow-dark">
+                  DINESH BABU KULSRESHTHA
+                </h6>
+                <span class="font-size-sm text-white text-shadow-dark"
+                  >Senior Judicial Assistant : 68694179</span
+                >
+              </div>
+
+              <div class="sidebar-user-material-footer">
+                <a
+                  href="#user-nav"
+                  class="d-flex justify-content-between align-items-center text-shadow-dark dropdown-toggle legitRipple"
+                  data-toggle="collapse"
+                  ><span>My account</span></a
+                >
+              </div>
+              <div class="collapse" id="user-nav">
+                <ul class="nav nav-sidebar">
+                  <li class="nav-item">
+                    <a
+                      href="#"
+                      class="nav-link legitRipple"
+                      id="emp_personal_qual_detail_update_btn"
+                    >
+                      <i class="icon-user-plus"></i>
+                      <span>My profile</span>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="#" class="nav-link legitRipple">
+                      <i class="icon-cog5"></i>
+                      <span>Account settings</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <a href="#">
+                <div class="dropdown-content-footer bg-light">
+                  <span
+                    class="font-size-sm line-height-sm text-uppercase font-weight-semibold text-grey mr-auto"
+                    >Log Out</span
+                  >
+
+                  <div>
+                    <span
+                      href="#"
+                      class="text-grey"
+                      data-popup="tooltip"
+                      title="Log Out"
+                      ><i class="icon-switch2"></i
+                    ></span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- /main navbar -->
+    <!-- Page content -->
+    <div class="page-content">
+      <!-- Main sidebar -->
+      <div class="sidebar sidebar-light sidebar-main sidebar-expand-md">
+        <!-- Sidebar mobile toggler -->
+        <div class="sidebar-mobile-toggler text-center">
+          <a href="#" class="sidebar-mobile-main-toggle">
+            <i class="icon-arrow-left8"></i>
+          </a>
+          <span class="font-weight-semibold">Navigation</span>
+          <a href="#" class="sidebar-mobile-expand">
+            <i class="icon-screen-full"></i>
+            <i class="icon-screen-normal"></i>
+          </a>
+        </div>
+        <!-- /sidebar mobile toggler -->
+
+        <!-- Sidebar content -->
+        <div class="sidebar-content">
+          <!-- Main navigation -->
+          <div class="card card-sidebar-mobile">
+            <ul class="nav nav-sidebar" data-nav-type="accordion">
+              <!-- Main -->
+              <li class="nav-item-header">
+                <div class="text-uppercase font-size-xs line-height-xs">
+                  Main
+                </div>
+                <i class="icon-menu" title="Main"></i>
+              </li>
+              <!-- /main -->
+
+              <!-- Home -->
+              <li class="nav-item">
+                <a
+                  href="e-TrueCopy_dashboard.html"
+                  class="nav-link legitRipple"
+                >
+                  <i class="text-pink-800 icon-home2"></i>
+                  <span> Home </span>
+                </a>
+              </li>
+              <!-- /Home -->
+              <!-- Accounts -->
+              <li class="nav-item">
+                <a href="#" class="nav-link legitRipple">
+                  <i class="text-indigo fa fa-rupee-sign"></i>
+                  <span> Accounts </span>
+                </a>
+              </li>
+              <!-- /Accounts -->
+              <!-- circulars -->
+              <li class="nav-item">
+                <a href="#" class="nav-link legitRipple">
+                  <i class="text-pink icon-clipboard3"></i>
+                  <span> Circulars </span>
+                </a>
+              </li>
+              <!-- circulars -->
+              <!-- Employees -->
+              <li class="nav-item">
+                <a href="#" class="nav-link legitRipple">
+                  <i class="text-pink icon-users4"></i>
+                  <span> Employees </span>
+                </a>
+              </li>
+              <!-- /Employees -->
+              <!-- Hierarchy -->
+              <li class="nav-item">
+                <a href="#" class="nav-link legitRipple" title="Hierarchy">
+                  <i class="text-blue icon-sort"></i>
+                  <span> Hierarchy </span>
+                </a>
+              </li>
+              <!-- /Hierarchy -->
+              <!-- digital court -->
+
+              <li class="nav-item">
+                <a href="#" class="nav-link legitRipple">
+                  <i class="text-orange-800 icon-graduation"></i>
+                  <span>Digital Court</span>
+                </a>
+              </li>
+              <!-- /digital court -->
+
+              <!-- Inventory Employee / User Item Issued -->
+              <li class="nav-item">
+                <a href="#" class="nav-link legitRipple">
+                  <i class="text-pink icon-calendar"></i>
+                  <span>Inventory</span>
+                </a>
+              </li>
+              <!-- Inventory Employee / User Item Issued -->
+
+              <!-- Extension phone numbers -->
+              <li class="nav-item">
+                <a href="#" class="nav-link legitRipple">
+                  <i class="text-pink-800 icon-phone"></i>
+                  <span>Extension Phone Numbers</span>
+                </a>
+              </li>
+              <!-- /Extension phone numbers -->
+              <!-- online CA -->
+              <li class="nav-item">
+                <a href="#" class="nav-link legitRipple">
+                  <i class="icon-copy4"></i>
+                  <span>Certified Copy</span>
+                </a>
+              </li>
+              <!-- /online CA -->
+
+              <!-- Leaves -->
+              <li class="nav-item">
+                <a href="#" class="nav-link legitRipple">
+                  <i class="icon-copy3 text-orange-800"></i>
+                  <span>Leaves</span>
+                </a>
+              </li>
+              <!--/Leaves -->
+              <!-- Recuritment -->
+              <li class="nav-item">
+                <a href="#" class="nav-link legitRipple">
+                  <i class="icon-file-text text-danger-800"></i>
+                  <span>Recruitment</span>
+                </a>
+              </li>
+              <!-- /Recuritment  -->
+              <!-- Misc. Forms -->
+              <li class="nav-item">
+                <a href="#" class="nav-link legitRipple">
+                  <i class="icon-file-text text-danger-600"></i>
+                  <span>Misc Forms</span>
+                </a>
+              </li>
+              <!-- /Misc. Forms -->
+            </ul>
+          </div>
+          <!-- /main navigation -->
+        </div>
+        <!-- /sidebar content -->
+      </div>
+      <!-- /main sidebar -->
+      <!-- Main content -->
+      <div class="content-wrapper">
+        <!-- Page content -->
+        <div class="page-content">
+          <!-- Main content -->
+          <div class="content-wrapper">
+            <!-- Page header -->
+            <div class="page-header page-header-light">
+              <div
+                class="breadcrumb-line breadcrumb-line-light header-elements-md-inline"
+              >
+                <div class="d-flex">
+                  <div class="breadcrumb">
+                    <a href="e-TrueCopy_dashboard.html" class="breadcrumb-item"
+                      ><i class="icon-home2 mr-2"></i> Home</a
+                    >
+                    <span class="breadcrumb-item">e-True Copy</span
+                    ><span class="breadcrumb-item">Rejected Report</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="header-elements-toggle text-default d-md-none"
+                    ><i class="icon-more"></i
+                  ></a>
+                </div>
+
+                <form
+                  action="#"
+                  name="reportfrm"
+                  id="reportfrm"
+                  method="post"
+                  accept-charset="utf-8"
+                  autocomplete="off"
+                >
+                  <input type="hidden" name="csrf_test_lalit" value="" />
+                  <div class="" style="margin-top: 0px; margin-bottom: -5px">
+                    <table class="table table-xs mb-1">
+                      <tbody>
+                        <tr>
+                          <td style="width: 63%"></td>
+                          <td
+                            style="width: 3%; padding-right: 0.3rem"
+                            class="text-right font-weight-semibold"
+                          >
+                            From
+                          </td>
+                          <td
+                            class="text-right"
+                            style="
+                              width: 21%;
+                              padding-left: 0.1rem;
+                              padding-right: 0.1rem;
+                            "
+                          >
+                            <div class="px-2 border bg-white">
+                              <input
+                                class="form-control bg-white px-2"
+                                type="date"
+                                name="from_date"
+                                value="2024-07-20"
+                              />
+                            </div>
+                          </td>
+                          <td
+                            style="
+                              width: 1%;
+                              padding-left: 0.2rem;
+                              padding-right: 0.1rem;
+                            "
+                            class="text-right font-weight-semibold"
+                          >
+                            To
+                          </td>
+                          <td
+                            class="text-right"
+                            style="
+                              width: 10%;
+                              padding-left: 0.3rem;
+                              padding-right: 0.1rem;
+                            "
+                          >
+                            <div class="px-2 border bg-white">
+                              <input
+                                class="form-control bg-white px-2"
+                                type="date"
+                                name="to_date"
+                                value="2024-07-20"
+                              />
+                            </div>
+                          </td>
+                          <td
+                            style="
+                              width: 1%;
+                              padding-left: 0.1rem;
+                              padding-right: 0.3rem;
+                            "
+                            class="text-right"
+                          >
+                            <button
+                              type="submit"
+                              class="btn bg-green-600 ml-1 legitRipple"
+                              fdprocessedid="hl49u"
+                            >
+                              go
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </form>
+              </div>
+              <div class="page-header-content header-elements-md-inline"></div>
+            </div>
+
+            <!-- /page header -->
+
+            <div class="content">
+              <!-- Inner container -->
+              <div class="d-md-flex align-items-md-start">
+                <style>
+                  .list-group-birthday {
+                    max-height: 450px;
+                    margin-bottom: 10px;
+                    padding: 10px;
+                    overflow: scroll;
+                    -webkit-overflow-scrolling: touch;
+                  }
+
+                  .fc-event {
+                    cursor: pointer;
+                  }
+                </style>
+                <!-- Left sidebar component -->
+                <div
+                  class="sidebar sidebar-light sidebar-component sidebar-component-left sidebar-expand-md"
+                  style="width: 20%"
+                >
+                  <!-- Sidebar content -->
+                  <div class="sidebar-content">
+                    <!-- Quarter Selection -->
+                    <div class="card card-collapsed">
+                      <div
+                        class="card-header bg-pink-600 header-elements-inline"
+                      >
+                        <a href="#" class="text-white"
+                          ><span
+                            class="text-uppercase font-size-lg font-weight-bold"
+                            ><i class="icon-home mr-2"></i> e-True Copy</span
+                          >
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /Quarter Selection -->
+
+                    <!-- e-True Copy Proccessing -->
+                    <div class="card card-collapsed">
+                      <div
+                        class="card-header bg-transparent header-elements-inline"
+                      >
+                        <span
+                          class="text-uppercase font-size-sm font-weight-semibold"
+                          ><i class="icon-copy2 mr-2 text-pink-600"></i> ETC
+                          Proccessing
+                        </span>
+                        <div class="header-elements">
+                          <div class="list-icons">
+                            <a
+                              class="list-icons-item rotate-180"
+                              data-action="collapse"
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-body p-0" style="display: none">
+                        <ul class="nav nav-sidebar" data-nav-type="accordion">
+                          <!-- Received list -->
+                          <li class="nav-item">
+                            <a
+                              href="e-Truecopy_received_list.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-file-check2"></i>Received
+                            </a>
+                          </li>
+                          <!-- /Received list -->
+                          <!-- Marked list -->
+                          <li class="nav-item">
+                            <a
+                              href="e-Truecopy_marked_list.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-bookmarks"></i>Marked
+                            </a>
+                          </li>
+                          <!-- /Marked list -->
+                          <!-- Prepared list -->
+                          <li class="nav-item">
+                            <a
+                              href="e-Truecopy_prepared_list.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-paste2"></i>Prepared
+                            </a>
+                          </li>
+                          <!-- /Prepared list -->
+                          <!-- Objections list -->
+                          <li class="nav-item">
+                            <a
+                              href="e-Truecopy_objections_list.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-blocked"></i>Objection
+                            </a>
+                          </li>
+                          <!-- /Objections list -->
+                          <!-- rejected list -->
+                          <li class="nav-item">
+                            <a
+                              href="e-Truecopy_rejected_list.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-cancel-circle2"></i>Rejected
+                            </a>
+                          </li>
+                          <!-- /rejected list -->
+                          <!-- Convert to CA -->
+                          <li class="nav-item">
+                            <a
+                              href="e-Truecopy_converted_to_CA_list.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-rotate-ccw"></i>Converted to CA
+                            </a>
+                          </li>
+                          <!-- /Convert to CA -->
+                          <!-- Delivered list -->
+                          <li class="nav-item">
+                            <a
+                              href="e-Truecopy_delivered_list.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-diff-renamed"></i>Delivered
+                            </a>
+                          </li>
+                          <!-- /Delivered list -->
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /e-True Copy Proccessing -->
+
+                    <!-- e-True Copy Reports -->
+                    <div class="card card-collapsed">
+                      <div
+                        class="card-header bg-transparent header-elements-inline"
+                      >
+                        <span
+                          class="text-uppercase font-size-sm font-weight-semibold"
+                          ><i class="icon-stack mr-2 text-pink-600"></i> ETC
+                          Reports
+                        </span>
+                        <div class="header-elements">
+                          <div class="list-icons">
+                            <a
+                              class="list-icons-item rotate-180"
+                              data-action="collapse"
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-body p-0" style="display: none">
+                        <ul class="nav nav-sidebar" data-nav-type="accordion">
+                          <!-- Marked list -->
+                          <li class="nav-item">
+                            <a
+                              href="etc_marked_list_report.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-bookmarks"></i>Marked
+                            </a>
+                          </li>
+                          <!-- /Marked list -->
+                          <!-- Prepared list -->
+                          <li class="nav-item">
+                            <a
+                              href="prepared_report.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-paste2"></i>Prepared
+                            </a>
+                          </li>
+                          <!-- /Prepared list -->
+                          <!-- Delivered list -->
+                          <li class="nav-item">
+                            <a
+                              href="delivered_report.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-diff-renamed"></i>Delivered
+                            </a>
+                          </li>
+                          <!-- /Delivered list -->
+                          <!-- Convert to CA -->
+                          <li class="nav-item">
+                            <a
+                              href="converted_to_ca_report.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-rotate-ccw"></i>Converted to CA
+                            </a>
+                          </li>
+                          <!-- /Convert to CA -->
+                          <!-- Objection list -->
+                          <!-- <li class="nav-item">
+                            <a
+                              href="etc_objections_report.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-blocked"></i>Objections
+                            </a>
+                          </li> -->
+                          <!-- /Objection list -->
+                          <!-- Rejected list -->
+                          <!-- <li class="nav-item">
+                            <a
+                              href="etc_rejected_report.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-cancel-circle2"></i>Rejected
+                            </a>
+                          </li> -->
+                          <!-- /Rejected list -->
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /e-True Copy Proccessing -->
+
+                    <!-- ETC Delivery Reschedule -->
+                    <div class="card card-collapsed">
+                      <div
+                        class="card-header bg-transparent header-elements-inline"
+                      >
+                        <a class="text-dark" href="#"
+                          ><span
+                            class="text-uppercase font-size-sm font-weight-semibold"
+                            ><i class="icon-alarm-add mr-2 text-pink"></i> ETC
+                            Delivery Reschedule
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /ETC Delivery Reschedule -->
+
+                    <!-- Setting -->
+                    <div class="card card-collapsed">
+                      <div
+                        class="card-header bg-transparent header-elements-inline"
+                      >
+                        <span
+                          class="text-uppercase font-size-sm font-weight-semibold"
+                          ><i class="icon-cog2 mr-2 text-pink-600"></i>
+                          Settings</span
+                        >
+                        <div class="header-elements">
+                          <div class="list-icons">
+                            <a
+                              class="list-icons-item rotate-180"
+                              data-action="collapse"
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-body p-0" style="display: none">
+                        <ul class="nav nav-sidebar" data-nav-type="accordion">
+                          <li class="nav-item">
+                            <a
+                              href="etc_User_role_list.html"
+                              class="nav-link legitRipple"
+                              ><i class="icon-collaboration"></i>User Roles
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="" class="nav-link legitRipple"
+                              ><i class="icon-calendar22"></i>Set Delivery Date
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /Setting -->
+                  </div>
+                  <!-- /sidebar content -->
+                </div>
+                <!-- /left sidebar component -->
+                <!-- Right content -->
+                <div class="" style="width: 100%">
+                  <!-- Button classes -->
+
+                  <div class="card">
+                    <div
+                      class="card-header bg-pink-600 header-elements-inline"
+                      style="padding-top: 10px; padding-bottom: 10px"
+                    >
+                      <h5 class="card-title text-uppercase font-weight-bold">
+                        <i class="icon-paste2"></i> e-True Copy Rejected Report
+                        (20-07-2024 - 20-07-2024)
+                      </h5>
+                      <div class="btn-group" style="float: right">
+                        <a
+                          type="button"
+                          class="btn bg-teal-400 ml-1 legitRipple"
+                          href="#"
+                          target="_blank"
+                          ><i class="icon-printer4 mr-1"></i> Print This
+                          Report</a
+                        >
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <!-- Progress counters -->
+                      <div class="row">
+                        <div class="col-sm-12 mb-3">
+                          <div class="table-responsive">
+                            <table
+                              class="table table-striped table-bordered table-hover"
+                            >
+                              <tbody>
+                                <tr>
+                                  <th style="width: 5%">#</th>
+                                  <th style="width: 10%">ETC ID No.</th>
+                                  <th style="width: 20%">Case Type & Number</th>
+                                  <th style="width: 30%">Case Title</th>
+                                  <th style="width: 15%">Pages Applied</th>
+                                  <th style="width: 20%">Reason</th>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td style="font-size: 12px">
+                                    <a href="#">2201000022</a>
+                                  </td>
+                                  <td style="font-size: 12px">
+                                    Cr. Cases /125 /2020
+                                  </td>
+                                  <td style="font-size: 12px">
+                                    HARISH VS. KAPIL
+                                  </td>
+                                  <td style="font-size: 12px">50</td>
+                                  <td style="font-size: 12px"></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- /progress counters -->
+                    </div>
+                  </div>
+                  <!-- /combined table styles -->
+                </div>
+
+                <!-- /Right content -->
+                <!-- /inner container -->
+              </div>
+            </div>
+            <!-- /main content -->
+          </div>
+        </div>
+
+        <!-- Basic modal -->
+
+        <!-- /Basic modal -->
+
+        <!--Code of Sandeep footer added here /-->
+        <script
+          src="global_assets/js/plugins/forms/validation/validate.min.js "
+          type="text/javascript"
+        ></script>
+        <script
+          src="global_assets/js/plugins/forms/validation/additional_methods.min.js"
+          type="text/javascript"
+        ></script>
+
+        <!-- Footer -->
+        <div class="navbar navbar-expand-lg navbar-light">
+          <div class="text-center d-lg-none w-100">
+            <button
+              type="button"
+              class="navbar-toggler dropdown-toggle"
+              data-toggle="collapse"
+              data-target="#navbar-footer"
+            >
+              <i class="icon-unfold mr-2"></i>
+              Footer
+            </button>
+          </div>
+
+          <div class="navbar-collapse collapse" id="navbar-footer">
+            <span class="navbar-text">
+              © 2024 <a href="#">Delhi District Courts</a> by
+              <a href="#" target="_blank">IT-Cell (HQs),Tis Hazari</a>
+            </span>
+          </div>
+        </div>
+        <!-- /footer -->
+      </div>
+      <!-- /main content -->
+    </div>
+    <!-- /page content -->
+  </body>
+</html>
