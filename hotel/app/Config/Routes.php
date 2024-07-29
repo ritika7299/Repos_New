@@ -9,3 +9,6 @@ $routes->get('/', 'Home::index');
 
 /*----User Login ------ */
 $routes->get('/login', 'Login::index');
+
+/*----Admin Login ------ */
+$routes->get('/admin', 'Admin::index');

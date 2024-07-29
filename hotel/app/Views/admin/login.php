@@ -17,26 +17,25 @@
     <link rel="stylesheet" href="assets_fol/dist/css/adminlte.min.css">
 </head>
 
-<body class="hold-transition login-page">
+<body class="hold-transition login-page bg-image" style="
+    background-image: url('images/admin_bg.jpg');
+    height: 100vh;
+  ">
     <!-- login-box -->
     <div class="login-box">
         <!-- login-card -->
-        <div class="card card-outline card-primary">
+        <div class="card card-outline shadow-lg">
             <!-- login-logo -->
             <div class="card-header text-center">
-                <a href="index2.html" class="h1"><b>Login</b></a>
-                <?php if (session()->getFlashdata('error')): ?>
-                    <div class="alert alert-danger">
-                        <?= session()->getFlashdata('error'); ?>
-                    </div>
-                <?php endif; ?>
+                <a href="#" class="h3"><span class="text-info"><b>ADMIN</b></span></a>
             </div>
             <!-- /login-logo -->
             <div class="card-body">
                 <!-- login-form -->
-                <form action="<?php echo base_url('/login'); ?>" method="post">
+                <form action="#" method="post">
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" id="email" placeholder="Email">
+
+                        <input type="text" class="form-control" id="username" placeholder="Username">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -51,26 +50,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-8 mb-3">
-                            <a href="forgot-password.html">Forgot password?</a>
-                        </div>
-                    </div>
+
                     <!-- login-button -->
-                    <div class="">
-                        <button type="submit" class="btn btn-primary btn-block float-right">Login <i
+                    <div class="mt-2">
+                        <button type="submit" class="btn btn-info btn-block">Sign-in <i
                                 class="fas fa-paper-plane"></i></button>
                     </div>
                     <!-- /login-button -->
                 </form>
+                <div class="mt-2 d-flex text-align-right">
+                    <a href="#">Forgot password?</a>
+                </div>
                 <!-- login-form -->
             </div>
-            <div class="text-primary mb-5 d-flex justify-content-center">
+            <!-- <div class="text-primary mb-5 d-flex justify-content-center">
                 Don't have an account?
 
                 <a href="#" class="text-center">
                     <b>Register</b> </a>
-            </div>
+            </div> -->
             <!-- /card-body -->
         </div>
         <!-- /login-card -->
