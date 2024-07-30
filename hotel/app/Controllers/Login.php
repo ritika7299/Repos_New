@@ -4,12 +4,6 @@ namespace App\Controllers;
 
 class Login extends BaseController
 {
-    // public function index()
-    // {
-    //     return view('layout/login');
-    //     // echo "Hello, login here!";
-    // }
-
     public function index()
     {
         return view('layout/login');
@@ -18,36 +12,31 @@ class Login extends BaseController
     public function authenticate()
     {
         $session = session();
-        $userModel = new UserModel();
+        $model = new UserModel();
 
-        $email = $this->request->getVar('email');
+        $username = $this->request->getVar('username');
         $password = $this->request->getVar('password');
 
-        $user = $userModel->where('email', $email)->first();
+        $data = $model->where('username', $username)->first();
 
-        if (is_null($user)) {
-            return redirect()->back()->withInput()->with('error', 'Invalid username or password.');
+        if ($data) {
+            $cpass = $data['password'];
+            $verify_pass = password_verify($password, $cpass);
+            if ($verify_pass) {
+                $ses_data = [
+                    'id' => $data['id'],
+                    'username' => $data['username'],
+                    'logged_in' => TRUE
+                ];
+                $session->set($ses_data);
+                return redirect()->to('/dashboard');
+            } else {
+                $session->setFlashdata('msg', 'Wrong Password');
+                return redirect()->to('/login');
+            }
+        } else {
+            $session->setFlashdata('msg', 'Username not found');
+            return redirect()->to('/login');
         }
-
-        $pwd_verify = password_verify($password, $user['password']);
-
-        if (!$pwd_verify) {
-            return redirect()->back()->withInput()->with('error', 'Invalid username or password.');
-        }
-
-        $ses_data = [
-            'id' => $user['id'],
-            'email' => $user['email'],
-            'isLoggedIn' => TRUE
-        ];
-
-        $session->set($ses_data);
-        return redirect()->to('/dashboard');
-    }
-
-    public function logout()
-    {
-        session_destroy();
-        return redirect()->to('/login');
     }
 }

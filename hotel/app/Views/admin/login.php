@@ -12,15 +12,12 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="assets_fol/plugins/fontawesome-free/css/all.min.css">
     <!-- icheck bootstrap -->
-    <link rel="stylesheet" href="assets_fol/plugins/icheck-bootstrap/icheck-bootstrap.min.css'); ?>">
+    <link rel="stylesheet" href="assets_fol/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="assets_fol/dist/css/adminlte.min.css">
 </head>
 
-<body class="hold-transition login-page bg-image" style="
-    background-image: url('images/admin_bg.jpg');
-    height: 100vh;
-  ">
+<body class="hold-transition login-page">
     <!-- login-box -->
     <div class="login-box">
         <!-- login-card -->
@@ -32,7 +29,7 @@
             <!-- /login-logo -->
             <div class="card-body">
                 <!-- login-form -->
-                <form action="#" method="post">
+                <form action="<?= base_url('login/authenticate') ?>" method="post">
                     <div class="input-group mb-3">
 
                         <input type="text" class="form-control" id="username" placeholder="Username">
