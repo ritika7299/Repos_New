@@ -1,66 +1,10 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <!-- Basic Page Info -->
-    <meta charset="utf-8" />
-    <title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
-
-    <!-- Bootstrap CDN Links -->
-
-    <!-- Site favicon -->
-    <link rel="apple-touch-icon" sizes="180x180"
-        href="<?= base_url('backend/vendors/images/apple-touch-icon.png') ?>" />
-    <link rel="icon" type="image/png" sizes="32x32"
-        href="<?= base_url('backend/vendors/images/favicon-32x32.png') ?>" />
-    <link rel="icon" type="image/png" sizes="16x16"
-        href="<?= base_url('backend/vendors/images/favicon-16x16.png') ?>" />
-
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet" />
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="<?= base_url('backend/vendors/styles/core.css') ?>" />
-    <link rel="stylesheet" type="text/css" href="<?= base_url('backend/vendors/styles/icon-font.min.css') ?>" />
-    <link rel="stylesheet" type="text/css" href="<?= base_url('backend/vendors/styles/style.css') ?>" />
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2973766580778258"
-        crossorigin="anonymous"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-
-        gtag("config", "G-GBZ3SGGX85");
-    </script>
-    <!-- Google Tag Manager -->
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != "dataLayer" ? "&l=" + l : "";
-            j.async = true;
-            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, "script", "dataLayer", "GTM-NXZMQSS");
-    </script>
-    <!-- End Google Tag Manager -->
-</head>
+<?php include ('template/dashboard-header.php'); ?>
 
 <body>
     <div class="pre-loader">
         <div class="pre-loader-box">
             <div class="loader-logo">
-                <img src="<?= base_url('backend/vendors/images/deskapp-logo.svg') ?>" alt="" />
+                <img src="<?php echo site_url(); ?>public/backend/vendors/images/deskapp-logo.svg" alt="" />
             </div>
             <div class="loader-progress" id="progress_div">
                 <div class="bar" id="bar1"></div>
@@ -130,7 +74,8 @@
                             <ul>
                                 <li>
                                     <a href="#">
-                                        <img src="<?= base_url('backend/vendors/images/img.jpg') ?>" alt="" />
+                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/img.jpg"
+                                            alt="" />
                                         <h3>John Doe</h3>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -140,7 +85,8 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="<?= base_url('backend/vendors/images/photo1.jpg') ?>" alt="" />
+                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo1.jpg"
+                                            alt="" />
                                         <h3>Lea R. Frith</h3>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -150,7 +96,8 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="<?= base_url('backend/vendors/images/photo2.jpg') ?>" alt="" />
+                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo2.jpg"
+                                            alt="" />
                                         <h3>Erik L. Richards</h3>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -160,7 +107,8 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="<?= base_url('backend/vendors/images/photo3.jpg') ?>" alt="" />
+                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo3.jpg"
+                                            alt="" />
                                         <h3>John Doe</h3>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -170,7 +118,8 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="<?= base_url('backend/vendors/images/photo4.jpg') ?>" alt="" />
+                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo4.jpg"
+                                            alt="" />
                                         <h3>Renee I. Hansen</h3>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -180,7 +129,8 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="<?= base_url('backend/vendors/images/img.jpg') ?>" alt="" />
+                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/img.jpg"
+                                            alt="" />
                                         <h3>Vicki M. Coleman</h3>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -197,7 +147,7 @@
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
                         <span class="user-icon">
-                            <img src="<?= base_url('backend/vendors/images/photo1.jpg') ?>" alt="" />
+                            <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo1.jpg" alt="" />
                         </span>
                         <span class="user-name">Ross C. Lopez</span>
                     </a>
@@ -210,8 +160,8 @@
                 </div>
             </div>
             <div class="github-link">
-                <a href="https://github.com/dropways/deskapp" target="_blank"><img
-                        src="<?= base_url('backend/vendors/images/github.svg') ?>" alt="" /></a>
+                <a href="https://github.com/dropways/deskapp" target="_blank"><img src="vendors/images/github.svg"
+                        alt="" /></a>
             </div>
         </div>
     </div>
@@ -310,8 +260,10 @@
     <div class="left-side-bar">
         <div class="brand-logo">
             <a href="index.html">
-                <img src="<?= base_url('backend/vendors/images/deskapp-logo.svg') ?>" alt="" class="dark-logo" />
-                <img src="<?= base_url('backend/vendors/images/deskapp-logo-white.svg') ?>" alt="" class="light-logo" />
+                <img src="<?php echo site_url(); ?>public/backend/vendors/images/deskapp-logo.svg" alt=""
+                    class="dark-logo" />
+                <img src="<?php echo site_url(); ?>public/backend/vendors/images/deskapp-logo-white.svg" alt=""
+                    class="light-logo" />
             </a>
             <div class="close-sidebar" data-toggle="left-sidebar-close">
                 <i class="ion-close-round"></i>
@@ -510,8 +462,7 @@
                             class="dropdown-toggle no-arrow">
                             <span class="micon bi bi-layout-text-window-reverse"></span>
                             <span class="mtext">Landing Page
-                                <img src="<?= base_url('backend/vendors/images/coming-soon.png') ?>" alt=""
-                                    width="25" /></span>
+                                <img src="vendors/images/coming-soon.png" alt="" width="25" /></span>
                         </a>
                     </li>
                 </ul>
@@ -521,104 +472,318 @@
     <div class="mobile-menu-overlay"></div>
 
     <div class="main-container">
-        <div class="pd-ltr-20 xs-pd-20-10">
-            <div class="min-height-200px">
-                <div class="page-header">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-12">
-                            <div class="title">
-                                <h4>blank</h4>
+        <div class="xs-pd-20-10 pd-ltr-20">
+            <div class="title pb-20">
+                <h2 class="h3 mb-0">Admin Dashboard</h2>
+            </div>
+
+            <div class="row pb-10">
+                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
+                    <div class="card-box height-100-p widget-style3">
+                        <div class="d-flex flex-wrap">
+                            <div class="widget-data">
+                                <div class="weight-700 font-24 text-dark">75</div>
+                                <div class="font-14 text-secondary weight-500">
+                                    Manage Bookings
+                                </div>
                             </div>
-                            <nav aria-label="breadcrumb" role="navigation">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item">
-                                        <a href="index.html">Home</a>
-                                    </li>
-                                    <li class="breadcrumb-item active" aria-current="page">
-                                        blank
-                                    </li>
-                                </ol>
-                            </nav>
-                        </div>
-                        <div class="col-md-6 col-sm-12 text-right">
-                            <div class="dropdown">
-                                <a class="btn btn-primary dropdown-toggle" href="#" role="button"
-                                    data-toggle="dropdown">
-                                    January 2018
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="#">Export List</a>
-                                    <a class="dropdown-item" href="#">Policies</a>
-                                    <a class="dropdown-item" href="#">View Assets</a>
+                            <div class="widget-icon">
+                                <div class="icon" data-color="#00eccf">
+                                    <i class="icon-copy dw dw-calendar1"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="pd-20 bg-white border-radius-4 box-shadow mb-30"></div>
+                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
+                    <div class="card-box height-100-p widget-style3">
+                        <div class="d-flex flex-wrap">
+                            <div class="widget-data">
+                                <div class="weight-700 font-24 text-dark">124,551</div>
+                                <div class="font-14 text-secondary weight-500">
+                                    Manage Employee
+                                </div>
+                            </div>
+                            <div class="widget-icon">
+                                <div class="icon" data-color="#ff5b5b">
+                                    <span class="icon-copy ti-heart"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
+                    <div class="card-box height-100-p widget-style3">
+                        <div class="d-flex flex-wrap">
+                            <div class="widget-data">
+                                <div class="weight-700 font-24 text-dark">400+</div>
+                                <div class="font-14 text-secondary weight-500">
+                                    Manage Hotel data
+                                </div>
+                            </div>
+                            <div class="widget-icon">
+                                <div class="icon">
+                                    <i class="icon-copy fa fa-stethoscope" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
+                    <div class="card-box height-100-p widget-style3">
+                        <div class="d-flex flex-wrap">
+                            <div class="widget-data">
+                                <div class="weight-700 font-24 text-dark">$50,000</div>
+                                <div class="font-14 text-secondary weight-500">Earning</div>
+                            </div>
+                            <div class="widget-icon">
+                                <div class="icon" data-color="#09cc06">
+                                    <i class="icon-copy fa fa-money" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="card-box pb-10">
+                <div class="h5 pd-20 mb-0">Recent Patient</div>
+                <table class="data-table table nowrap">
+                    <thead>
+                        <tr>
+                            <th class="table-plus">Name</th>
+                            <th>Gender</th>
+                            <th>Weight</th>
+                            <th>Assigned Doctor</th>
+                            <th>Admit Date</th>
+                            <th>Disease</th>
+                            <th class="datatable-nosort">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table-plus">
+                                <div class="name-avatar d-flex align-items-center">
+                                    <div class="avatar mr-2 flex-shrink-0">
+                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo4.jpg"
+                                            class="border-radius-100 shadow" width="40" height="40" alt="" />
+                                    </div>
+                                    <div class="txt">
+                                        <div class="weight-600">Jennifer O. Oster</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Female</td>
+                            <td>45 kg</td>
+                            <td>Dr. Callie Reed</td>
+                            <td>19 Oct 2020</td>
+                            <td>
+                                <span class="badge badge-pill" data-bgcolor="#e7ebf5"
+                                    data-color="#265ed7">Typhoid</span>
+                            </td>
+                            <td>
+                                <div class="table-actions">
+                                    <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
+                                    <a href="#" data-color="#e95959"><i class="icon-copy dw dw-delete-3"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-plus">
+                                <div class="name-avatar d-flex align-items-center">
+                                    <div class="avatar mr-2 flex-shrink-0">
+                                        <img src="vendors/images/photo5.jpg" class="border-radius-100 shadow" width="40"
+                                            height="40" alt="" />
+                                    </div>
+                                    <div class="txt">
+                                        <div class="weight-600">Doris L. Larson</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Male</td>
+                            <td>76 kg</td>
+                            <td>Dr. Ren Delan</td>
+                            <td>22 Jul 2020</td>
+                            <td>
+                                <span class="badge badge-pill" data-bgcolor="#e7ebf5" data-color="#265ed7">Dengue</span>
+                            </td>
+                            <td>
+                                <div class="table-actions">
+                                    <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
+                                    <a href="#" data-color="#e95959"><i class="icon-copy dw dw-delete-3"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-plus">
+                                <div class="name-avatar d-flex align-items-center">
+                                    <div class="avatar mr-2 flex-shrink-0">
+                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo6.jpg"
+                                            class="border-radius-100 shadow" width="40" height="40" alt="" />
+                                    </div>
+                                    <div class="txt">
+                                        <div class="weight-600">Joseph Powell</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Male</td>
+                            <td>90 kg</td>
+                            <td>Dr. Allen Hannagan</td>
+                            <td>15 Nov 2020</td>
+                            <td>
+                                <span class="badge badge-pill" data-bgcolor="#e7ebf5"
+                                    data-color="#265ed7">Infection</span>
+                            </td>
+                            <td>
+                                <div class="table-actions">
+                                    <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
+                                    <a href="#" data-color="#e95959"><i class="icon-copy dw dw-delete-3"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-plus">
+                                <div class="name-avatar d-flex align-items-center">
+                                    <div class="avatar mr-2 flex-shrink-0">
+                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo9.jpg"
+                                            class="border-radius-100 shadow" width="40" height="40" alt="" />
+                                    </div>
+                                    <div class="txt">
+                                        <div class="weight-600">Jake Springer</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Female</td>
+                            <td>45 kg</td>
+                            <td>Dr. Garrett Kincy</td>
+                            <td>08 Oct 2020</td>
+                            <td>
+                                <span class="badge badge-pill" data-bgcolor="#e7ebf5" data-color="#265ed7">Covid
+                                    19</span>
+                            </td>
+                            <td>
+                                <div class="table-actions">
+                                    <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
+                                    <a href="#" data-color="#e95959"><i class="icon-copy dw dw-delete-3"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-plus">
+                                <div class="name-avatar d-flex align-items-center">
+                                    <div class="avatar mr-2 flex-shrink-0">
+                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo1.jpg"
+                                            class="border-radius-100 shadow" width="40" height="40" alt="" />
+                                    </div>
+                                    <div class="txt">
+                                        <div class="weight-600">Paul Buckland</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Male</td>
+                            <td>76 kg</td>
+                            <td>Dr. Maxwell Soltes</td>
+                            <td>12 Dec 2020</td>
+                            <td>
+                                <span class="badge badge-pill" data-bgcolor="#e7ebf5" data-color="#265ed7">Asthma</span>
+                            </td>
+                            <td>
+                                <div class="table-actions">
+                                    <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
+                                    <a href="#" data-color="#e95959"><i class="icon-copy dw dw-delete-3"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-plus">
+                                <div class="name-avatar d-flex align-items-center">
+                                    <div class="avatar mr-2 flex-shrink-0">
+                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo2.jpg"
+                                            class="border-radius-100 shadow" width="40" height="40" alt="" />
+                                    </div>
+                                    <div class="txt">
+                                        <div class="weight-600">Neil Arnold</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Male</td>
+                            <td>60 kg</td>
+                            <td>Dr. Sebastian Tandon</td>
+                            <td>30 Oct 2020</td>
+                            <td>
+                                <span class="badge badge-pill" data-bgcolor="#e7ebf5"
+                                    data-color="#265ed7">Diabetes</span>
+                            </td>
+                            <td>
+                                <div class="table-actions">
+                                    <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
+                                    <a href="#" data-color="#e95959"><i class="icon-copy dw dw-delete-3"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-plus">
+                                <div class="name-avatar d-flex align-items-center">
+                                    <div class="avatar mr-2 flex-shrink-0">
+                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo8.jpg"
+                                            class="border-radius-100 shadow" width="40" height="40" alt="" />
+                                    </div>
+                                    <div class="txt">
+                                        <div class="weight-600">Christian Dyer</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Male</td>
+                            <td>80 kg</td>
+                            <td>Dr. Sebastian Tandon</td>
+                            <td>15 Jun 2020</td>
+                            <td>
+                                <span class="badge badge-pill" data-bgcolor="#e7ebf5"
+                                    data-color="#265ed7">Diabetes</span>
+                            </td>
+                            <td>
+                                <div class="table-actions">
+                                    <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
+                                    <a href="#" data-color="#e95959"><i class="icon-copy dw dw-delete-3"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-plus">
+                                <div class="name-avatar d-flex align-items-center">
+                                    <div class="avatar mr-2 flex-shrink-0">
+                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo1.jpg"
+                                            class="border-radius-100 shadow" width="40" height="40" alt="" />
+                                    </div>
+                                    <div class="txt">
+                                        <div class="weight-600">Doris L. Larson</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Male</td>
+                            <td>76 kg</td>
+                            <td>Dr. Ren Delan</td>
+                            <td>22 Jul 2020</td>
+                            <td>
+                                <span class="badge badge-pill" data-bgcolor="#e7ebf5" data-color="#265ed7">Dengue</span>
+                            </td>
+                            <td>
+                                <div class="table-actions">
+                                    <a href="#" data-color="#265ed7"><i class="icon-copy dw dw-edit2"></i></a>
+                                    <a href="#" data-color="#e95959"><i class="icon-copy dw dw-delete-3"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
             <div class="footer-wrap pd-20 mb-20 card-box">
                 DeskApp - Bootstrap 4 Admin Template By
                 <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
             </div>
         </div>
     </div>
-    <!-- welcome modal start -->
-    <div class="welcome-modal">
-        <button class="welcome-modal-close">
-            <i class="bi bi-x-lg"></i>
-        </button>
-        <iframe class="w-100 border-0" src="https://embed.lottiefiles.com/animation/31548"></iframe>
-        <div class="text-center">
-            <h3 class="h5 weight-500 text-center mb-2">
-                Open source
-                <span role="img" aria-label="gratitude">❤️</span>
-            </h3>
-            <div class="pb-2">
-                <a class="github-button" href="https://github.com/dropways/deskapp"
-                    data-color-scheme="no-preference: dark; light: light; dark: light;" data-icon="octicon-star"
-                    data-size="large" data-show-count="true"
-                    aria-label="Star dropways/deskapp dashboard on GitHub">Star</a>
-                <a class="github-button" href="https://github.com/dropways/deskapp/fork"
-                    data-color-scheme="no-preference: dark; light: light; dark: light;" data-icon="octicon-repo-forked"
-                    data-size="large" data-show-count="true"
-                    aria-label="Fork dropways/deskapp dashboard on GitHub">Fork</a>
-            </div>
-        </div>
-        <div class="text-center mb-1">
-            <div>
-                <a href="https://github.com/dropways/deskapp" target="_blank" class="btn btn-light btn-block btn-sm">
-                    <span class="text-danger weight-600">STAR US</span>
-                    <span class="weight-600">ON GITHUB</span>
-                    <i class="fa fa-github"></i>
-                </a>
-            </div>
-            <script async defer="defer" src="https://buttons.github.io/buttons.js"></script>
-        </div>
-        <a href="https://github.com/dropways/deskapp" target="_blank" class="btn btn-success btn-sm mb-0 mb-md-3 w-100">
-            DOWNLOAD
-            <i class="fa fa-download"></i>
-        </a>
-        <p class="font-14 text-center mb-1 d-none d-md-block">
-            Available in the following technologies:
-        </p>
-        <div class="d-none d-md-flex justify-content-center h1 mb-0 text-danger">
-            <i class="fa fa-html5"></i>
-        </div>
-    </div>
-    <button class="welcome-modal-btn">
-        <i class="fa fa-download"></i> Download
-    </button>
-    <!-- welcome modal end -->
-    <!-- js -->
-    <script src="<?= base_url('backend/vendors/scripts/core.js') ?>"></script>
-    <script src="<?= base_url('backend/vendors/scripts/script.min.js') ?>"></script>
-    <script src="<?= base_url('backend/vendors/scripts/process.js') ?>"></script>
-    <script src="<?= base_url('backend/vendors/scripts/layout-settings.js') ?>"></script>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS" height="0" width="0"
-            style="display: none; visibility: hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-</body>
 
-</html>
+</body>
+<?php include ('template/dashboard-footer.php'); ?>

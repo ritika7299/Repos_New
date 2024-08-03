@@ -29,7 +29,7 @@
             <!-- /login-logo -->
             <div class="card-body">
                 <!-- login-form -->
-                <form action="<?= base_url('login/authenticate') ?>" method="post">
+                <form action="<?= base_url('admin/login_action') ?>" method="post">
                     <div class="input-group mb-3">
 
                         <input type="text" class="form-control" id="username" placeholder="Username">
