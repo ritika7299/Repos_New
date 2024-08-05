@@ -4,7 +4,7 @@
 <head>
     <!-- Basic Page Info -->
     <meta charset="utf-8" />
-    <title>Dashboard</title>
+    <title>Admin-Dashboard</title>
 
     <!-- Site favicon -->
     <link rel="apple-touch-icon" sizes="180x180"
@@ -25,7 +25,9 @@
     <link rel="stylesheet" type="text/css"
         href="<?php echo site_url(); ?>public/backend/vendors/styles/icon-font.min.css" />
     <link rel="stylesheet" type="text/css"
-        href="<?php echo site_url(); ?>public/backend/src/plugins/jquery-steps/jquery.steps.css" />
+        href="<?php echo site_url(); ?>public/backend/src/plugins/datatables/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="<?php echo site_url(); ?>public/backend/src/plugins/datatables/css/responsive.bootstrap4.min.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>public/backend/vendors/styles/style.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->

@@ -63,8 +63,9 @@
                                         OR
                                     </div>
                                     <div class="input-group mb-0">
-                                        <a class="btn btn-outline-primary btn-lg btn-block"
-                                            href="register.html">Sign-Up</a>
+                                        <a class="btn btn-lg btn-block" href="signup.html"><span
+                                                class="text-danger">Don't
+                                                have an account?</span><span class="text-primary"> Sign-Up</span></a>
                                     </div>
                                 </div>
                             </div>

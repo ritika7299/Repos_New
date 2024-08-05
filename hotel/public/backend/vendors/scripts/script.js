@@ -358,4 +358,3 @@ function CopyToClipboard(value, showNotification, notificationText) {
 	// other browser
 	return false;
 })();
-
