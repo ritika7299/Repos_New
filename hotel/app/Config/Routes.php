@@ -6,29 +6,14 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
-
-/*----User Login ------ */
 $routes->get('/login', 'Login::index');
 
 /*----Admin Login ------ */
 $routes->get('/admin', 'Admin::index');
-$routes->get('/admin/dashboard', 'Admin::admin_dashboard');
-// $routes->get('/admin/dashboard', 'Admin::dashboard');
+$routes->get('/admincon/dashboard', 'AdminCon::dashboard');
 
-/*This is deskapp maniputation*/
-// Auth
-// $routes->get('/auth', 'Auth::index');
-/*--------------------------------------------------------------------------- */
-/*$routes->group('admin', static function ($routes) {
-    $routes->group('', [], static function ($routes) {
-        $routes->view('example-page', 'example-page');
-    });
-
-    $routes->group('', [], static function ($routes) {
-        $routes->view('example-auth', 'example-auth');
-    });
-});*/
-
+/*----Recepionist Login ------ */
 $routes->get('/usercon', 'UserCon::index');
 $routes->get('/usercon/register', 'UserCon::register');
 $routes->get('usercon/dashboard', 'UserCon::dashboard');
+$routes->get('usercon/invoice', 'UserCon::invoice');

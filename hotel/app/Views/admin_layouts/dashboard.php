@@ -280,17 +280,17 @@
                     </li>
                     <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon fa fa-calendar-check-o"></span><span class="mtext">Rooms Booking</span>
+                            <span class="micon fa fa-calendar-check-o"></span><span class="mtext">Reservation</span>
                         </a>
                     </li>
                     <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon ti-comment-alt"></span><span class="mtext">User Manage</span>
+                            <span class="micon ti-comment-alt"></span><span class="mtext">Manage Rooms</span>
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="<?php echo site_url(); ?>user_layouts/invoice" class="dropdown-toggle">
-                            <span class="micon fa fa-group"></span><span class="mtext">Invoice</span>
+                        <a href="javascript:;" class="dropdown-toggle">
+                            <span class="micon fa fa-group"></span><span class="mtext">Staff Section</span>
                         </a>
                     </li>
                     <li class="dropdown">
@@ -298,7 +298,11 @@
                             <span class="micon ti-comment-alt"></span><span class="mtext">Manage Complaints</span>
                         </a>
                     </li>
-
+                    <li>
+                        <a href="invoice.html" class="dropdown-toggle no-arrow">
+                            <span class="micon bi bi-receipt-cutoff"></span><span class="mtext">Invoice</span>
+                        </a>
+                    </li>
 
                 </ul>
             </div>
@@ -308,7 +312,7 @@
     <div class="main-container">
         <div class="xs-pd-20-10 pd-ltr-20">
             <div class="title pb-20">
-                <h2 class="h3 mb-0">Recepionist Dashboard</h2>
+                <h2 class="h3 mb-0">Admin Dashboard</h2>
             </div>
 
             <div class="row pb-10">
@@ -447,22 +451,9 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xl-8 mb-30">
-                    <div class="card-box height-100-p pd-20" style="position: relative;">
-                        <h2 class="h4 mb-20">Activity</h2>
-                    </div>
-                </div>
-                <div class="col-xl-4 mb-30">
-                    <div class="card-box height-100-p pd-20" style="position: relative;">
-                        <h2 class="h4 mb-20">Lead Target</h2>
-
-                    </div>
-                </div>
-            </div>
 
             <div class="footer-wrap pd-20 mb-20 card-box">
-                Theme design by
+                Hotel theme design-by
                 <a href="https://github.com/dropways" target="_blank">Ritika</a>
             </div>
         </div>

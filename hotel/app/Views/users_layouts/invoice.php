@@ -289,7 +289,7 @@
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="<?php echo site_url(); ?>user_layouts/invoice" class="dropdown-toggle">
+                        <a href="#" class="dropdown-toggle">
                             <span class="micon fa fa-group"></span><span class="mtext">Invoice</span>
                         </a>
                     </li>
@@ -311,157 +311,111 @@
                 <h2 class="h3 mb-0">Recepionist Dashboard</h2>
             </div>
 
-            <div class="row pb-10">
-                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
-                    <div class="card-box height-100-p widget-style3">
-                        <div class="d-flex flex-wrap">
-                            <div class="widget-data">
-                                <div class="weight-700 font-24 text-dark">12</div>
-                                <div class="font-14 text-secondary weight-500">
-                                    Total Rooms
-                                </div>
-                            </div>
-                            <div class="widget-icon">
-                                <div class="icon" data-color="#FFFAB7">
-                                    <i class="icon-copy fa fa-bed"></i>
-                                </div>
+            <div class="invoice-wrap">
+                <div class="invoice-box">
+                    <div class="invoice-header">
+                        <div class="logo text-center">
+                            <img src="vendors/images/deskapp-logo.png" alt="">
+                        </div>
+                    </div>
+                    <h4 class="text-center mb-30 weight-600">INVOICE</h4>
+                    <div class="row pb-30">
+                        <div class="col-md-6">
+                            <h5 class="mb-15">Ritika</h5>
+                            <p class="font-14 mb-5">
+                                Date Issued: <strong class="weight-600">06 July 2024</strong>
+                            </p>
+                            <p class="font-14 mb-5">
+                                Invoice No: <strong class="weight-600">4556</strong>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-right">
+                                <p class="font-14 mb-5">Ritika</p>
+                                <p class="font-14 mb-5">H.no. 40 post office, Bazaria</p>
+                                <p class="font-14 mb-5">Ghaziabad</p>
+                                <p class="font-14 mb-5">201009</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
-                    <div class="card-box height-100-p widget-style3">
-                        <div class="d-flex flex-wrap">
-                            <div class="widget-data">
-                                <div class="weight-700 font-24 text-dark">8</div>
-                                <div class="font-14 text-secondary weight-500">
-                                    Reservations
-                                </div>
+                    <div class="invoice-desc pb-30">
+                        <div class="invoice-desc-head clearfix">
+                            <div class="invoice-sub">Description</div>
+                            <div class="invoice-rate">Rate</div>
+                            <div class="invoice-hours">Hours</div>
+                            <div class="invoice-subtotal">Subtotal</div>
+                        </div>
+                        <div class="invoice-desc-body">
+                            <ul>
+                                <li class="clearfix">
+                                    <div class="invoice-sub">Website Design</div>
+                                    <div class="invoice-rate">Rs. 2000</div>
+                                    <div class="invoice-hours">100</div>
+                                    <div class="invoice-subtotal">
+                                        <span class="weight-600">Rs. 2000</span>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="invoice-sub">Logo Design</div>
+                                    <div class="invoice-rate">Rs.20</div>
+                                    <div class="invoice-hours">100</div>
+                                    <div class="invoice-subtotal">
+                                        <span class="weight-600">$2000</span>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="invoice-sub">Website Design</div>
+                                    <div class="invoice-rate">$20</div>
+                                    <div class="invoice-hours">100</div>
+                                    <div class="invoice-subtotal">
+                                        <span class="weight-600">Rs. 2000</span>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="invoice-sub">Logo Design</div>
+                                    <div class="invoice-rate">Rs. 20</div>
+                                    <div class="invoice-hours">100</div>
+                                    <div class="invoice-subtotal">
+                                        <span class="weight-600">Rs. 2000</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="invoice-desc-footer">
+                            <div class="invoice-desc-head clearfix">
+                                <div class="invoice-sub">Bank Info</div>
+                                <div class="invoice-rate">Due By</div>
+                                <div class="invoice-subtotal">Total Due</div>
                             </div>
-                            <div class="widget-icon">
-                                <div class="icon" data-color="#A1DD70">
-                                    <span class="icon-copy fa fa-calendar-check-o" aria-hidden="true"></i></span>
-                                </div>
+                            <div class="invoice-desc-body">
+                                <ul>
+                                    <li class="clearfix">
+                                        <div class="invoice-sub">
+                                            <p class="font-14 mb-5">
+                                                Account No:
+                                                <strong class="weight-600">123 456 789</strong>
+                                            </p>
+                                            <p class="font-14 mb-5">
+                                                Code: <strong class="weight-600">4556</strong>
+                                            </p>
+                                        </div>
+                                        <div class="invoice-rate font-20 weight-600">
+                                            10 Jan 2018
+                                        </div>
+                                        <div class="invoice-subtotal">
+                                            <span class="weight-600 font-24 text-danger">Rs. 8000</span>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
-                    <div class="card-box height-100-p widget-style3">
-                        <div class="d-flex flex-wrap">
-                            <div class="widget-data">
-                                <div class="weight-700 font-24 text-dark">20</div>
-                                <div class="font-14 text-secondary weight-500">
-                                    Staff
-                                </div>
-                            </div>
-                            <div class="widget-icon">
-                                <div class="icon" data-color="#00eccf">
-                                    <i class="icon-copy fa fa-group" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
-                    <div class="card-box height-100-p widget-style3">
-                        <div class="d-flex flex-wrap">
-                            <div class="widget-data">
-                                <div class="weight-700 font-24 text-dark">2</div>
-                                <div class="font-14 text-secondary weight-500">Complaints</div>
-                            </div>
-                            <div class="widget-icon">
-                                <div class="icon" data-color="#B5C18E">
-                                    <i class="icon-copy ti-comment-alt" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row pb-10">
-                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
-                    <div class="card-box height-100-p widget-style3">
-                        <div class="d-flex flex-wrap">
-                            <div class="widget-data">
-                                <div class="weight-700 font-24 text-dark">7</div>
-                                <div class="font-14 text-secondary weight-500">
-                                    Booked Rooms
-                                </div>
-                            </div>
-                            <div class="widget-icon">
-                                <div class="icon" data-color="#FF0000">
-                                    <i class="icon-copy fa fa-reorder"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
-                    <div class="card-box height-100-p widget-style3">
-                        <div class="d-flex flex-wrap">
-                            <div class="widget-data">
-                                <div class="weight-700 font-24 text-dark">5</div>
-                                <div class="font-14 text-secondary weight-500">
-                                    Available Rooms
-                                </div>
-                            </div>
-                            <div class="widget-icon">
-                                <div class="icon" data-color="#9BEC00">
-                                    <span class="icon-copy fa fa-check-circle"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
-                    <div class="card-box height-100-p widget-style3">
-                        <div class="d-flex flex-wrap">
-                            <div class="widget-data">
-                                <div class="weight-700 font-24 text-dark">2</div>
-                                <div class="font-14 text-secondary weight-500">
-                                    Checked-In
-                                </div>
-                            </div>
-                            <div class="widget-icon">
-                                <div class="icon" data-color="#91DDCF">
-                                    <i class="icon-copy dw dw-calendar1" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
-                    <div class="card-box height-100-p widget-style3">
-                        <div class="d-flex flex-wrap">
-                            <div class="widget-data">
-                                <div class="weight-700 font-24 text-dark">1</div>
-                                <div class="font-14 text-secondary weight-500">Total Pending Payment</div>
-                            </div>
-                            <div class="widget-icon">
-                                <div class="icon" data-color="#95D2B3">
-                                    <i class="icon-copy fa fa-credit-card" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-8 mb-30">
-                    <div class="card-box height-100-p pd-20" style="position: relative;">
-                        <h2 class="h4 mb-20">Activity</h2>
-                    </div>
-                </div>
-                <div class="col-xl-4 mb-30">
-                    <div class="card-box height-100-p pd-20" style="position: relative;">
-                        <h2 class="h4 mb-20">Lead Target</h2>
-
-                    </div>
+                    <h4 class="text-center pb-20">Thank You!!</h4>
                 </div>
             </div>
 
-            <div class="footer-wrap pd-20 mb-20 card-box">
+
+            <div class="footer-wrap pd-20 mb-20 card-box mt-4">
                 Theme design by
                 <a href="https://github.com/dropways" target="_blank">Ritika</a>
             </div>

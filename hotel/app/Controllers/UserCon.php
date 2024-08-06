@@ -17,14 +17,10 @@ class UserCon extends BaseController
     public function dashboard()
     {
         return view('users_layouts/dashboard');
-        // echo "User dashboard";
     }
 
-    public function do_login()
+    public function invoice()
     {
-        // $userModel = new userModel();
-        echo "Login page submitted";
-
-
+        return view('users_layouts/invoice');
     }
 }

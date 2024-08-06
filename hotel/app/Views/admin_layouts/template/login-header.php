@@ -4,7 +4,7 @@
 <head>
     <!-- Basic Page Info -->
     <meta charset="utf-8" />
-    <title>Recepionist-Dashboard</title>
+    <title>Login</title>
 
     <!-- Site favicon -->
     <link rel="apple-touch-icon" sizes="180x180"
@@ -24,12 +24,6 @@
     <link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>public/backend/vendors/styles/core.css" />
     <link rel="stylesheet" type="text/css"
         href="<?php echo site_url(); ?>public/backend/vendors/styles/icon-font.min.css" />
-    <link rel="stylesheet" type="text/css"
-        href="<?php echo site_url(); ?>public/backend/src/plugins/datatables/css/dataTables.bootstrap4.min.css" />
-    <link rel="stylesheet" type="text/css"
-        href="<?php echo site_url(); ?>public/backend/src/plugins/datatables/css/responsive.bootstrap4.min.css" />
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
     <link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>public/backend/vendors/styles/style.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
