@@ -2,38 +2,40 @@
 
 namespace App\Controllers;
 
-use App\Models\AdminModel;
-
 class Admin extends BaseController
 {
     public function index()
     {
-        return view('admin/login');
+        return view('admin_layouts/login');
+    }
+
+    public function dashboard()
+    {
+        return view('admin_layouts/dashboard');
 
     }
-    public function admin_dashboard()
+    public function login_ac()
     {
-        return view('admin/dashboard');
+        helper(['form']);
+        $mod_user = new AdminModel();
+        $username = $this->request->getVar('username');
+        $password = $this->request->getVar('password');
+        $data = $mod_user->where('username', $username)->first();
 
-    }
-    public function login_action()
-    {
-        $modal = new AdminModel();
-        $result = $modal->where('username', $this->request->getVar('username'))->first();
-
-        if ($result != null) {
-            if ($result['password'] == $this->request->getVar('password'))
-                ; {
-                echo "<h1>Welcome." . $result['name'];
+        if ($data) {
+            $pass_db = $data['password'];
+            $ver_pass = password_verify($password, $pass_db);
+            if ($ver_pass) {
+                return redirect()->to('admin/dashboard');
             }
 
-
-
         } else {
-            return view('admin/login');
+            return redirect()->to('admin/index');
+
         }
+
 
     }
 
-}
 
+}

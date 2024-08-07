@@ -6,14 +6,16 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
-$routes->get('/login', 'Login::index');
+// $routes->get('/login', 'Login::index');
 
-/*----Admin Login ------ */
+/*----Admin Section ------ */
 $routes->get('/admin', 'Admin::index');
-$routes->get('/admincon/dashboard', 'AdminCon::dashboard');
+$routes->get('/admin/dashboard', 'Admin::dashboard');
+$routes->get('/admin/login_ac', 'Admin::login_ac');
 
-/*----Recepionist Login ------ */
-$routes->get('/usercon', 'UserCon::index');
-$routes->get('/usercon/register', 'UserCon::register');
-$routes->get('usercon/dashboard', 'UserCon::dashboard');
-$routes->get('usercon/invoice', 'UserCon::invoice');
+/*----Recepionist Section (User) ------ */
+$routes->get('/user', 'User::index');
+$routes->get('/user/register', 'User::register');
+$routes->get('user/dashboard', 'User::dashboard');
+$routes->get('user/reservation', 'User::reservation');
+$routes->get('user/invoice', 'User::invoice');

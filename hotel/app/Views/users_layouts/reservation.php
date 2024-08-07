@@ -19,7 +19,7 @@
             <div class="menu-icon bi bi-list"></div>
             <div class="search-toggle-icon bi bi-search" data-toggle="header_search"></div>
             <div class="header-search">
-                <form action="<?php echo site_url('') ?>" method="post">
+                <form>
                     <div class="form-group mb-0">
                         <i class="dw dw-search2 search-icon"></i>
                         <input type="text" class="form-control search-input" placeholder="Search Here" />
@@ -273,24 +273,24 @@
             <div class="sidebar-menu">
                 <ul id="accordion-menu">
                     <li class="dropdown">
-                        <a href="<?php echo site_url(); ?>Admin/dashboard" class="dropdown-toggle">
+                        <a href="javascript:;" class="dropdown-toggle">
                             <span class="micon bi bi-house"></span><span class="mtext">Dashboard</span>
                         </a>
 
                     </li>
                     <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon fa fa-calendar-check-o"></span><span class="mtext">Reservation</span>
+                            <span class="micon fa fa-calendar-check-o"></span><span class="mtext">Rooms Booking</span>
                         </a>
                     </li>
                     <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon ti-comment-alt"></span><span class="mtext">Manage Rooms</span>
+                            <span class="micon ti-comment-alt"></span><span class="mtext">User Manage</span>
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon fa fa-group"></span><span class="mtext">Staff Section</span>
+                        <a href="<?php echo site_url(); ?>user_layouts/invoice" class="dropdown-toggle">
+                            <span class="micon fa fa-group"></span><span class="mtext">Invoice</span>
                         </a>
                     </li>
                     <li class="dropdown">
@@ -298,11 +298,7 @@
                             <span class="micon ti-comment-alt"></span><span class="mtext">Manage Complaints</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="invoice.html" class="dropdown-toggle no-arrow">
-                            <span class="micon bi bi-receipt-cutoff"></span><span class="mtext">Invoice</span>
-                        </a>
-                    </li>
+
 
                 </ul>
             </div>
@@ -312,148 +308,139 @@
     <div class="main-container">
         <div class="xs-pd-20-10 pd-ltr-20">
             <div class="title pb-20">
-                <h2 class="h3 mb-0">Dashboard</h2>
+                <h2 class="h3 mb-0">Booking</h2>
             </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 mb-30">
+                    <div class="card-box pd-30 height-100-p">
+                        <h4 class="mb-30 h4">Customer Details</h4>
+                        <div id="guest-information" class="guest-information" data-highcharts-chart="1">
+                            <form>
+                                <div class="form-group">
 
-            <div class="row pb-10">
-                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
-                    <div class="card-box height-100-p widget-style3">
-                        <div class="d-flex flex-wrap">
-                            <div class="widget-data">
-                                <div class="weight-700 font-24 text-dark">12</div>
-                                <div class="font-14 text-secondary weight-500">
-                                    Total Rooms
+                                    <input class="form-control" type="text" placeholder="Enter Name">
                                 </div>
-                            </div>
-                            <div class="widget-icon">
-                                <div class="icon" data-color="#FFFAB7">
-                                    <i class="icon-copy fa fa-bed"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
-                    <div class="card-box height-100-p widget-style3">
-                        <div class="d-flex flex-wrap">
-                            <div class="widget-data">
-                                <div class="weight-700 font-24 text-dark">8</div>
-                                <div class="font-14 text-secondary weight-500">
-                                    Reservations
-                                </div>
-                            </div>
-                            <div class="widget-icon">
-                                <div class="icon" data-color="#A1DD70">
-                                    <span class="icon-copy fa fa-calendar-check-o" aria-hidden="true"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
-                    <div class="card-box height-100-p widget-style3">
-                        <div class="d-flex flex-wrap">
-                            <div class="widget-data">
-                                <div class="weight-700 font-24 text-dark">20</div>
-                                <div class="font-14 text-secondary weight-500">
-                                    Staff
-                                </div>
-                            </div>
-                            <div class="widget-icon">
-                                <div class="icon" data-color="#00eccf">
-                                    <i class="icon-copy fa fa-group" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
-                    <div class="card-box height-100-p widget-style3">
-                        <div class="d-flex flex-wrap">
-                            <div class="widget-data">
-                                <div class="weight-700 font-24 text-dark">2</div>
-                                <div class="font-14 text-secondary weight-500">Complaints</div>
-                            </div>
-                            <div class="widget-icon">
-                                <div class="icon" data-color="#B5C18E">
-                                    <i class="icon-copy ti-comment-alt" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row pb-10">
-                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
-                    <div class="card-box height-100-p widget-style3">
-                        <div class="d-flex flex-wrap">
-                            <div class="widget-data">
-                                <div class="weight-700 font-24 text-dark">7</div>
-                                <div class="font-14 text-secondary weight-500">
-                                    Booked Rooms
-                                </div>
-                            </div>
-                            <div class="widget-icon">
-                                <div class="icon" data-color="#FF0000">
-                                    <i class="icon-copy fa fa-reorder"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
-                    <div class="card-box height-100-p widget-style3">
-                        <div class="d-flex flex-wrap">
-                            <div class="widget-data">
-                                <div class="weight-700 font-24 text-dark">5</div>
-                                <div class="font-14 text-secondary weight-500">
-                                    Available Rooms
-                                </div>
-                            </div>
-                            <div class="widget-icon">
-                                <div class="icon" data-color="#9BEC00">
-                                    <span class="icon-copy fa fa-check-circle"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
-                    <div class="card-box height-100-p widget-style3">
-                        <div class="d-flex flex-wrap">
-                            <div class="widget-data">
-                                <div class="weight-700 font-24 text-dark">2</div>
-                                <div class="font-14 text-secondary weight-500">
-                                    Checked-In
-                                </div>
-                            </div>
-                            <div class="widget-icon">
-                                <div class="icon" data-color="#91DDCF">
-                                    <i class="icon-copy dw dw-calendar1" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
-                    <div class="card-box height-100-p widget-style3">
-                        <div class="d-flex flex-wrap">
-                            <div class="widget-data">
-                                <div class="weight-700 font-24 text-dark">1</div>
-                                <div class="font-14 text-secondary weight-500">Total Pending Payment</div>
-                            </div>
-                            <div class="widget-icon">
-                                <div class="icon" data-color="#95D2B3">
-                                    <i class="icon-copy fa fa-credit-card" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                <div class="form-group">
 
-            <div class="footer-wrap pd-20 mb-20 card-box">
-                Hotel theme design-by
+                                    <input class="form-control" value="" type="email" placeholder="Enter Email">
+                                </div>
+                                <div class=" form-group">
+                                    <input class="form-control" value="" type="tel" placeholder="Enter Mobile">
+                                </div>
+                                <div class=" form-group">
+                                    <select class="form-control">
+                                        <option placeholder="">Select ID</option>
+                                        <option id="vo">Voter ID</option>
+                                        <option id="ac">Aadhaar Card</option>
+                                        <option id="pc">Pan Card</option>
+                                        <option id="pp">Passport</option>
+                                    </select>
+                                </div>
+                                <div class=" form-group">
+                                    <input class="form-control" value="" type="tel" placeholder="Enter Id numbers">
+                                </div>
+                                <div class=" form-group">
+                                    <input class="form-control" value="" type="tel" placeholder="Enter Address">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 mb-30">
+                    <div class="card-box pd-30 height-100-p">
+                        <h4 class="mb-30 h4">Booking Information</h4>
+                        <div id="chart" class="chart" data-highcharts-chart="0">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class=" form-group">
+                                            <label>Check-In</label>
+                                            <input class="form-control" value="" type="date">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class=" form-group">
+                                            <label>Check-Out</label>
+                                            <input class="form-control" value="" type="date">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class=" form-group">
+                                            <select class="form-control">
+                                                <option placeholder="">Select Room Type</option>
+                                                <option id="vo">Single Room</option>
+                                                <option id="ac">Deluxe Room</option>
+                                                <option id="pc">Superior Room</option>
+                                                <option id="pp">Double Deluxe Room</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class=" form-group">
+                                            <select class="form-control">
+                                                <option placeholder="">Select Bed type</option>
+                                                <option id="vo">Single</option>
+                                                <option id="ac">Double</option>
+                                                <option id="pc">Triple</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class=" form-group">
+                                            <select class="form-control">
+                                                <option placeholder="">Select No. of Room</option>
+                                                <option id="vo">1</option>
+                                                <option id="ac">2</option>
+                                                <option id="pc">3</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class=" form-group">
+                                            <select class="form-control">
+                                                <option placeholder="">Select Meal</option>
+                                                <option id="vo">Breakfast</option>
+                                                <option id="ac">Lunch</option>
+                                                <option id="pc">Dinner</option>
+                                                <option id="pc">Full Meal</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="row mt-5">
+                                <div class="col-md-8 col-sm-12">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-bold">Days (24 hours)</th>
+                                                <th class="text-bold">Include Meal</th>
+                                                <th class="text-bold">Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>07.08.2024-08.08.2024</td>
+                                                <td>500</td>
+                                                <td>Rs. 4000</td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-wrap pd-20 mb-20 card-box fixed-bottom">
+                Theme design by
                 <a href="https://github.com/dropways" target="_blank">Ritika</a>
             </div>
         </div>
