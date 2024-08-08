@@ -12,7 +12,7 @@
     </div>
     <!-- sign-in wrap -->
     <div class="login-wrap d-flex align-items-center flex-wrap justify-content-center">
-        <!-- sign-in container -->
+        <!-- container -->
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 col-lg-7">
@@ -24,7 +24,7 @@
                             <h2 class="text-center text-primary">Sign-In</h2>
                         </div>
                         <!-- Sign-in form  -->
-                        <form action="<?php echo site_url('UserCon/'); ?>" method="">
+                        <form action="<?php echo site_url('User/login_action'); ?>" method="">
                             <div class="input-group custom">
                                 <input type="text" class="form-control form-control-lg" placeholder="Username" />
                                 <div class="input-group-append custom">
@@ -59,13 +59,10 @@
 
                                         <a class="btn btn-primary btn-lg btn-block" href="">Sign-In</a>
                                     </div>
-                                    <div class="font-16 weight-600 pt-10 pb-10 text-center" data-color="#707373">
-                                        OR
-                                    </div>
-                                    <div class="input-group mb-0">
-                                        <a class="btn btn-lg btn-block" href="signup.html"><span
-                                                class="text-danger">Don't
-                                                have an account?</span><span class="text-primary"> Sign-Up</span></a>
+                                    <div class="input-group mb-0 mt-2">
+                                        <a class="btn btn-lg btn-block" href="signup.html"><span class="text-info">Don't
+                                                have an account?</span><span class="text-primary"><b>
+                                                    Sign-Up</b></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +72,7 @@
                 </div>
             </div>
         </div>
-        <!-- sign-in container -->
+        <!-- /container -->
     </div>
     <!-- sign-in wrap -->
     <?php include ('template/login-footer.php'); ?>

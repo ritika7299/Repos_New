@@ -33,7 +33,10 @@ class Admin extends BaseController
             return redirect()->to('admin/index');
 
         }
-
+    }
+    public function data_table()
+    {
+        return view('admin_layouts/data');
 
     }
 

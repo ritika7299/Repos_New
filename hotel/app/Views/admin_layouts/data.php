@@ -20,9 +20,132 @@
         <div class="header-left">
             <div class="menu-icon bi bi-list"></div>
             <div class="search-toggle-icon bi bi-search" data-toggle="header_search"></div>
+            <div class="header-search">
+                <form>
+                    <div class="form-group mb-0">
+                        <i class="dw dw-search2 search-icon"></i>
+                        <input type="text" class="form-control search-input" placeholder="Search Here" />
+                        <div class="dropdown">
+                            <a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown">
+                                <i class="ion-arrow-down-c"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="form-group row">
+                                    <label class="col-sm-12 col-md-2 col-form-label">From</label>
+                                    <div class="col-sm-12 col-md-10">
+                                        <input class="form-control form-control-sm form-control-line" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-12 col-md-2 col-form-label">To</label>
+                                    <div class="col-sm-12 col-md-10">
+                                        <input class="form-control form-control-sm form-control-line" type="text" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-12 col-md-2 col-form-label">Subject</label>
+                                    <div class="col-sm-12 col-md-10">
+                                        <input class="form-control form-control-sm form-control-line" type="text" />
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <button class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
         <div class="header-right">
-            <div class="user-info-dropdown mr-3">
+            <div class="dashboard-setting user-notification">
+                <div class="dropdown">
+                    <a class="dropdown-toggle no-arrow" href="javascript:;" data-toggle="right-sidebar">
+                        <i class="dw dw-settings2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="user-notification">
+                <div class="dropdown">
+                    <a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown">
+                        <i class="icon-copy dw dw-notification"></i>
+                        <span class="badge notification-active"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="notification-list mx-h-350 customscroll">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/img.jpg"
+                                            alt="" />
+                                        <h3>John Doe</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit, sed...
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo1.jpg"
+                                            alt="" />
+                                        <h3>Lea R. Frith</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit, sed...
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo2.jpg"
+                                            alt="" />
+                                        <h3>Erik L. Richards</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit, sed...
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo3.jpg"
+                                            alt="" />
+                                        <h3>John Doe</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit, sed...
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo4.jpg"
+                                            alt="" />
+                                        <h3>Renee I. Hansen</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit, sed...
+                                        </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/img.jpg"
+                                            alt="" />
+                                        <h3>Vicki M. Coleman</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                                            elit, sed...
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user-info-dropdown">
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
                         <span class="user-icon">
@@ -38,7 +161,10 @@
                     </div>
                 </div>
             </div>
-
+            <div class="github-link">
+                <a href="https://github.com/dropways/deskapp" target="_blank"><img
+                        src="<?php echo site_url(); ?>public/backend/vendors/images/github.svg" alt="" /></a>
+            </div>
         </div>
     </div>
     <!-- /header -->
@@ -60,13 +186,11 @@
                     <a href="javascript:void(0);" class="btn btn-outline-primary header-white active">White</a>
                     <a href="javascript:void(0);" class="btn btn-outline-primary header-dark">Dark</a>
                 </div>
-
                 <h4 class="weight-600 font-18 pb-10">Sidebar Background</h4>
                 <div class="sidebar-btn-group pb-30 mb-10">
                     <a href="javascript:void(0);" class="btn btn-outline-primary sidebar-light">White</a>
                     <a href="javascript:void(0);" class="btn btn-outline-primary sidebar-dark active">Dark</a>
                 </div>
-
                 <h4 class="weight-600 font-18 pb-10">Menu Dropdown Icon</h4>
                 <div class="sidebar-radio-group pb-10 mb-10">
                     <div class="custom-control custom-radio custom-control-inline">
@@ -86,7 +210,6 @@
                                 class="fa fa-angle-double-right"></i></label>
                     </div>
                 </div>
-
                 <h4 class="weight-600 font-18 pb-10">Menu List Icon</h4>
                 <div class="sidebar-radio-group pb-30 mb-10">
                     <div class="custom-control custom-radio custom-control-inline">
@@ -176,8 +299,6 @@
                             <span class="micon ti-comment-alt"></span><span class="mtext">Manage Complaints</span>
                         </a>
                     </li>
-
-
                 </ul>
             </div>
         </div>
@@ -190,175 +311,72 @@
                 <h2 class="h3 mb-0">Booking</h2>
             </div>
 
-            <!--customer and bookings details -->
+            <!--details table -->
             <div class="pd-20 card-box mb-30">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12 mb-30">
-                        <div class="pd-30 height-100-p">
-                            <h4 class="mb-30 h4">Customer Details</h4>
-                            <div id="guest-information" class="guest-information" data-highcharts-chart="1">
-                                <form>
-                                    <div class="form-group">
-
-                                        <input class="form-control" type="text" placeholder="Enter Name">
-                                    </div>
-                                    <div class="form-group">
-
-                                        <input class="form-control" value="" type="email" placeholder="Enter Email">
-                                    </div>
-                                    <div class=" form-group">
-                                        <input class="form-control" value="" type="tel" placeholder="Enter Mobile">
-                                    </div>
-                                    <div class=" form-group">
-                                        <select class="form-control">
-                                            <option placeholder="">Select ID</option>
-                                            <option id="vo">Voter ID</option>
-                                            <option id="ac">Aadhaar Card</option>
-                                            <option id="pc">Pan Card</option>
-                                            <option id="pp">Passport</option>
-                                        </select>
-                                    </div>
-                                    <div class=" form-group">
-                                        <input class="form-control" value="" type="tel" placeholder="Enter Id numbers">
-                                    </div>
-                                    <div class=" form-group">
-                                        <input class="form-control" value="" type="tel" placeholder="Enter Address">
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                <div class="clearfix mb-20">
+                    <div class="pull-left">
+                        <h4 class="text-blue h4">Bordered table</h4>
+                        <p>
+                            Add <code>.table .table-bordered</code> for borders on all
+                            sides of the table and cells.
+                        </p>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 mb-30">
-                        <div class="pd-30 height-100-p">
-                            <h4 class="mb-30 h4">Booking Information</h4>
-                            <div id="chart" class="chart" data-highcharts-chart="0">
-                                <form>
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-12">
-                                            <div class=" form-group">
-                                                <label>Check-In</label>
-                                                <input class="form-control" value="" type="date">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-12">
-                                            <div class=" form-group">
-                                                <label>Check-Out</label>
-                                                <input class="form-control" value="" type="date">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-12">
-                                            <div class=" form-group">
-                                                <select class="form-control">
-                                                    <option placeholder="">Select Room Type</option>
-                                                    <option id="vo">Single Room</option>
-                                                    <option id="ac">Deluxe Room</option>
-                                                    <option id="pc">Superior Room</option>
-                                                    <option id="pp">Double Deluxe Room</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-12">
-                                            <div class=" form-group">
-                                                <select class="form-control">
-                                                    <option placeholder="">Select Bed type</option>
-                                                    <option id="vo">Single</option>
-                                                    <option id="ac">Double</option>
-                                                    <option id="pc">Triple</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-12">
-                                            <div class=" form-group">
-                                                <select class="form-control">
-                                                    <option placeholder="">Select No. of Room</option>
-                                                    <option id="vo">1</option>
-                                                    <option id="ac">2</option>
-                                                    <option id="pc">3</option>
-
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-12">
-                                            <div class=" form-group">
-                                                <select class="form-control">
-                                                    <option placeholder="">Select Meal</option>
-                                                    <option id="vo">Breakfast</option>
-                                                    <option id="ac">Lunch</option>
-                                                    <option id="pc">Dinner</option>
-                                                    <option id="pc">Full Meal</option>
-                                                    <option id="pc">None</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                                <!-- <div class="row">
-                                <div class="col-md-12 col-sm-12">
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th class="text-bold">Check-In</th>
-                                                <th class="text-bold">Check-Out</th>
-                                                <th class="text-bold">Include Meal</th>
-                                                <th class="text-bold">Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>07.08.2024</td>
-                                                <td>08.08.2024</td>
-                                                <td>Full Meal</td>
-                                                <td>-</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1500/-</td>
-                                                <td>1500/-</td>
-                                                <td>1000/-</td>
-                                                <td>4000/-</td>
-                                            </tr>
-                                            </tbody>
-                                    </table>
-                                </div>
-                            </div> -->
-                            </div>
-                        </div>
+                    <div class="pull-right">
+                        <a href="#border-table" class="btn btn-primary btn-sm scroll-click" rel="content-y"
+                            data-toggle="collapse" role="button"><i class="fa fa-code"></i> Source Code</a>
                     </div>
                 </div>
-                <div class="actions clearfix">
-                    <a class="btn btn-primary float-right mt-2" href="#finish" role="menuitem" data-toggle="modal"
-                        data-target="#booking-modal">Submit
-                        <i class="icon-copy fa fa-paper-plane" aria-hidden="true"></i></a>
-                </div>
-            </div>
-            <!-- /customer and bookings details -->
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                            <th scope="col">Tag</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td><span class="badge badge-primary">Primary</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td><span class="badge badge-secondary">Secondary</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td><span class="badge badge-success">Success</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="collapse collapse-box" id="border-table">
+                    <div class="code-box">
+                        <div class="clearfix">
+                            <a href="javascript:;" class="btn btn-primary btn-sm code-copy pull-left"
+                                data-clipboard-target="#border-table-code"><i class="fa fa-clipboard"></i> Copy Code</a>
+                            <a href="#border-table" class="btn btn-primary btn-sm pull-right" rel="content-y"
+                                data-toggle="collapse" role="button"><i class="fa fa-eye-slash"></i> Hide Code</a>
+                        </div>
 
-            <!-- Booking successfully modal -->
-            <div class="modal fade" id="booking-modal" tabindex="-1" role="dialog"
-                aria-labelledby="exampleModalCenterTitle" style="display: none;" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body text-center font-18">
-                            <h3 class="mb-20">Booking successfully!</h3>
-                            <div class="mb-30 text-center">
-                                <img src="<?php echo site_url(); ?>public/backend/vendors/images/success.png">
-                            </div>
-                        </div>
-                        <div class="modal-footer justify-content-center">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">
-                                Done
-                            </button>
-                        </div>
                     </div>
                 </div>
             </div>
-            <!-- /Booking successfully modal -->
 
+
+            <!-- /details table -->
             <!-- footer -->
-            <div class="footer-wrap pd-20 mb-20 card-box mt-6">
+            <div class="footer-wrap pd-20 mb-20 card-box">
                 Template design By
                 <a href="https://github.com/dropways" target="_blank">Ritika</a>
             </div>
