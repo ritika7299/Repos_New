@@ -58,7 +58,7 @@
         <div class="header-right">
             <div class="dashboard-setting user-notification">
                 <div class="dropdown">
-                    <a class="dropdown-toggle no-arrow" href="javascript:;" data-toggle="right-sidebar">
+                    <a class="dropdown-toggle no-arrow" href="#" data-toggle="right-sidebar">
                         <i class="dw dw-settings2"></i>
                     </a>
                 </div>
@@ -279,22 +279,24 @@
 
                     </li>
                     <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
+                        <a href="
+                        
+                        " class="dropdown-toggle">
                             <span class="micon fa fa-calendar-check-o"></span><span class="mtext">Reservation</span>
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
+                        <a href="#" class="dropdown-toggle">
                             <span class="micon ti-comment-alt"></span><span class="mtext">Manage Rooms</span>
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
+                        <a href="#" class="dropdown-toggle">
                             <span class="micon fa fa-group"></span><span class="mtext">Staff Section</span>
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
+                        <a href="#" class="dropdown-toggle">
                             <span class="micon ti-comment-alt"></span><span class="mtext">Manage Complaints</span>
                         </a>
                     </li>

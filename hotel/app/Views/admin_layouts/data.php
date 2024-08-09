@@ -1,11 +1,11 @@
-<?php include ('template/dashboard-header.php'); ?>
+<?php include ('template/data-header.php'); ?>
 
 <body>
     <!-- loader -->
     <div class="pre-loader">
         <div class="pre-loader-box">
             <div class="loader-logo">
-                <img src="<?php echo site_url(); ?>public/backend/vendors/images/deskapp-logo.svg" alt="" />
+                <img src="<?php echo site_url(); ?>public/backend/vendors/images/main-logo.png" alt="" />
             </div>
             <div class="loader-progress" id="progress_div">
                 <div class="bar" id="bar1"></div>
@@ -60,89 +60,9 @@
         <div class="header-right">
             <div class="dashboard-setting user-notification">
                 <div class="dropdown">
-                    <a class="dropdown-toggle no-arrow" href="javascript:;" data-toggle="right-sidebar">
+                    <a class="dropdown-toggle no-arrow" href="#" data-toggle="right-sidebar">
                         <i class="dw dw-settings2"></i>
                     </a>
-                </div>
-            </div>
-            <div class="user-notification">
-                <div class="dropdown">
-                    <a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown">
-                        <i class="icon-copy dw dw-notification"></i>
-                        <span class="badge notification-active"></span>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <div class="notification-list mx-h-350 customscroll">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/img.jpg"
-                                            alt="" />
-                                        <h3>John Doe</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                                            elit, sed...
-                                        </p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo1.jpg"
-                                            alt="" />
-                                        <h3>Lea R. Frith</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                                            elit, sed...
-                                        </p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo2.jpg"
-                                            alt="" />
-                                        <h3>Erik L. Richards</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                                            elit, sed...
-                                        </p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo3.jpg"
-                                            alt="" />
-                                        <h3>John Doe</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                                            elit, sed...
-                                        </p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo4.jpg"
-                                            alt="" />
-                                        <h3>Renee I. Hansen</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                                            elit, sed...
-                                        </p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/img.jpg"
-                                            alt="" />
-                                        <h3>Vicki M. Coleman</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                                            elit, sed...
-                                        </p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="user-info-dropdown">
@@ -261,10 +181,12 @@
     <div class="left-side-bar">
         <div class="brand-logo">
             <a href="index.html">
-                <img src="<?php echo site_url(); ?>public/backend/vendors/images/deskapp-logo.svg" alt=""
-                    class="dark-logo" />
-                <img src="<?php echo site_url(); ?>public/backend/vendors/images/deskapp-logo-white.svg" alt=""
-                    class="light-logo" />
+                <div class="left-side-logo mb-1">
+                    <img src="<?php echo site_url(); ?>public/backend/vendors/images/icon-image-logo.png" alt=""
+                        class="dark-logo" />
+                </div>
+                <!-- <img src="<?php echo site_url(); ?>public/backend/vendors/images/text-white-logo.png" alt=""
+                    class="light-logo" /> -->
             </a>
             <div class="close-sidebar" data-toggle="left-sidebar-close">
                 <i class="ion-close-round"></i>
@@ -274,18 +196,18 @@
             <div class="sidebar-menu">
                 <ul id="accordion-menu">
                     <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
+                        <a href="#" class="dropdown-toggle">
                             <span class="micon bi bi-house"></span><span class="mtext">Dashboard</span>
                         </a>
 
                     </li>
                     <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
+                        <a href="#" class="dropdown-toggle">
                             <span class="micon fa fa-calendar-check-o"></span><span class="mtext">Rooms Booking</span>
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
+                        <a href="#" class="dropdown-toggle">
                             <span class="micon ti-comment-alt"></span><span class="mtext">User Manage</span>
                         </a>
                     </li>
@@ -295,7 +217,7 @@
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
+                        <a href="#" class="dropdown-toggle">
                             <span class="micon ti-comment-alt"></span><span class="mtext">Manage Complaints</span>
                         </a>
                     </li>
@@ -315,55 +237,65 @@
             <div class="pd-20 card-box mb-30">
                 <div class="clearfix mb-20">
                     <div class="pull-left">
-                        <h4 class="text-blue h4">Bordered table</h4>
-                        <p>
-                            Add <code>.table .table-bordered</code> for borders on all
-                            sides of the table and cells.
-                        </p>
+                        <h4 class="text-blue h4"></h4>
+
                     </div>
-                    <div class="pull-right">
-                        <a href="#border-table" class="btn btn-primary btn-sm scroll-click" rel="content-y"
-                            data-toggle="collapse" role="button"><i class="fa fa-code"></i> Source Code</a>
-                    </div>
+
                 </div>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                            <th scope="col">Tag</th>
+                            <th scope="col">Booking Id</th>
+                            <th scope="col">Customer Id</th>
+                            <th scope="col">Customer Name</th>
+                            <th scope="col">Room type</th>
+                            <th scope="col">Bed type</th>
+                            <th scope="col">No. of Room</th>
+                            <th scope="col">Room No.</th>
+                            <th scope="col">Included Meal</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td><span class="badge badge-primary">Primary</span></td>
+                            <th scope="row">1.</th>
+                            <td>12345</td>
+                            <td>123456</td>
+                            <td>Ritika</td>
+                            <td>Single</td>
+                            <td>Double</td>
+                            <td>1</td>
+                            <td>Full Meal</td>
+                            <td class="action d-flex">
+                                <span class="badge badge-success ml-4"><i class="fa fa-check"
+                                        aria-hidden="true"></i></span>
+                                <span class="ml-1 badge badge-danger"><i class="fa fa-trash"
+                                        aria-hidden="true"></i></span>
+                            </td>
                         </tr>
                         <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td><span class="badge badge-secondary">Secondary</span></td>
+                            <th scope="row">2.</th>
+                            <td>12345</td>
+                            <td>123456</td>
+                            <td>Ritika</td>
+                            <td>Single</td>
+                            <td>Double</td>
+                            <td>1</td>
+                            <td>Full Meal</td>
+                            <td class="action d-flex">
+                                <span class="badge badge-success ml-4"><i class="fa fa-check"
+                                        aria-hidden="true"></i></span>
+                                <span class="ml-1 badge badge-danger"><i class="fa fa-trash"
+                                        aria-hidden="true"></i></span>
+                            </td>
                         </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td><span class="badge badge-success">Success</span></td>
-                        </tr>
+
                     </tbody>
                 </table>
                 <div class="collapse collapse-box" id="border-table">
                     <div class="code-box">
                         <div class="clearfix">
-                            <a href="javascript:;" class="btn btn-primary btn-sm code-copy pull-left"
+                            <a href="#" class="btn btn-primary btn-sm code-copy pull-left"
                                 data-clipboard-target="#border-table-code"><i class="fa fa-clipboard"></i> Copy Code</a>
                             <a href="#border-table" class="btn btn-primary btn-sm pull-right" rel="content-y"
                                 data-toggle="collapse" role="button"><i class="fa fa-eye-slash"></i> Hide Code</a>

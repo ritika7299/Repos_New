@@ -12,6 +12,7 @@ $routes->get('/', 'Home::index');
 $routes->get('admin', 'Admin::index');
 $routes->get('admin/dashboard', 'Admin::dashboard');
 $routes->get('admin/login_ac', 'Admin::login_ac');
+$routes->get('admin/data_table', 'Admin::data_table');
 
 /*----Recepionist Section (User) ------ */
 $routes->get('user', 'User::index');

@@ -252,10 +252,10 @@
                                             <div class=" form-group">
                                                 <select class="form-control">
                                                     <option placeholder="">Select Room Type</option>
-                                                    <option id="vo">Single Room</option>
-                                                    <option id="ac">Deluxe Room</option>
-                                                    <option id="pc">Superior Room</option>
-                                                    <option id="pp">Double Deluxe Room</option>
+                                                    <option id="vo">Single</option>
+                                                    <option id="ac">Deluxe</option>
+                                                    <option id="pc">Superior</option>
+                                                    <option id="pp">Double Deluxe</option>
                                                 </select>
                                             </div>
                                         </div>
