@@ -11,6 +11,11 @@
         </div>
     </div>
     <!-- sign-in wrap -->
+    <?php if (session()->getFlashdata('error')): ?>
+        <div class="alert alert-danger">
+            <?= session()->getFlashdata('error') ?>
+        </div>
+    <?php endif; ?>
     <div class="login-wrap d-flex align-items-center flex-wrap justify-content-center">
         <!-- container -->
         <div class="container">
@@ -22,9 +27,10 @@
                     <div class="login-box bg-white box-shadow border-radius-10">
                         <div class="login-title">
                             <h2 class="text-center text-primary">Sign-In</h2>
+
                         </div>
                         <!-- Sign-in form  -->
-                        <form action="<?php echo site_url('User/login_action'); ?>" method="">
+                        <form action="<?php echo site_url('/login/authenticate'); ?>" method="POST">
                             <div class="input-group custom">
                                 <input type="text" class="form-control form-control-lg" placeholder="Username" />
                                 <div class="input-group-append custom">
@@ -56,8 +62,7 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="input-group mb-0">
-
-                                        <a class="btn btn-primary btn-lg btn-block" href="">Sign-In</a>
+                                        <button class="btn btn-primary btn-lg btn-block" href="">Sign-In</button>
                                     </div>
                                     <div class="input-group mb-0 mt-2">
                                         <a class="btn btn-lg btn-block" href="signup.html"><span class="text-info">Don't

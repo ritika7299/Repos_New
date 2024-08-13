@@ -2,11 +2,14 @@
 
 namespace App\Controllers;
 
-class Login extends BaseController
+use App\Models\UserModel;
+use CodeIgniter\Controller;
+
+class Login extends Controller
 {
     public function index()
     {
-        return view('layout/login');
+        return view('users_layouts/login');
     }
 
     public function authenticate()
@@ -17,26 +20,14 @@ class Login extends BaseController
         $username = $this->request->getVar('username');
         $password = $this->request->getVar('password');
 
-        $data = $model->where('username', $username)->first();
+        $user = $model->getUserByusername($username);
 
-        if ($data) {
-            $cpass = $data['password'];
-            $verify_pass = password_verify($password, $cpass);
-            if ($verify_pass) {
-                $ses_data = [
-                    'id' => $data['id'],
-                    'username' => $data['username'],
-                    'logged_in' => TRUE
-                ];
-                $session->set($ses_data);
-                return redirect()->to('/dashboard');
-            } else {
-                $session->setFlashdata('msg', 'Wrong Password');
-                return redirect()->to('/login');
-            }
+        if ($user && password_verify($password, $user['password'])) {
+            $session->set('user', $user);
+            return redirect()->to('users_layouts/dashboard');
         } else {
-            $session->setFlashdata('msg', 'Username not found');
-            return redirect()->to('/login');
+            $session->setFlashdata('error', 'Invalid email or password');
+            return redirect()->to('users_layouts/login');
         }
     }
 }
