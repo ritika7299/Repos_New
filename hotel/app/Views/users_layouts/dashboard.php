@@ -1,10 +1,10 @@
-<?php include ('template/dashboard-header.php'); ?>
+<?php include('template/dashboard-header.php'); ?>
 
 <body>
     <div class="pre-loader">
         <div class="pre-loader-box">
             <div class="loader-logo">
-                <img src="<?php echo site_url(); ?>public/backend/vendors/images/deskapp-logo.svg" alt="" />
+                <img src="<?php echo site_url(); ?>public/backend/vendors/images/main-logo.png" alt="" />
             </div>
             <div class="loader-progress" id="progress_div">
                 <div class="bar" id="bar1"></div>
@@ -13,7 +13,7 @@
             <div class="loading-text">Loading...</div>
         </div>
     </div>
-
+    <!-- header -->
     <div class="header">
         <div class="header-left">
             <div class="menu-icon bi bi-list"></div>
@@ -22,7 +22,7 @@
                 <form>
                     <div class="form-group mb-0">
                         <i class="dw dw-search2 search-icon"></i>
-                        <input type="text" class="form-control search-input" placeholder="Search Here" />
+                        <input type="text" class="form-control search-input" placeholder="Search Here">
                         <div class="dropdown">
                             <a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown">
                                 <i class="ion-arrow-down-c"></i>
@@ -31,19 +31,19 @@
                                 <div class="form-group row">
                                     <label class="col-sm-12 col-md-2 col-form-label">From</label>
                                     <div class="col-sm-12 col-md-10">
-                                        <input class="form-control form-control-sm form-control-line" type="text" />
+                                        <input class="form-control form-control-sm form-control-line" type="text">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-12 col-md-2 col-form-label">To</label>
                                     <div class="col-sm-12 col-md-10">
-                                        <input class="form-control form-control-sm form-control-line" type="text" />
+                                        <input class="form-control form-control-sm form-control-line" type="text">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-12 col-md-2 col-form-label">Subject</label>
                                     <div class="col-sm-12 col-md-10">
-                                        <input class="form-control form-control-sm form-control-line" type="text" />
+                                        <input class="form-control form-control-sm form-control-line" type="text">
                                     </div>
                                 </div>
                                 <div class="text-right">
@@ -70,75 +70,86 @@
                         <span class="badge notification-active"></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
-                        <div class="notification-list mx-h-350 customscroll">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/img.jpg"
-                                            alt="" />
-                                        <h3>John Doe</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                                            elit, sed...
-                                        </p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo1.jpg"
-                                            alt="" />
-                                        <h3>Lea R. Frith</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                                            elit, sed...
-                                        </p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo2.jpg"
-                                            alt="" />
-                                        <h3>Erik L. Richards</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                                            elit, sed...
-                                        </p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo3.jpg"
-                                            alt="" />
-                                        <h3>John Doe</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                                            elit, sed...
-                                        </p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo4.jpg"
-                                            alt="" />
-                                        <h3>Renee I. Hansen</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                                            elit, sed...
-                                        </p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="<?php echo site_url(); ?>public/backend/vendors/images/img.jpg"
-                                            alt="" />
-                                        <h3>Vicki M. Coleman</h3>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                                            elit, sed...
-                                        </p>
-                                    </a>
-                                </li>
-                            </ul>
+                        <div class="notification-list mx-h-350 customscroll mCustomScrollbar _mCS_1 mCS_no_scrollbar">
+                            <div id="mCSB_1" class="mCustomScrollBox mCS-dark-2 mCSB_vertical mCSB_inside"
+                                style="max-height: 0px;" tabindex="0">
+                                <div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+                                    style="position:relative; top:0; left:0;" dir="ltr">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="vendors/images/img.jpg" alt="" class="mCS_img_loaded">
+                                                <h3>John Doe</h3>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                    elit, sed...
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="vendors/images/photo1.jpg" alt="" class="mCS_img_loaded">
+                                                <h3>Lea R. Frith</h3>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                    elit, sed...
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="vendors/images/photo2.jpg" alt="" class="mCS_img_loaded">
+                                                <h3>Erik L. Richards</h3>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                    elit, sed...
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="vendors/images/photo3.jpg" alt="" class="mCS_img_loaded">
+                                                <h3>John Doe</h3>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                    elit, sed...
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="vendors/images/photo4.jpg" alt="" class="mCS_img_loaded">
+                                                <h3>Renee I. Hansen</h3>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                    elit, sed...
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="vendors/images/img.jpg" alt="" class="mCS_img_loaded">
+                                                <h3>Vicki M. Coleman</h3>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                    elit, sed...
+                                                </p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="mCSB_1_scrollbar_vertical"
+                                    class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark-2 mCSB_scrollTools_vertical mCSB_scrollTools_onDrag_expand"
+                                    style="display: none;">
+                                    <div class="mCSB_draggerContainer">
+                                        <div id="mCSB_1_dragger_vertical" class="mCSB_dragger"
+                                            style="position: absolute; min-height: 30px; top: 0px;">
+                                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                                        </div>
+                                        <div class="mCSB_draggerRail"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -147,9 +158,9 @@
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
                         <span class="user-icon">
-                            <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo3.jpg" alt="" />
+                            <img src="vendors/images/photo1.jpg" alt="">
                         </span>
-                        <span class="user-name">Ritika</span>
+                        <span class="user-name">Ross C. Lopez</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
                         <a class="dropdown-item" href="profile.html"><i class="dw dw-user1"></i> Profile</a>
@@ -160,12 +171,12 @@
                 </div>
             </div>
             <div class="github-link">
-                <a href="https://github.com/dropways/deskapp" target="_blank"><img
-                        src="<?php echo site_url(); ?>public/backend/vendors/images/github.svg" alt="" /></a>
+                <a href="https://github.com/dropways/deskapp" target="_blank"><img src="vendors/images/github.svg"
+                        alt=""></a>
             </div>
         </div>
     </div>
-
+    <!-- /header -->
     <div class="right-sidebar">
         <div class="sidebar-title">
             <h3 class="weight-600 font-16 text-blue">
@@ -318,7 +329,7 @@
                             <div class="widget-data">
                                 <div class="weight-700 font-24 text-dark">12</div>
                                 <div class="font-14 text-secondary weight-500">
-                                    Total Rooms
+                                    Rooms Availablity
                                 </div>
                             </div>
                             <div class="widget-icon">
@@ -346,13 +357,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
+                <!-- <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
                     <div class="card-box height-100-p widget-style3">
                         <div class="d-flex flex-wrap">
                             <div class="widget-data">
                                 <div class="weight-700 font-24 text-dark">20</div>
                                 <div class="font-14 text-secondary weight-500">
-                                    Staff
+
                                 </div>
                             </div>
                             <div class="widget-icon">
@@ -362,7 +373,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
                     <div class="card-box height-100-p widget-style3">
                         <div class="d-flex flex-wrap">
@@ -397,7 +408,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
+                <!-- <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
                     <div class="card-box height-100-p widget-style3">
                         <div class="d-flex flex-wrap">
                             <div class="widget-data">
@@ -413,14 +424,14 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
                     <div class="card-box height-100-p widget-style3">
                         <div class="d-flex flex-wrap">
                             <div class="widget-data">
                                 <div class="weight-700 font-24 text-dark">2</div>
                                 <div class="font-14 text-secondary weight-500">
-                                    Checked-In
+                                    Users Details
                                 </div>
                             </div>
                             <div class="widget-icon">
@@ -437,6 +448,21 @@
                             <div class="widget-data">
                                 <div class="weight-700 font-24 text-dark">1</div>
                                 <div class="font-14 text-secondary weight-500">Total Pending Payment</div>
+                            </div>
+                            <div class="widget-icon">
+                                <div class="icon" data-color="#95D2B3">
+                                    <i class="icon-copy fa fa-credit-card" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 mb-20">
+                    <div class="card-box height-100-p widget-style3">
+                        <div class="d-flex flex-wrap">
+                            <div class="widget-data">
+                                <div class="weight-700 font-24 text-dark">1</div>
+                                <div class="font-14 text-secondary weight-500">Payment Details</div>
                             </div>
                             <div class="widget-icon">
                                 <div class="icon" data-color="#95D2B3">
@@ -468,4 +494,4 @@
         </div>
     </div>
 </body>
-<?php include ('template/dashboard-footer.php'); ?>
+<?php include('template/dashboard-footer.php'); ?>

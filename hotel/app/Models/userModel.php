@@ -6,12 +6,22 @@ use CodeIgniter\Model;
 
 class UserModel extends Model
 {
-    protected $table = 'users';
-    protected $primaryKey = 'id';
-    protected $allowedFields = ['username', 'password'];
 
-    public function getUserByusername($username)
+    public function insert_user($data)
     {
-        return $this->where('username', $username)->first();
+        return $this->db->insert('users', $data);
     }
 }
+// protected $table = 'users';
+// protected $primaryKey = 'id';
+// protected $useAutoIncrement = true;
+// protected $returType = 'object';
+// protected $useSoftDeletes = true;
+// protected $allowedFields = ['username', 'email', 'password', 'created_at', 'updated_at'];
+// protected $useTimestamps = false;
+// protected $createdField = 'created_at';
+// protected $updatedField = 'updated_at';
+
+// protected $validationRules = [];
+// protected $validationMessages = [];
+// protected $skipValidation = false;

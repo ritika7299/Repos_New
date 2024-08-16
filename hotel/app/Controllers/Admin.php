@@ -39,6 +39,10 @@ class Admin extends BaseController
         return view('admin_layouts/data');
 
     }
+    public function rooms_availability()
+    {
+        return view('admin_layouts/rooms-available');
+    }
 
 
 }

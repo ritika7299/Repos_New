@@ -1,10 +1,10 @@
-<?php include ('template/dashboard-header.php'); ?>
+<?php include('template/dashboard-header.php'); ?>
 
 <body>
     <div class="pre-loader">
         <div class="pre-loader-box">
             <div class="loader-logo">
-                <img src="<?php echo site_url(); ?>public/backend/vendors/images/deskapp-logo.svg" alt="" />
+                <img src="<?php echo site_url(); ?>public/backend/vendors/images/main-logo.png" alt="" />
             </div>
             <div class="loader-progress" id="progress_div">
                 <div class="bar" id="bar1"></div>
@@ -292,7 +292,12 @@
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle">
-                            <span class="micon fa fa-group"></span><span class="mtext">Staff Section</span>
+                            <span class="micon fa fa-group"></span><span class="mtext">Manage Staff</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <span class="micon fa fa-group"></span><span class="mtext">Manage User Role</span>
                         </a>
                     </li>
                     <li class="dropdown">
@@ -302,7 +307,7 @@
                     </li>
                     <li>
                         <a href="invoice.html" class="dropdown-toggle no-arrow">
-                            <span class="micon bi bi-receipt-cutoff"></span><span class="mtext">Invoice</span>
+                            <span class="micon bi bi-receipt-cutoff"></span><span class="mtext">Manage Invoice</span>
                         </a>
                     </li>
 
@@ -461,4 +466,4 @@
         </div>
     </div>
 </body>
-<?php include ('template/dashboard-footer.php'); ?>
+<?php include('template/dashboard-footer.php'); ?>

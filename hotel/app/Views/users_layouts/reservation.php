@@ -1,11 +1,11 @@
-<?php include ('template/dashboard-header.php'); ?>
+<?php include('template/dashboard-header.php'); ?>
 
 <body>
     <!-- loader -->
     <div class="pre-loader">
         <div class="pre-loader-box">
             <div class="loader-logo">
-                <img src="<?php echo site_url(); ?>public/backend/vendors/images/deskapp-logo.svg" alt="" />
+                <img src="<?php echo site_url(); ?>public/backend/vendors/images/main-logo.png" alt="" />
             </div>
             <div class="loader-progress" id="progress_div">
                 <div class="bar" id="bar1"></div>
@@ -20,13 +20,56 @@
         <div class="header-left">
             <div class="menu-icon bi bi-list"></div>
             <div class="search-toggle-icon bi bi-search" data-toggle="header_search"></div>
+            <div class="header-search">
+                <form>
+                    <div class="form-group mb-0">
+                        <i class="dw dw-search2 search-icon"></i>
+                        <input type="text" class="form-control search-input" placeholder="Search Here">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown">
+                                <i class="ion-arrow-down-c"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="form-group row">
+                                    <label class="col-sm-12 col-md-2 col-form-label">From</label>
+                                    <div class="col-sm-12 col-md-10">
+                                        <input class="form-control form-control-sm form-control-line" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-12 col-md-2 col-form-label">To</label>
+                                    <div class="col-sm-12 col-md-10">
+                                        <input class="form-control form-control-sm form-control-line" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-12 col-md-2 col-form-label">Subject</label>
+                                    <div class="col-sm-12 col-md-10">
+                                        <input class="form-control form-control-sm form-control-line" type="text">
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <button class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
         <div class="header-right">
-            <div class="user-info-dropdown mr-3">
+            <div class="dashboard-setting user-notification">
+                <div class="dropdown">
+                    <a class="dropdown-toggle no-arrow" href="javascript:;" data-toggle="right-sidebar">
+                        <i class="dw dw-settings2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="user-info-dropdown">
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
                         <span class="user-icon">
-                            <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo3.jpg" alt="" />
+                            <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo7.jpg" alt="">
                         </span>
                         <span class="user-name">Ritika</span>
                     </a>
@@ -38,7 +81,10 @@
                     </div>
                 </div>
             </div>
-
+            <div class="github-link">
+                <a href="https://github.com/dropways/deskapp" target="_blank"><img src="vendors/images/github.svg"
+                        alt=""></a>
+            </div>
         </div>
     </div>
     <!-- /header -->
@@ -199,7 +245,6 @@
                             <div id="guest-information" class="guest-information" data-highcharts-chart="1">
                                 <form>
                                     <div class="form-group">
-
                                         <input class="form-control" type="text" placeholder="Enter Name">
                                     </div>
                                     <div class="form-group">
@@ -334,6 +379,148 @@
                         <i class="icon-copy fa fa-paper-plane" aria-hidden="true"></i></a>
                 </div>
             </div>
+            <!--/customer and bookings details -->
+            <!-- table of rooms -->
+            <div class="card-box pb-10">
+                <div class="h5 pd-20 mb-0">User List</div>
+                <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6"></div>
+                        <div class="col-sm-12 col-md-6"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="data-table table nowrap dataTable no-footer dtr-inline"
+                                id="DataTables_Table_0" role="grid">
+                                <thead>
+                                    <tr role="row">
+                                        <th class="table-plus sorting_asc" tabindex="0"
+                                            aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                                            aria-sort="ascending" aria-label="Name: activate to sort column descending">
+                                            Name</th>
+                                        <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                            colspan="1" aria-label="Gender: activate to sort column ascending">Email
+                                        </th>
+                                        <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                            colspan="1" aria-label="Weight: activate to sort column ascending">Mobile
+                                            No.
+                                        </th>
+                                        <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                            colspan="1" aria-label="Assigned Doctor: activate to sort column ascending">
+                                            Address</th>
+                                        <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                            colspan="1" aria-label="Admit Date: activate to sort column ascending">
+                                            Check-In</th>
+                                        <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                            colspan="1" aria-label="Disease: activate to sort column ascending">
+                                            Check-Out
+                                        </th>
+                                        <th class="datatable-nosort sorting_disabled" rowspan="1" colspan="1"
+                                            aria-label="Actions">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr role="row" class="odd">
+                                        <td class="table-plus sorting_1" tabindex="0">
+                                            <div class="name-avatar d-flex align-items-center">
+                                                <div class="txt">
+                                                    <div class="weight-600">Christian Dyer</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>dyer@gmail.com</td>
+                                        <td>9958311017</td>
+                                        <td>H.no. 40 Post office wali gali, Bazaria, Ghaziabad</td>
+                                        <td>16-08-2024</td>
+                                        <td>
+                                            18-08-2024
+                                        </td>
+                                        <td>
+                                            <div class="table-actions">
+                                                <a href="#" data-color="#265ed7" style="color: rgb(38, 94, 215);"><i
+                                                        class="icon-copy dw dw-edit2"></i></a>
+                                                <a href="#" data-color="#e95959" style="color: rgb(233, 89, 89);"><i
+                                                        class="icon-copy dw dw-delete-3"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="even">
+                                        <td class="table-plus sorting_1" tabindex="0">
+                                            <div class="name-avatar d-flex align-items-center">
+                                                <div class="txt">
+                                                    <div class="weight-600">Doris L. Larson</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>dyer@gmail.com</td>
+                                        <td>9958311017</td>
+                                        <td>H.no. 40 Post office wali gali, Bazaria, Ghaziabad</td>
+                                        <td>16-08-2024</td>
+                                        <td>
+                                            18-08-2024
+                                        </td>
+                                        <td>
+                                            <div class="table-actions">
+                                                <a href="#" data-color="#265ed7" style="color: rgb(38, 94, 215);"><i
+                                                        class="icon-copy dw dw-edit2"></i></a>
+                                                <a href="#" data-color="#e95959" style="color: rgb(233, 89, 89);"><i
+                                                        class="icon-copy dw dw-delete-3"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                        <td class="table-plus sorting_1" tabindex="0">
+                                            <div class="name-avatar d-flex align-items-center">
+                                                <div class="txt">
+                                                    <div class="weight-600">Doris L. Larson</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>dyer@gmail.com</td>
+                                        <td>9958311017</td>
+                                        <td>H.no. 40 Post office wali gali, Bazaria, Ghaziabad</td>
+                                        <td>16-08-2024</td>
+                                        <td>
+                                            18-08-2024
+                                        </td>
+                                        <td>
+                                            <div class="table-actions">
+                                                <a href="#" data-color="#265ed7" style="color: rgb(38, 94, 215);"><i
+                                                        class="icon-copy dw dw-edit2"></i></a>
+                                                <a href="#" data-color="#e95959" style="color: rgb(233, 89, 89);"><i
+                                                        class="icon-copy dw dw-delete-3"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-7"></div>
+                        <!-- <div class="col-sm-12 col-md-7">
+                            <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
+                                <ul class="pagination">
+                                    <li class="paginate_button page-item previous disabled"
+                                        id="DataTables_Table_0_previous"><a href="#" aria-controls="DataTables_Table_0"
+                                            data-dt-idx="0" tabindex="0" class="page-link"><i
+                                                class="ion-chevron-left"></i></a></li>
+                                    <li class="paginate_button page-item active"><a href="#"
+                                            aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0"
+                                            class="page-link">1</a></li>
+                                    <li class="paginate_button page-item "><a href="#"
+                                            aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0"
+                                            class="page-link">2</a></li>
+                                    <li class="paginate_button page-item next" id="DataTables_Table_0_next"><a href="#"
+                                            aria-controls="DataTables_Table_0" data-dt-idx="3" tabindex="0"
+                                            class="page-link"><i class="ion-chevron-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- /table of rooms -->
             <!-- /customer and bookings details -->
 
             <!-- Booking successfully modal -->
@@ -358,7 +545,7 @@
             <!-- /Booking successfully modal -->
 
             <!-- footer -->
-            <div class="footer-wrap pd-20 mb-20 card-box mt-6">
+            <div class="footer-wrap pd-20 mb-20 card-box mt-3">
                 Template design By
                 <a href="https://github.com/dropways" target="_blank">Ritika</a>
             </div>
@@ -368,4 +555,4 @@
     </div>
     </div>
 </body>
-<?php include ('template/dashboard-footer.php'); ?>
+<?php include('template/dashboard-footer.php'); ?>

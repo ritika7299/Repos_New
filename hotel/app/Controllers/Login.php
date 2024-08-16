@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\UserModel;
 use CodeIgniter\Controller;
 
-class Login extends Controller
+class Login extends BaseController
 {
     public function index()
     {
@@ -17,17 +17,47 @@ class Login extends Controller
         $session = session();
         $model = new UserModel();
 
-        $username = $this->request->getVar('username');
-        $password = $this->request->getVar('password');
+        $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
 
-        $user = $model->getUserByusername($username);
+        $users = $model->getUserByusername($email);
 
-        if ($user && password_verify($password, $user['password'])) {
-            $session->set('user', $user);
-            return redirect()->to('users_layouts/dashboard');
+        if ($users && password_verify($password, $users['password'])) {
+            $session->set('users', $users);
+            return redirect()->to('/dashboard');
         } else {
             $session->setFlashdata('error', 'Invalid email or password');
-            return redirect()->to('users_layouts/login');
+            return redirect()->to('login');
         }
+    }
+
+    // public function auth()
+    // {
+    //     // $session = session();
+    //     $userModel = new UserModel();
+    //     $email = $this->request->getPost('email');
+    //     $password = $this->request->getPost('password');
+
+    //     $result = $userModel->where('email', $email)->first();
+    //     // print_r($result);
+
+    //     if ($result->id > 0) {
+    //         if (password_verify($password, $result->password)) {
+    //             $this->session->set('user', $result);
+    //             return redirect()->to('/users_layouts/dashboard');
+
+    //         } else {
+    //             echo 'Invalid email or Password';
+
+    //         }
+    //     } else {
+    //         echo 'Invalid email or Password';
+
+    //     }
+
+    // }
+    public function dashboard()
+    {
+        return view('users_layouts/dashboard');
     }
 }
