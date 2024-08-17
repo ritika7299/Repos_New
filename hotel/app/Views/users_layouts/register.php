@@ -91,8 +91,8 @@
                     <img src="<?php echo site_url(); ?>public/backend/vendors/images/register-page-img.png" alt="" />
                 </div>
                 <div class="col-md-6 col-lg-5">
-                    <?php if (session()->getFlashdata('msg')): ?>
-                        <div><?= session()->getFlashdata('msg') ?></div>
+                    <?php if (session()->getFlashdata('success_msg')): ?>
+                        <div><?= session()->getFlashdata('error_msg') ?></div>
                     <?php endif; ?>
                     <!-- signup form area -->
                     <div class="login-box bg-white box-shadow border-radius-10">
@@ -100,17 +100,25 @@
                             <h2 class="text-center text-primary">Sign-Up</h2>
 
                         </div>
+                        <?php if (session()->getFlashdata('error')): ?>
+                            <p><?= session()->getFlashdata('error') ?></p>
+                        <?php endif; ?>
+                        <?php if (session()->getFlashdata('success')): ?>
+                            <p><?= session()->getFlashdata('success') ?></p>
+                        <?php endif; ?>
                         <!-- Signup form  -->
                         <form action="<?php echo site_url('user/do_signup'); ?>" method="POST">
                             <div class="form-group row">
                                 <div class="col-sm-12">
                                     <input type="text" class="form-control" id="username"
-                                        placeholder="Enter Username..." />
+                                        placeholder="Enter Username..." name="username"
+                                        value="<?= set_value('name') ?>" />
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12">
-                                    <input type="email" class="form-control" id="email" placeholder="Enter Email..." />
+                                    <input type="email" class="form-control" id="email" placeholder="Enter Email..."
+                                        name="email" value="<?= set_value('email') ?>" />
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -162,11 +170,10 @@
                     <div class="mb-30 text-center">
                         <img src="vendors/images/success.png" />
                     </div>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                    eiusmod
+                    Your details successfully submitted.
                 </div>
                 <div class="modal-footer justify-content-center">
-                    <a href="login.html" class="btn btn-primary">Done</a>
+                    <a href="<?php echo base_url('user/login'); ?>" class="btn btn-primary">Done</a>
                 </div>
             </div>
         </div>

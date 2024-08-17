@@ -87,7 +87,8 @@
                             <h2 class="text-center text-primary">Sign-In</h2>
                         </div>
                         <!-- Sign-in form  -->
-                        <form action="<?php echo site_url('login/authenticate'); ?>" method="POST">
+                        <form action="<?php echo site_url(''); ?>" method="POST">
+                            <?= csrf_field() ?>
                             <div class="input-group custom">
                                 <input type="email" class="form-control form-control-lg" placeholder="Email"
                                     id="email" />
@@ -120,10 +121,11 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="input-group mb-0">
-                                        <button class="btn btn-primary btn-lg btn-block" href="">Sign-In</button>
+                                        <button class="btn btn-primary btn-lg btn-block" href="#">Sign-In</button>
                                     </div>
                                     <div class="input-group mb-0 mt-2">
-                                        <a class="btn btn-lg btn-block" href="signup.html"><span class="text-info">Don't
+                                        <a class="btn btn-lg btn-block"
+                                            href="<?php echo base_url('user/index'); ?>"><span class="text-info">Don't
                                                 have an account?</span><span class="text-primary"><b>
                                                     Sign-Up</b></span></a>
                                     </div>
