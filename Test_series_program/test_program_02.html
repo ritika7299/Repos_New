@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: "Arial", sans-serif;
+    }
+
+    h1 {
+      color: #343a40;
+      margin-bottom: 30px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    #taskList .list-group-item {
+      background-color: #9e8686;
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    #taskList .btn-danger {
+      background-color: #dc3545;
+      border-color: #dc3545;
+    }
+
+    #taskList .btn-danger:hover {
+      background-color: #c82333;
+      border-color: #bd2130;
+    }
+  </style>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center">To-Do List</h1>
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          id="taskInput"
+          class="form-control"
+          placeholder="Enter a new task"
+        />
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" onclick="addTask()">
+            Add Task
+          </button>
+        </div>
+      </div>
+      <ul class="list-group" id="taskList"></ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+  <script>
+    function addTask() {
+      const taskInput = document.getElementById("taskInput");
+      const taskList = document.getElementById("taskList");
+
+      if (taskInput.value.trim() !== "") {
+        const listItem = document.createElement("li");
+        listItem.className =
+          "list-group-item d-flex justify-content-between align-items-center";
+        listItem.textContent = taskInput.value;
+
+        const deleteButton = document.createElement("button");
+        deleteButton.className = "btn btn-danger btn-sm";
+        deleteButton.textContent = "Delete";
+        deleteButton.onclick = function () {
+          taskList.removeChild(listItem);
+        };
+
+        listItem.appendChild(deleteButton);
+        taskList.appendChild(listItem);
+        taskInput.value = "";
+      }
+    }
+  </script>
+</html>
