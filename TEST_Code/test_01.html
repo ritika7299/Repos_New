@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio Button Example</title>
+    <script>
+      function handleRadioButtonChange() {
+        const ltcRadioButton = document.getElementById("ltc");
+        const hometownRadioButton = document.getElementById("hometown");
+        const trElement = document.getElementById("myTableRow");
+
+        if (ltcRadioButton.checked || hometownRadioButton.checked) {
+          trElement.style.display = "table-row";
+        } else {
+          trElement.style.display = "none";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <input
+        type="radio"
+        id="ltc"
+        name="location"
+        value="ltc"
+        onchange="handleRadioButtonChange()"
+      />
+      <label for="ltc">LTC</label><br />
+      <input
+        type="radio"
+        id="hometown"
+        name="location"
+        value="hometown"
+        onchange="handleRadioButtonChange()"
+      />
+      <label for="hometown">Hometown</label><br />
+      <input
+        type="radio"
+        id="other"
+        name="location"
+        value="other"
+        onchange="handleRadioButtonChange()"
+      />
+      <label for="other">Other</label><br />
+    </form>
+
+    <table>
+      <tr id="myTableRow">
+        <td>This row will be shown when LTC or Hometown is selected.</td>
+      </tr>
+    </table>
+  </body>
+</html>

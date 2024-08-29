@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Details Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        max-width: 450px;
+        margin: 0 auto;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+      }
+      input[type="submit"] {
+        background-color: #04aa6d;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="process_form.php" method="post">
+        <div>
+          <label for="first_name">First Name</label>
+          <input type="text" id="first_name" name="first_name" required />
+        </div>
+        <!-- Add other fields (last name, email, etc.) -->
+
+        <!-- Radio buttons -->
+        <div class="radio-div d-flex">
+          <input type="radio" id="accept" name="response" value="accept" />
+          <label for="accept">Accept</label>
+          <input type="radio" id="reject" name="response" value="reject" />
+          <label for="reject">Reject</label>
+          <input
+            type="radio"
+            id="objection"
+            name="response"
+            value="objection"
+          />
+          <label for="objection">Objection</label>
+        </div>
+
+        <!-- Authorized user section (only visible to authorized users) -->
+        <div>
+          <label for="authorized_user">Authorized User</label>
+          <input type="checkbox" id="authorized_user" name="authorized_user" />
+        </div>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

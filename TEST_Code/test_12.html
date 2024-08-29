@@ -1,0 +1,90 @@
+<?php include('template/dashboard-footer.php'); ?><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Booking Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+      }
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      button {
+        background-color: #0074d9;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hotel Booking Form</h1>
+    <form id="booking-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="check-in">Check-In Date:</label>
+      <input type="date" id="check-in" name="check-in" required />
+
+      <label for="check-out">Check-Out Date:</label>
+      <input type="date" id="check-out" name="check-out" required />
+
+      <label for="room-preferences">Room Preferences:</label>
+      <textarea id="room-preferences" name="room-preferences"></textarea>
+      <button type="submit">Book Now</button>
+    </form>
+  </body>
+  <script>
+    // app.js
+    const bookingForm = document.getElementById("booking-form");
+
+    bookingForm.addEventListener("submit", (e) => {
+      e.preventDefault(); // Prevent form submission (for demonstration)
+
+      // Validate form fields (you can add more validation logic)
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+
+      if (!name || !email) {
+        alert("Please fill in all required fields.");
+        return;
+      }
+
+      // Handle form submission (send data to server, etc.)
+      console.log("Booking submitted:", { name, email });
+    });
+  </script>
+</html>

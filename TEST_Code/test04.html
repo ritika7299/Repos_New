@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple File Uploader</title>
+    <style>
+      /* Add your custom CSS styles here */
+    </style>
+  </head>
+  <body>
+    <input type="file" id="fileInput" multiple />
+    <button onclick="uploadFiles()">Upload</button>
+
+    <!-- <div class="card">
+                        <div class="card-body w-100">
+                          <div class="btn-group">
+                            <div class="div-button-one">
+                              <button
+                                type="button"
+                                class="btn bg-green-600 ml-1"
+                                data-toggle="modal"
+                                data-target="#modal_accept"
+                              >
+                                <i class="icon-user-check mr-1"></i> Accept
+                              </button>
+                            </div>
+                            <div class="div-button-two">
+                              <button
+                                type="button"
+                                class="btn bg-danger-600 ml-1"
+                                data-toggle="modal"
+                                data-target="#modal_reject"
+                              >
+                                <i class="icon-user-cancel mr-1"></i> Reject
+                              </button>
+                            </div>
+                            <div class="div-button-three">
+                              <button
+                                type="button"
+                                class="btn bg-warning-400 ml-1"
+                                data-toggle="modal"
+                                data-target="#modal_objection"
+                              >
+                                <i class="icon-user-block mr-1"></i> Objection
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div> -->
+    <script>
+      function uploadFiles() {
+        const files = document.getElementById("fileInput").files;
+        // Handle file upload logic here (e.g., send files to server)
+        console.log("Selected files:", files);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Viewer and Video Player</title>
+  </head>
+  <body>
+    <!-- PDF Viewer -->
+    <iframe
+      id="pdfViewer"
+      src="How to apply leave.mp4"
+      frameborder="0"
+    ></iframe>
+
+    <!-- Video Player -->
+    <video id="video-container" controls>
+      <!-- Your video source here -->
+    </video>
+
+    <!-- jQuery (Make sure to include jQuery library) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      // PDF View
+      $(".viewpdf").click(function () {
+        url = $(this).attr("href");
+        $("#pdfViewer").attr("src", url);
+      });
+
+      // Video Play
+      $(".videoplay").click(function () {
+        url = $(this).attr("href");
+        $("#video-container").attr("src", url + "?autoplay=1");
+        var symbol = $("#video1")[0].src.indexOf("?") > -1 ? "&" : "?";
+        $("#video-container")[0].src += symbol + "autoplay=1";
+      });
+    </script>
+  </body>
+</html>

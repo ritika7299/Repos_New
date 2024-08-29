@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+      .header {
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
+    <title>Examination Form</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>Roll Number:</td>
+        <td><input type="text" name="rollnumber" /></td>
+        <td colspan="2" rowspan="4">
+          <span
+            class="text-uppercase font-weight-bold text-float-right"
+            style="text-decoration: underline; font-size: small"
+            >Photograph</span
+          >
+          <br /><input type="file" accept="image/*" />
+        </td>
+      </tr>
+      <tr>
+        <td>Candidate's Name:</td>
+        <td><input type="text" name="candidatename" /></td>
+      </tr>
+      <tr>
+        <td>Father/Husband's Name:</td>
+        <td><input type="text" name="fathername" /></td>
+      </tr>
+      <tr>
+        <td>Date of Birth:</td>
+        <td><input type="date" name="dob" /></td>
+      </tr>
+      <tr>
+        <td>Category:</td>
+        <td><input type="text" name="category" /></td>
+        <td>Employee Code:</td>
+        <td><input type="text" name="employeecode" /></td>
+      </tr>
+      <tr>
+        <th colspan="4" class="header">SCHEDULE</th>
+      </tr>
+      <tr>
+        <td>Date of Typing Test & Shift:</td>
+        <td><input type="text" name="testdate" /></td>
+        <td>Reporting Time:</td>
+        <td><input type="text" name="reportingtime" /></td>
+      </tr>
+      <tr>
+        <td>Test Centre/Venue of Exam:</td>
+        <td colspan="3"><input type="text" name="venue" /></td>
+      </tr>
+      <tr>
+        <td>Room No., Floor:</td>
+        <td colspan="3"><input type="text" name="room" /></td>
+      </tr>
+      <tr>
+        <td>Invigilator's Signature:</td>
+        <td colspan="3"><input type="text" name="invigilatorsignature" /></td>
+      </tr>
+    </table>
+  </body>
+</html>
