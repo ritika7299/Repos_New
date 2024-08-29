@@ -1,0 +1,13 @@
+.bg-gradient-custom {
+    background: linear-gradient(to right, #EEF5FF, #B4D4FF); /* Example colors */
+}
+
+.responsive-width {
+    width: 100%; /* Default to full width */
+}
+
+@media (min-width: 768px) {
+    .responsive-width {
+        width: 50%; /* 50% width for screens wider than 768px */
+    }
+}
