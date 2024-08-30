@@ -5,7 +5,7 @@
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <div class="brand-logo">
                 <a href="login.html">
-                    <img src="<?php echo site_url(); ?>public/backend/vendors/images/deskapp-logo.svg" alt="" />
+                    <img src="<?php echo site_url(); ?>public/backend/vendors/images/main-logo.png" alt="" />
                 </a>
             </div>
         </div>
@@ -21,7 +21,7 @@
                 <div class="col-md-6 col-lg-5">
                     <div class="login-box bg-white box-shadow border-radius-10">
                         <div class="login-title">
-                            <h2 class="text-center text-info">Admin</h2>
+                            <h2 class="text-center text-primary">Admin</h2>
                         </div>
                         <!-- Sign-in form  -->
                         <?php $validation = \Config\Services::validation(); ?>
@@ -82,7 +82,7 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="input-group mb-0">
-                                        <a class="btn btn-info btn-lg btn-block" href="">Login</a>
+                                        <a class="btn btn-primary btn-lg btn-block" href="">Login</a>
                                     </div>
 
 

@@ -290,6 +290,11 @@
 
                     </li>
                     <li class="dropdown">
+                        <a href="<?php echo base_url('room/availability'); ?>" class="dropdown-toggle">
+                            <span class="micon ti-comment-alt"></span><span class="mtext">Check Availablity</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
                         <a href="javascript:;" class="dropdown-toggle">
                             <span class="micon fa fa-calendar-check-o"></span><span class="mtext">Rooms Booking</span>
                         </a>

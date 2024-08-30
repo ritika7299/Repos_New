@@ -8,9 +8,8 @@
 
     <!-- Site favicon -->
     <link rel="apple-touch-icon" sizes="180x180"
-        href="<?php echo site_url(); ?>public/backend/vendors/images/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32"
-        href="<?php echo site_url(); ?>public/backend/vendors/images/favicon-32x32.png" />
+        href="<?php echo site_url('public/backend/vendors/images/apple-touch-icon.png'); ?>" />
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo site_url(''); ?>" />
     <link rel="icon" type="image/png" sizes="16x16"
         href="<?php echo site_url(); ?>public/backend/vendors/images/favicon-16x16.png" />
 
@@ -58,110 +57,98 @@
 </head>
 
 <body class="login-page">
+    <!-- header -->
     <div class="login-header box-shadow">
-        <div class="container-fluid d-flex justify-content-between align-items-center">
-            <div class="brand-logo">
-                <a href="login.html">
-                    <img src="<?php echo site_url(); ?>public/backend/vendors/images/deskapp-logo.svg" alt="" />
-                </a>
-            </div>
-            <div class="login-menu">
-                <ul>
-                    <li>
-                        <div class="login-icon d-flex">
-                            <a href="<?php echo site_url(); ?>User/index">
-                                <div class="login-text mt-3 mr-2">
-                                    Login
-                            </a>
-                        </div>
-                        <div class="icon fa-sm">
-                            <img src="<?php echo site_url(); ?>public/backend/vendors/images/person.svg" class="svg"
-                                alt="" />
-                        </div>
-            </div>
-            </li>
-            </ul>
-        </div>
-    </div>
     </div>
     <div class="register-page-wrap d-flex align-items-center flex-wrap justify-content-center">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 col-lg-7">
-                    <img src="<?php echo site_url(); ?>public/backend/vendors/images/register-page-img.png" alt="" />
-                </div>
-                <div class="col-md-6 col-lg-5">
-                    <?php if (session()->getFlashdata('success_msg')): ?>
-                        <div><?= session()->getFlashdata('error_msg') ?></div>
-                    <?php endif; ?>
-                    <!-- signup form area -->
-                    <div class="login-box bg-white box-shadow border-radius-10">
-                        <div class="login-title">
-                            <h2 class="text-center text-primary">Sign-Up</h2>
-
-                        </div>
-                        <?php if (session()->getFlashdata('error')): ?>
-                            <p><?= session()->getFlashdata('error') ?></p>
-                        <?php endif; ?>
-                        <?php if (session()->getFlashdata('success')): ?>
-                            <p><?= session()->getFlashdata('success') ?></p>
-                        <?php endif; ?>
-                        <!-- Signup form  -->
-                        <form action="<?php echo site_url('user/do_signup'); ?>" method="POST">
-                            <div class="form-group row">
-                                <div class="col-sm-12">
-                                    <input type="text" class="form-control" id="username"
-                                        placeholder="Enter Username..." name="username"
-                                        value="<?= set_value('name') ?>" />
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-sm-12">
-                                    <input type="email" class="form-control" id="email" placeholder="Enter Email..."
-                                        name="email" value="<?= set_value('email') ?>" />
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-sm-12">
-                                    <input type="password" class="form-control" id="password"
-                                        placeholder="Enter Password..." />
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-sm-12">
-                                    <input type="password" class="form-control" id="cpass"
-                                        placeholder="Enter Confirm password..." />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="input-group mb-0">
-                                        <button class="btn btn-primary btn-lg btn-block" href="#"
-                                            data-target="#success-modal" data-toggle="modal">Sign-up</button>
-                                    </div>
-                                    <div class="input-group mb-0 mt-2">
-                                        <a class="btn btn-lg btn-block" href="signup.html"><span class="text-info">Have
-                                                an already account?</span><span class="text-primary"><b>
-                                                    Sign-In</b></span></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </form>
-                        <!-- /Signup form  -->
+            <div class="row justify-content-center">
+                <!-- signup form area -->
+                <div class="login-box bg-white box-shadow border-radius-10">
+                    <div class="login-title">
+                        <h2 class="text-center text-primary">Sign-Up</h2>
                     </div>
-                    <!-- /signup form area -->
+
+
+                    <!-- Register form  -->
+
+                    <!-- form starting -->
+                    <form action="<?php echo site_url('user/save'); ?>" id="registerForm" method="POST">
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="name" placeholder="Name" name="name"
+                                    value="<?= set_value('name'); ?>" />
+                                <?php if (isset($validation)): ?>
+                                    <div class="text-danger">
+                                        <?= $validation->listErrors('name') ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <input type="email" class="form-control" id="email" placeholder="Email..." name="email"
+                                    value="<?= set_value('email'); ?>" />
+                                <?php if (isset($validation)): ?>
+                                    <div class="text-danger">
+                                        <?= $validation->listErrors('email') ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <input type="password" class="form-control" id="password" name="password"
+                                    placeholder="Password..." value="" />
+                                <?php if (isset($validation)): ?>
+                                    <div class="text-danger">
+                                        <?= $validation->listErrors('password') ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <input type="password" class="form-control" id="cpass" name="cpass"
+                                    placeholder="Confirm password..." />
+                                <?php if (isset($validation)): ?>
+                                    <div class="text-danger">
+                                        <?= $validation->listErrors('cpass') ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="input-group mb-0">
+                                    <button class="btn btn-primary btn-lg btn-block" href="#"
+                                        data-target="#success-modal" data-toggle="modal">Submit</button>
+                                </div>
+                                <div class="input-group mb-0 mt-2">
+                                    <a class="btn btn-lg btn-block" href="<?php echo site_url('user'); ?>"><span
+                                            class="text-info">I already
+                                            have an account?</span>
+                                        <span class="text-primary"><b>
+                                                Sign-In</b></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- form ending -->
+
+                    <!-- /register form  -->
                 </div>
+                <!-- /signup form area -->
             </div>
         </div>
     </div>
-
     <!-- success Popup html Start -->
     <button type="button" id="success-modal-btn" hidden data-toggle="modal" data-target="#success-modal"
         data-backdrop="static">
         Launch modal
     </button>
-    <div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    <!-- modal  -->
+    <!-- <div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered max-width-400" role="document">
             <div class="modal-content">
@@ -173,11 +160,12 @@
                     Your details successfully submitted.
                 </div>
                 <div class="modal-footer justify-content-center">
-                    <a href="<?php echo base_url('user/login'); ?>" class="btn btn-primary">Done</a>
+                    <a href="#" class="btn btn-primary">Done</a>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+    <!-- modal  -->
     <!-- success Popup html End -->
 </body>
 <!-- js -->
@@ -187,6 +175,7 @@
 <script src="<?php echo site_url(); ?>public/backend/vendors/scripts/layout-settings.js"></script>
 <script src="<?php echo site_url(); ?>public/backend/src/plugins/jquery-steps/jquery.steps.js"></script>
 <script src="<?php echo site_url(); ?>public/backend/vendors/scripts/steps-setting.js"></script>
+<script src="<?php echo site_url(); ?>public/backend/vendors/scripts/validation.js"></script>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS" height="0" width="0"
         style="display: none; visibility: hidden"></iframe></noscript>

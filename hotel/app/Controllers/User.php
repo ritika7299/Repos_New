@@ -7,111 +7,48 @@ use App\Models\UserModel;
 class User extends BaseController
 {
 
-    public function __construct()
-    {
-        $this->userModel = new UserModel();
-        $this->form_validation = \Config\Services::validation();
+    // public function __construct()
+    // {
+    //     helper(['url', 'form']);
+    // }
 
-    }
+    protected $helpers = ['form', 'url'];
     public function index()
     {
-        //include helper form
-        helper(['form']);
-        $data = [];
-        echo view('register', $data);
-        return view('users_layouts/register');
+        echo view('users_layouts/login');
+    }
+
+    function register()
+    {
+        echo view('users_layouts/register');
 
     }
 
-    public function do_signup()
+    public function save()
     {
-        //include helper form
-        helper(['form']);
-        //set rules validation form
-        $rules = [
-            'name' => 'required|min_length[3]|max_length[20]',
-            'email' => 'required|min_length[6]|max_length[50]|valid_email|is_unique[users.user_email]',
-            'password' => 'required|min_length[6]|max_length[200]',
-            'confpassword' => 'matches[password]'
-        ];
+        $validation = \Config\Services::validation();
 
-        if ($this->validate($rules)) {
-            $model = new UserModel();
-            $data = [
-                'username' => $this->request->getVar('name'),
-                'email' => $this->request->getVar('email'),
-                'userpassword' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
-            ];
-            $model->save($data);
-            return redirect()->to('user/login');
-        } else {
-            $data['validation'] = $this->validator;
-            echo view('register', $data);
-        }
-    }
+        $validation->setRules([
+            'name' => 'required|min_length[3]',
+            'email' => 'required|valid_email|is_unique[users.user_email]',
+            'password' => 'required|min_length[6]',
+            'cpass' => 'matches[password]'
+        ]);
 
-    public function login()
-    {
-        return view('users_layouts/login');
-    }
-
-    public function do_login()
-    {
-        helper(['form', 'url']);
-        $session = session();
-
-        if ($this->request->getMethod() == 'post') {
-            $rules = [
-                'email' => 'required|valid_email',
-                'password' => 'required|min_length[8]'
-            ];
-            if ($this->validate($rules)) {
-                $model = new UserModel();
-                $user = $model->where('email', $this->request->getPost('email'))->first();
-
-                if ($user && password_verify($this->request->getPost('password'), $user['password'])) {
-                    $session->set([
-                        'user_id' => $user['id'],
-                        'username' => $user['username'],
-                        'logged_in' => true
-                    ]);
-                    return redirect()->to('/dashboard');
-                } else {
-                    $session->setFlashdata('error', 'Invalid login credentials');
-                }
-            } else {
-                $data['validation'] = $this->validator;
-            }
+        if (!$validation->withRequest($this->request)->run()) {
+            return view('users_layouts/register', ['validation' => $validation]);
         }
 
-        echo view('login', $data);
+        $userModel = new UserModel();
+        $userModel->save([
+            'name' => $this->request->getPost('name'),
+            'email' => $this->request->getPost('email'),
+            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT)
+        ]);
+
+        return redirect()->to('users_layouts/register')->with('success', 'Registration successful');
     }
 
-    public function logout()
-    {
-        $session = session();
-        $session->destroy();
-        return redirect()->to('/user/login');
-    }
-
-
-    /*public function login()
-    {
-        return view('users_layouts/login');
-
-    }
-
-    public function logout()
-    {
-        $session = session();
-        $session->destroy();
-        return redirect()->to('/login');
-    }
-    public function dashboard()
-    {
-        return view('users_layouts/dashboard');
-
-    }
     public function invoice()
     {
         return view('users_layouts/invoice');
@@ -121,6 +58,6 @@ class User extends BaseController
     {
         return view('users_layouts/reservation');
 
-    }*/
+    }
 
 }

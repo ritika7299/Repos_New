@@ -26,6 +26,12 @@ class Validation extends BaseConfig
         FileRules::class,
         CreditCardRules::class,
     ];
+    /*public array $ruleSets = [
+        \CodeIgniter\Validation\CreditCardRules::class,
+        \CodeIgniter\Validation\FileRules::class,
+        \CodeIgniter\Validation\FormatRules::class,
+        \CodeIgniter\Validation\Rules::class,
+    ];*/
 
     /**
      * Specifies the views that are used to display the
@@ -34,7 +40,7 @@ class Validation extends BaseConfig
      * @var array<string, string>
      */
     public array $templates = [
-        'list'   => 'CodeIgniter\Validation\Views\list',
+        'list' => 'CodeIgniter\Validation\Views\list',
         'single' => 'CodeIgniter\Validation\Views\single',
     ];
 

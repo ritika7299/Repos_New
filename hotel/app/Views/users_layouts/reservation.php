@@ -5,7 +5,7 @@
     <div class="pre-loader">
         <div class="pre-loader-box">
             <div class="loader-logo">
-                <img src="<?php echo site_url(); ?>public/backend/vendors/images/main-logo.png" alt="" />
+                <img src="<?php echo site_url(); ?>public/backend/vendors/images/home-loading.png" alt="" />
             </div>
             <div class="loader-progress" id="progress_div">
                 <div class="bar" id="bar1"></div>
