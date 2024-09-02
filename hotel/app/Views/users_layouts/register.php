@@ -68,12 +68,12 @@
                     <div class="login-title">
                         <h2 class="text-center text-primary">Sign-Up</h2>
                     </div>
-
-
                     <!-- Register form  -->
 
                     <!-- form starting -->
-                    <form action="<?php echo site_url('user/save'); ?>" id="registerForm" method="POST">
+                    <?= \Config\Services::validation()->listErrors() ?>
+
+                    <form action="<?php echo site_url('user/register'); ?>" id="registerForm" method="POST">
                         <div class="form-group row">
                             <div class="col-sm-12">
                                 <input type="text" class="form-control" id="name" placeholder="Name" name="name"

@@ -8,7 +8,7 @@
 
     <!-- Site favicon -->
     <link rel="apple-touch-icon" sizes="180x180"
-        href="<?php echo site_url(); ?>public/backend/vendors/images/apple-touch-icon.png" />
+        href="<?php echo site_url(); ?>public/backend/vendors/images/home-image.png" />
     <link rel="icon" type="image/png" sizes="32x32"
         href="<?php echo site_url(); ?>public/backend/vendors/images/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16"

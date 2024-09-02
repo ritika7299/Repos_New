@@ -82,8 +82,8 @@
                 </div>
             </div>
             <div class="github-link">
-                <a href="https://github.com/dropways/deskapp" target="_blank"><img src="vendors/images/github.svg"
-                        alt=""></a>
+                <a href="https://github.com/dropways/deskapp" target="_blank"><img
+                        src="<?php echo base_url(); ?>public/vendors/images/github.svg" alt=""></a>
             </div>
         </div>
     </div>
@@ -103,16 +103,15 @@
             <div class="right-sidebar-body-content">
                 <h4 class="weight-600 font-18 pb-10">Header Background</h4>
                 <div class="sidebar-btn-group pb-30 mb-10">
-                    <a href="javascript:void(0);" class="btn btn-outline-primary header-white active">White</a>
-                    <a href="javascript:void(0);" class="btn btn-outline-primary header-dark">Dark</a>
+                    <a href="#" class="btn btn-outline-primary header-white active">White</a>
+                    <a href="#" class="btn btn-outline-primary header-dark">Dark</a>
                 </div>
 
                 <h4 class="weight-600 font-18 pb-10">Sidebar Background</h4>
                 <div class="sidebar-btn-group pb-30 mb-10">
-                    <a href="javascript:void(0);" class="btn btn-outline-primary sidebar-light">White</a>
-                    <a href="javascript:void(0);" class="btn btn-outline-primary sidebar-dark active">Dark</a>
+                    <a href="#" class="btn btn-outline-primary sidebar-light">White</a>
+                    <a href="#" class="btn btn-outline-primary sidebar-dark active">Dark</a>
                 </div>
-
                 <h4 class="weight-600 font-18 pb-10">Menu Dropdown Icon</h4>
                 <div class="sidebar-radio-group pb-10 mb-10">
                     <div class="custom-control custom-radio custom-control-inline">
@@ -132,7 +131,6 @@
                                 class="fa fa-angle-double-right"></i></label>
                     </div>
                 </div>
-
                 <h4 class="weight-600 font-18 pb-10">Menu List Icon</h4>
                 <div class="sidebar-radio-group pb-30 mb-10">
                     <div class="custom-control custom-radio custom-control-inline">

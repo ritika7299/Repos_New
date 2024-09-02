@@ -20,35 +20,45 @@ class User extends BaseController
 
     function register()
     {
-        echo view('users_layouts/register');
-
-    }
-
-    public function save()
-    {
+        helper(['form', 'url']);
         $validation = \Config\Services::validation();
-
         $validation->setRules([
             'name' => 'required|min_length[3]',
             'email' => 'required|valid_email|is_unique[users.user_email]',
             'password' => 'required|min_length[6]',
-            'cpass' => 'matches[password]'
+            'cpass' => 'required|matches[password]'
         ]);
+        if (!$validation) {
+            return view('users_layouts/register', ['validation' => $this->validator]);
+        } else {
+            $encrypter = service('encrypter');
+            $model = new UserModel();
+            $data = [
+                'name' => $this->request->getVar('name'),
+                'email' => $this->request->getVar('email'),
+                'password' => $encrypter->encrypt($this->request->getVar('password'))
+            ];
+            $model->insert($data);
 
-        if (!$validation->withRequest($this->request)->run()) {
-            return view('users_layouts/register', ['validation' => $validation]);
         }
 
-        $userModel = new UserModel();
-        $userModel->save([
-            'name' => $this->request->getPost('name'),
-            'email' => $this->request->getPost('email'),
-            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT)
-        ]);
+        // echo view('users_layouts/register');
 
-        return redirect()->to('users_layouts/register')->with('success', 'Registration successful');
     }
 
+
+
+    public function reset_password()
+    {
+        return view('users_layouts/reset-password');
+
+    }
+
+    public function dashboard()
+    {
+        return view('users_layouts/dashboard');
+
+    }
     public function invoice()
     {
         return view('users_layouts/invoice');

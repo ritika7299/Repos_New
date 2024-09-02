@@ -4,7 +4,7 @@
     <div class="pre-loader">
         <div class="pre-loader-box">
             <div class="loader-logo">
-                <img src="<?php echo site_url(); ?>public/backend/vendors/images/main-logo.png" alt="" />
+                <img src="<?php echo site_url(); ?>public/backend/vendors/images/home-loading.png" alt="" />
             </div>
             <div class="loader-progress" id="progress_div">
                 <div class="bar" id="bar1"></div>
@@ -58,7 +58,7 @@
         <div class="header-right">
             <div class="dashboard-setting user-notification">
                 <div class="dropdown">
-                    <a class="dropdown-toggle no-arrow" href="javascript:;" data-toggle="right-sidebar">
+                    <a class="dropdown-toggle no-arrow" href="#" data-toggle="right-sidebar">
                         <i class="dw dw-settings2"></i>
                     </a>
                 </div>
@@ -78,7 +78,8 @@
                                     <ul>
                                         <li>
                                             <a href="#">
-                                                <img src="vendors/images/img.jpg" alt="" class="mCS_img_loaded">
+                                                <img src="<?php echo site_url(); ?>public/backend/vendors/images/img.jpg"
+                                                    alt="" class="mCS_img_loaded">
                                                 <h3>John Doe</h3>
                                                 <p>
                                                     Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -88,7 +89,8 @@
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <img src="vendors/images/photo1.jpg" alt="" class="mCS_img_loaded">
+                                                <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo1.jpg"
+                                                    alt="" class="mCS_img_loaded">
                                                 <h3>Lea R. Frith</h3>
                                                 <p>
                                                     Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -98,7 +100,8 @@
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <img src="vendors/images/photo2.jpg" alt="" class="mCS_img_loaded">
+                                                <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo2.jpg"
+                                                    alt="" class="mCS_img_loaded">
                                                 <h3>Erik L. Richards</h3>
                                                 <p>
                                                     Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -108,7 +111,8 @@
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <img src="vendors/images/photo3.jpg" alt="" class="mCS_img_loaded">
+                                                <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo3.jpg"
+                                                    alt="" class="mCS_img_loaded">
                                                 <h3>John Doe</h3>
                                                 <p>
                                                     Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -118,7 +122,8 @@
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <img src="vendors/images/photo4.jpg" alt="" class="mCS_img_loaded">
+                                                <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo4.jpg"
+                                                    alt="" class="mCS_img_loaded">
                                                 <h3>Renee I. Hansen</h3>
                                                 <p>
                                                     Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -128,7 +133,8 @@
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <img src="vendors/images/img.jpg" alt="" class="mCS_img_loaded">
+                                                <img src="<?php echo site_url(); ?>public/backend/vendors/images/img.jpg"
+                                                    alt="" class="mCS_img_loaded">
                                                 <h3>Vicki M. Coleman</h3>
                                                 <p>
                                                     Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -158,7 +164,7 @@
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
                         <span class="user-icon">
-                            <img src="vendors/images/photo1.jpg" alt="">
+                            <img src="<?php echo site_url(); ?>public/backend/vendors/images/photo1.jpg" alt="">
                         </span>
                         <span class="user-name">Ross C. Lopez</span>
                     </a>
@@ -191,14 +197,14 @@
             <div class="right-sidebar-body-content">
                 <h4 class="weight-600 font-18 pb-10">Header Background</h4>
                 <div class="sidebar-btn-group pb-30 mb-10">
-                    <a href="javascript:void(0);" class="btn btn-outline-primary header-white active">White</a>
-                    <a href="javascript:void(0);" class="btn btn-outline-primary header-dark">Dark</a>
+                    <a href="#" class="btn btn-outline-primary header-white active">White</a>
+                    <a href="#" class="btn btn-outline-primary header-dark">Dark</a>
                 </div>
 
                 <h4 class="weight-600 font-18 pb-10">Sidebar Background</h4>
                 <div class="sidebar-btn-group pb-30 mb-10">
-                    <a href="javascript:void(0);" class="btn btn-outline-primary sidebar-light">White</a>
-                    <a href="javascript:void(0);" class="btn btn-outline-primary sidebar-dark active">Dark</a>
+                    <a href="#" class="btn btn-outline-primary sidebar-light">White</a>
+                    <a href="#" class="btn btn-outline-primary sidebar-dark active">Dark</a>
                 </div>
 
                 <h4 class="weight-600 font-18 pb-10">Menu Dropdown Icon</h4>
@@ -284,23 +290,23 @@
             <div class="sidebar-menu">
                 <ul id="accordion-menu">
                     <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
+                        <a href="#" class="dropdown-toggle">
                             <span class="micon bi bi-house"></span><span class="mtext">Dashboard</span>
                         </a>
 
                     </li>
                     <li class="dropdown">
-                        <a href="<?php echo base_url('room/availability'); ?>" class="dropdown-toggle">
+                        <a href="<?php echo base_url('room/check-availability'); ?>" class="dropdown-toggle">
                             <span class="micon ti-comment-alt"></span><span class="mtext">Check Availablity</span>
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
-                            <span class="micon fa fa-calendar-check-o"></span><span class="mtext">Rooms Booking</span>
+                        <a href="#" class="dropdown-toggle">
+                            <span class="micon fa fa-calendar-check-o"></span><span class="mtext">Reservation</span>
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
+                        <a href="#" class="dropdown-toggle">
                             <span class="micon ti-comment-alt"></span><span class="mtext">User Manage</span>
                         </a>
                     </li>
@@ -310,7 +316,7 @@
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="javascript:;" class="dropdown-toggle">
+                        <a href="#" class="dropdown-toggle">
                             <span class="micon ti-comment-alt"></span><span class="mtext">Manage Complaints</span>
                         </a>
                     </li>

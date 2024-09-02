@@ -27,9 +27,13 @@ $routes->post('login/dashboard', 'Login::dashboard');
 $routes->get('user', 'User::index');
 $routes->get('user/register', 'User::register');
 $routes->post('user/register', 'User::register');
-// $routes->get('user/dashboard', 'User::dashboard');
+$routes->get('user/dashboard', 'User::dashboard');
 $routes->get('user/reservation', 'User::reservation');
 $routes->get('user/invoice', 'User::invoice');
 // $routes->get('user/login', 'User::login');
 $routes->post('user/save', 'User::save');      //for user register
+
+$routes->post('user/reset_password', 'User::reset_password');
+
+$routes->get('room', 'Room::index');
 
