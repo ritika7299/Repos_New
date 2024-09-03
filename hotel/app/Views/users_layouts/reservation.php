@@ -4,9 +4,9 @@
     <!-- loader -->
     <div class="pre-loader">
         <div class="pre-loader-box">
-            <div class="loader-logo">
+            <!-- <div class="loader-logo">
                 <img src="<?php echo site_url(); ?>public/backend/vendors/images/home-loading.png" alt="" />
-            </div>
+            </div> -->
             <div class="loader-progress" id="progress_div">
                 <div class="bar" id="bar1"></div>
             </div>
