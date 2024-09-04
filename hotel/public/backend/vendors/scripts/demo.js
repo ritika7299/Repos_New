@@ -13,3 +13,19 @@ function showPassword() {
         icon.classList.add("dw-padlock1");
     }
 }
+
+ // Hide the success message after 5 seconds
+ setTimeout(function() {
+    var successMessage = document.getElementById('success-message');
+    if (successMessage) {
+        successMessage.style.display = 'none';
+    }
+}, 5000); // 5000 milliseconds = 5 seconds
+
+// Hide the errors message after 5 seconds
+setTimeout(function() {
+    var errorMessage = document.getElementById('error-message');
+    if (errorMessage) {
+        errorMessage.style.display = 'none';
+    }
+}, 5000); // 5000 milliseconds = 5 seconds

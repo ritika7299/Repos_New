@@ -31,7 +31,7 @@ $routes->get('user/dashboard', 'User::dashboard');
 $routes->get('user/reservation', 'User::reservation');
 $routes->get('user/invoice', 'User::invoice');
 // $routes->get('user/login', 'User::login');
-$routes->post('user/save', 'User::save');      //for user register
+$routes->post('user/store', 'User::store');      //for user register
 
 $routes->post('user/reset_password', 'User::reset_password');
 

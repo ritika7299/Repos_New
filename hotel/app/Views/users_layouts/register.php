@@ -71,51 +71,49 @@
                     <!-- Register form  -->
 
                     <!-- form starting -->
-                    <?= \Config\Services::validation()->listErrors() ?>
+                    <?php if (session()->getFlashdata('success')): ?>
+                        <div id="success-message" class="alert alert-success">
+                            <?= session()->getFlashdata('success') ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (isset($validation)): ?>
+                        <div id="error-message" class="alert alert-warning">
+                            <?= $validation->listErrors() ?>
+                        </div>
+                    <?php endif; ?>
 
-                    <form action="<?php echo site_url('user/register'); ?>" id="registerForm" method="POST">
+                    <form action="<?php echo site_url('user/store'); ?>" id="registerForm" method="POST">
                         <div class="form-group row">
                             <div class="col-sm-12">
                                 <input type="text" class="form-control" id="name" placeholder="Name" name="name"
-                                    value="<?= set_value('name'); ?>" />
-                                <?php if (isset($validation)): ?>
-                                    <div class="text-danger">
-                                        <?= $validation->listErrors('name') ?>
-                                    </div>
-                                <?php endif; ?>
+                                    value="<?= set_value('name') ?>" />
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12">
                                 <input type="email" class="form-control" id="email" placeholder="Email..." name="email"
-                                    value="<?= set_value('email'); ?>" />
-                                <?php if (isset($validation)): ?>
-                                    <div class="text-danger">
-                                        <?= $validation->listErrors('email') ?>
-                                    </div>
-                                <?php endif; ?>
+                                    value="<?= set_value('email') ?>" />
+
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12">
                                 <input type="password" class="form-control" id="password" name="password"
-                                    placeholder="Password..." value="" />
-                                <?php if (isset($validation)): ?>
-                                    <div class="text-danger">
-                                        <?= $validation->listErrors('password') ?>
-                                    </div>
-                                <?php endif; ?>
+                                    placeholder="Password..." value="<?= set_value('password') ?>" />
+                                <div class="input-group-append custom mr-2">
+                                    <span class="input-group-text" onclick="showPassword()">
+                                        <i class="fa fa-eye-slash"></i>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12">
                                 <input type="password" class="form-control" id="cpass" name="cpass"
-                                    placeholder="Confirm password..." />
-                                <?php if (isset($validation)): ?>
-                                    <div class="text-danger">
-                                        <?= $validation->listErrors('cpass') ?>
-                                    </div>
-                                <?php endif; ?>
+                                    placeholder="Confirm password..." value="" />
+                                <div class="input-group-append custom mr-2">
+                                    <span class="input-group-text"><i class="fa fa-eye-slash"></i></span>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
@@ -142,33 +140,10 @@
             </div>
         </div>
     </div>
-    <!-- success Popup html Start -->
-    <button type="button" id="success-modal-btn" hidden data-toggle="modal" data-target="#success-modal"
-        data-backdrop="static">
-        Launch modal
-    </button>
-    <!-- modal  -->
-    <!-- <div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered max-width-400" role="document">
-            <div class="modal-content">
-                <div class="modal-body text-center font-18">
-                    <h3 class="mb-20">Form Submitted!</h3>
-                    <div class="mb-30 text-center">
-                        <img src="vendors/images/success.png" />
-                    </div>
-                    Your details successfully submitted.
-                </div>
-                <div class="modal-footer justify-content-center">
-                    <a href="#" class="btn btn-primary">Done</a>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- modal  -->
-    <!-- success Popup html End -->
+
 </body>
 <!-- js -->
+<script src="<?php echo site_url(); ?>public/backend/vendors/scripts/demo.js"></script>
 <script src="<?php echo site_url(); ?>public/backend/vendors/scripts/core.js"></script>
 <script src="<?php echo site_url(); ?>public/backend/vendors/scripts/script.min.js"></script>
 <script src="<?php echo site_url(); ?>public/backend/vendors/scripts/process.js"></script>
